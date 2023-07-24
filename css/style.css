@@ -3,9 +3,19 @@ html{
     padding: 0;
 }
 a{
-    color: #F0F1F2;
+    color: white;
     text-decoration: none;
     transition: 0.3s;
+}
+#carrinho a{
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ffffff
+}
+#carrinho a:hover{
+    background: #ffffff;
+    color: black;
+    opacity: 1;
 }
 a:hover{
     opacity: 0.6;
@@ -25,7 +35,7 @@ header{
 }
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: #4178BF;
@@ -36,6 +46,7 @@ nav{
     display: flex;
 }
 .pesquisa{
+    display: flex;
     width: 140px;
     display: block
 }
@@ -43,4 +54,5 @@ nav{
     letter-spacing: 3px;
     margin-left: 32px;
 }
+
 
