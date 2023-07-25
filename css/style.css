@@ -75,7 +75,7 @@ nav{
 input {
     width: 200px;
 }
-.navgiation{
+.navigation{
     padding: 20%;
     justify-content: space-evenly;
     display: flex;
@@ -85,12 +85,13 @@ input {
     background-color: #F0F1F2;
     box-shadow: 2px 1px 5px black;
 }
-.navgiation a{
+.navigation a{
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: #0D0D0D;
     font-size: 16px;
     font-weight: 500;
+    position: relative;
 }
 @media (min-width: 1034px){
     #carrinho2{
@@ -98,9 +99,8 @@ input {
         
     } 
 }
-
 @media (max-width: 1034px) {
-    .navgiation{
+    .navigation{
         display: none;
     }
     .search-box{
@@ -108,6 +108,14 @@ input {
     }
     .nav-list #carrinho{
         display: none;
+    }
+    .nav-list{
+        font-size: 20px;
+    }
+}
+@media (max-width: 555px){
+    .logo{
+        font-size: 20px;
     }
 }
 .menu-container {
@@ -138,6 +146,23 @@ input {
 .menu-trigger:hover + .menu-produtos{ 
     display: block;
 }
+.navigation a::after{
+    content: "";
+    position: absolute;
+    margin-top: 10px;
+    border: 10px;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #D95A11;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+.navigation a:hover::after{
+    width: 100%;
+}
+
 
 
 
