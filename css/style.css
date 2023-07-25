@@ -76,22 +76,23 @@ input {
     width: 200px;
 }
 .navigation{
+    position: relative;
     padding-left: 20%;
     padding-right: 20%;
     justify-content: space-evenly;
     display: flex;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    padding-top: 15px;
     margin: 0 auto;
     background-color: #F0F1F2;
-    box-shadow: 2px 1px 5px black;
+    box-shadow: 1px 0px 10px #0d0d0d7a;
 }
 .navigation a{
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: #0D0D0D;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 100;
     position: relative;
 }
 @media (min-width: 1034px){
@@ -119,36 +120,15 @@ input {
         font-size: 20px;
     }
 }
-.menu-container {
+.dropdown {
     position: relative;
-    width: 200px;
-}
-.produtos{
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #0D0D0D;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-.menu li {
-    padding: 10px;
-    list-style-type: none;
-}
-.menu li a {
-    display: block;
-    color: #333;
-    text-decoration: none;
-}
-.menu-trigger {
-    cursor: pointer;
-}
-.menu-trigger:hover + .menu-produtos{ 
-    display: block;
+    display: inline-block;
 }
 .navigation span{
     padding-bottom: 20px;
+}
+.navigation a{
+    padding-bottom: 10px;
 }
 .navigation a::after{
     content: "";
@@ -165,6 +145,43 @@ input {
 }
 .navigation a:hover::after{
     width: 100%;
+}
+#produtos{
+    font-weight: bold;
+}
+.dropdown-content {
+    display: none;
+    opacity: 1;
+    top: 37px;
+    padding-bottom: px;
+    position: absolute;
+    background-color: #F0F1F2;
+    min-width: 150px;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+    margin: 0;
+    z-index: 1;
+}
+.dropdown-content ul{
+    list-style: none;
+    margin-left: 10px;
+    padding: 0;
+}
+.dropdown-content li{
+    color: #3a3a3a;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 10px;
+}
+.dropdown-content li:hover{
+    font-weight: bold;
+    list-style-type: disc;
+    transition: 2s ease-in;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: 2s;
 }
 
 
