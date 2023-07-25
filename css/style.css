@@ -124,7 +124,7 @@ input {
     position: relative;
     display: inline-block;
 }
-.navigation span{
+.navigation  span{
     padding-bottom: 20px;
 }
 .navigation a{
