@@ -1,0 +1,12 @@
+Paleta escuro via logo IF
+#D91424
+#2EA640
+#2A8C39
+#4B8C49
+#0D0D0D
+Paleta 2:
+#4178BF
+#66B1F2
+#F0F1F2
+#D95A11
+#0D0D0D
