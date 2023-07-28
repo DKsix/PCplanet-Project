@@ -1,36 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleluma.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Cards</title>
+    <style>
+
+    body{
+        background: rgb(27, 27, 27);
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .card{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background: white;
+        width: 200px;
+        height: 400px;
+        margin: 10px;
+        border-radius: 15px;
+    }
+    .card-image{
+        background: transparent;
+        height: 250px;
+        margin-bottom: 15px;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+    .img-1{
+        background-image: url(/arquivos/Image/monitor/img04.jpg);
+        width: 200px;
+        height: 200px;
+    }
+    .img-2{
+        background-image: url(/arquivos/Image/monitor/img03.jpg);
+        width: 200px;
+        height: 200px;
+    }
+    .img-3{
+        background-image: url(/arquivos/Image/monitor/img01.jpg);
+        width: 200px;
+        height: 200px;
+    }
+    .img-4{
+      background-image: url(/arquivos/Image/monitor/img02.png);
+      width: 200px;
+      height: 200px;
+      position: relative;
+      right: 15px;
+    }
+    .card h2{
+        margin-bottom: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+        padding: 0px;
+    }
+    .card p{
+      margin-left: 10px;
+      padding: 0px;
+      margin-bottom: 0;
+    }
+    .card a{
+        padding: 10px;
+        position: absolute;
+        background-color: black;
+        color: white;
+        display: block;
+        border-radius: 10px;
+        text-align: center;
+        margin: 10px 50px;
+        text-decoration: none;
+    }
+    .card:hover{
+        cursor: pointer;
+        transform: scale(1.03);
+        transition: all 0.7s ease;
+    }
+    #principal{
+      text-align: center;
+      color: #F0F1F2;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    hr2{
+      position: relative;
+      margin-left: 25%;
+      margin-right: 25%;
+      bottom: 10px;
+      color: #66B1F2;
+    }
+    .hr1{
+      position: relative;
+      margin-left: 48%;
+      margin-right: 48%;
+      bottom: 10px;
+      color: #66B1F2;
+    }
+
+    </style>
 </head>
 <body>
-     <section class="container">
+      <header>
+        <nav>
+            <a href="#"class='logo'>PC Planet</a>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li ><a href="#"><i class="fa-solid fa-comments"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-sun"></i></a></li>
+                    <li id="carrinho"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i>CARRINHO</a></li>   
+                    <li id="carrinho2"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+            </ul>
+            <div class="search-box">
+                <input type="text" class="search-text" placeholder="Digite o que você procura...">    
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            </div>
+        </nav>
+        <div class="navigation">
+            <div class="dropdown">
+                    <a href="#"><span id="produtos">Produtos</span></a>
+                <div class="dropdown-content">
+                    <ul>
+                        <div class="menu">
+                        <a href="#"><li>Hardware</li></a>
+                        <a href="#"><li>Computadores</li></a>
+                        <a href="#"><li>Periféricos</li></a>
+                        <a href="#"><li>Monitores</li></a>
+                        <a href="#"><li>Consoles</li></a>
+                        <a href="#"><li>Eletronicos</li></a>
+                    </div>
+                    </ul>
+                    </div>
+            </div>
+            <div class="dropdown-content">
+            <ul>
+                <a href="#"><li>Hardware</li></a>
+                <a href="#"><li>Computadores</li></a>
+                <a href="#"><li>Periféricos</li></a>
+                <a href="#"><li>Monitores</li></a>
+                <a href="#"><li>Consoles</li></a>
+                <a href="#"><li>Eletronicos</li></a>
+            </ul>
+            </div>
+            <a href="#"class="menu">Home</a>
+            <a href="#"class="menu">Computadores</a>
+            <a href="#"class="menu">Periféricos</a>
+            <a href="#"class="menu">Monitores</a>
+            <a href="#"class="menu">Contate-nos</a>
+        </div>
+    </header>
+    <main>
+      <h2 id="principal">Monitores</h2>
+      <hr class="hr1">
+      <hr class="hr2">
+      <section class="container">
         <div class="card">
-            <div class="card-image"></div>
-            <h2> MONITOR GAMER </h2>
-            <br>
-            <p> Pichau centauri cr27, 27 pol ips, qhd, 1ms, 165hz, freesync, hdmi/dp, pg-ctr-bl1  </p>
+            <div class="card-image img-1"></div>
+            <h2> Monitor Gamer </h2>
+            <p> Pichau centauri 27 pol ips, 1ms, 165hz, freesync...</p>
             <a href="">COMPRAR</a>
           </div>
         <div class="card">
-            <div class="card-image"></div>
-            <h2> MONITOR GAMER </h2>
-            <br>
-            <p> Samsung t350,24, ips, fhd, 5ms, 75hz, freesync, hdmi/vga, lf24t350fhlmzd. </p>
+            <div class="card-image img-2"></div>
+            <h2> Monitor Gamer  </h2>
+            <p> Samsung t350,24, ips, fhd, 5ms, 75hz, freesync...</p>
+            <h3></h3>
             <a href="">COMPRAR</a>
           </div>
         <div class="card">
-            <div class="card-image"></div>
-            <h2> MONITOR GAMER </h2>
-            <br>
-            <p> Pichau cepheus vpro24, 24.5pol., ips, fhd, 1ms, 360hz, freesync, pg-cfvpro24-bl01 </p>
+            <div class="card-image img-3">
+            </div>
+            <h2> Monitor Gamer  </h2>
+            <p> Pichau cepheus 24.5pol., ips, 1ms, 360hz, freesync...</p>
             <a href="">COMPRAR</a>
         </div>
-
-
-     </section>
-</body>
+        <div class="card">
+          <div class="card-image img-4">
+          </div>
+          <h2> Monitor Gamer  </h2>
+          <p> Monitor Pichau 21" FULL HD IPS 5MS 75HZ...</p>
+          <a href="">COMPRAR</a>
+      </div>
+        
+    </section>
+    </main>
+    
+</body>   
 </html>
