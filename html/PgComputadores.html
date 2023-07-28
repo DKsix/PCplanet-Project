@@ -3,29 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylemaria.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Cards para computador</title>
 </head>
+<style>
+        .container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .card{
+        box-shadow: 0px 0px 10px 0px #9797979d;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background: white;
+        width: 210px;
+        height: 400px;
+        margin: 10px;
+        border-radius: 15px;
+        transition: all 0.7s ease;
+    }
+    .card-image{
+        background: transparent;
+        height: 250px;
+        margin-bottom: 15px;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+    .img-1{
+        background-image: url(/arquivos/Image/computadores/imagem1.jpg);
+        width: 210px;
+        height: 210px;
+    }
+    .img-2{
+        background-image: url(/arquivos/Image/computadores/imagem2.jpg);
+        width: 210px;
+        height: 210px;
+        position: relative;
+        right: 15px;
+    }
+    .img-3{
+        background-image: url(/arquivos/Image/computadores/imagem3.jpg);
+        width: 210px;
+        height: 210px;
+    }
+    .img-4{
+        background-image: url(/arquivos/Image/computadores/imagem4.jpg);
+        width: 210px;
+        height: 210px;
+
+    }
+    .img-5{
+        background-image: url(/arquivos/Image/computadores/imagem5.jpg);
+        width: 210px;
+        height: 210px;
+    }
+    .img-6{
+        background-image: url(/arquivos/Image/computadores/imagem6.jpg);
+        width: 210px;
+        height: 210px;
+        position: relative;
+        right: 15px;
+    }
+    .img-7{
+        background-image: url(/arquivos/Image/computadores/imagem7.jpg);
+        width: 210px;
+        height: 210px;
+    }
+    .img-8{
+        background-image: url(/arquivos/Image/computadores/imagem8.jpg);
+        width: 210px;
+        height: 210px;
+    }
+    
+    .card h2{
+        margin-bottom: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+        padding: 0px;
+    }
+    .card p{
+        margin-top: 0;
+        padding-top: 9px;
+        width: 190px;
+        height: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 0px;
+        
+    }
+    .card a{
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        align-items: center;
+        padding: 10px 55px 10px 55px;
+        position: absolute;
+        background-color: black;
+        color: white;
+        display: block;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .card:hover{
+        cursor: pointer;
+        transform: scale(1.03);
+        transition: all 0.7s ease;
+        box-shadow: 0px 0px 20px 0px #9797979d;
+    }
+    #principal{
+        text-align: center;
+        color: #3a3a3a;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .hr1{
+        margin-top: 0;
+        position: relative;
+        justify-content: center;
+        bottom: 6px;
+        z-index: 1;
+        width: 120px;
+        font-size: 2px;
+        border: #66B1F2 solid 1px;
+    }
+    .hr2{
+        border-radius: 10px;
+        border: #e0e2e2 solid 1px;
+        position: absolute;
+        bottom: 1px;
+        position: relative;
+        bottom: 10px;
+        font-size: 4px;
+    }
+
+    .preços{
+        display: block;
+        padding-top: 10px;
+        padding-left: 10px;
+        margin:  0px;
+    }
+
+    .preços span{
+        font-size: 16px;
+        color: #66B1F2;
+        font-weight: 400;
+        text-decoration: line-through;
+    }
+    
+</style>
 <body>
-    <section class="container">
-        <div class="card">
-            <div class="card-image"></div>
-            <h2> COMPUTADOR GAMER</h2>
-            <p> Computador Pichau Gamer, Amd rizen 5 5600, radeon rx 550 4gb, 8gb ddr4, ssd 240gb </p>
-            <a href=""> COMPRAR</a>
+    <header>
+        <nav>
+            <a target="_self" href="/html/PgPrincipal.html"class='logo'>PC Planet</a>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li ><a href="#"><i class="fa-solid fa-comments"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-sun"></i></a></li>
+                    <li id="carrinho"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i>CARRINHO</a></li>   
+                    <li id="carrinho2"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+            </ul>
+            <div class="search-box">
+                <input type="text" class="search-text" placeholder="Digite o que você procura...">    
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            </div>
+        </nav>
+        <div class="navigation">
+            <div class="dropdown">
+                    <a href="#"><span id="produtos">Produtos</span></a>
+                <div class="dropdown-content">
+                    <ul>
+                        <div class="menu">
+                        <a href="#"><li>Hardware</li></a>
+                        <a href="PgComputadores.html"><li>Computadores</li></a>
+                        <a href="#"><li>Periféricos</li></a>
+                        <a href="PgMonitores.html"><li>Monitores</li></a>
+                        <a href="#"><li>Consoles</li></a>
+                        <a href="#"><li>Eletronicos</li></a>
+                    </div>
+                    </ul>
+                    </div>
+            </div>
+            <div class="dropdown-content">
+            <ul>
+                <a href="#"><li>Hardware</li></a>
+                <a target="_self" href="/html/PgMonitores.html"><li>Computadores</li></a>
+                <a href="#"><li>Periféricos</li></a>
+                <a href="PgMonitores.html"><li>Monitores</li></a>
+                <a href="#"><li>Consoles</li></a>
+                <a href="#"><li>Eletronicos</li></a>
+            </ul>
+            </div>
+            <a  target="_self" href="/html/PgPrincipal.html"class="menu">Home</a>
+            <a href="PgComputadores.html"class="menu">Computadores</a>
+            <a href="#"class="menu">Periféricos</a>
+            <a target="_self" href="/html/PgMonitores.html"class="menu">Monitores</a>
+            <a href="#"class="menu">Contate-nos</a>
         </div>
-        <div class="card">
-            <div class="card-image"></div>
-            <h2> COMPUTADOR GAMER</h2>
-            <p> Computador Pichau Gamer, Intel i5-11400F, Geforce gtx 1650 4gb, 8gb ddr4, ssd 240gb </p>
-            <a href=""> COMPRAR</a>
-        </div>
-        <div class="card">
-            <div class="card-image"></div>
-            <h2> COMPUTADOR GAMER </h2>
-            <p> Computador Pichau Gamer aura, intel i5-10400F, geforce rtx 3060 12GB, 16GB DDR4 </p>
-            <a href=""> COMPRAR</a>
-        </div>
-    </section>
+        
+        </header>
+        <main>
+            <h2 id="principal">Computadores</h2>
+            <hr class="hr1">
+            <hr class="hr2">
+            <section class="container">
+                <div class="card">
+                    <div class="card-image img-1"></div>
+                    <h2> Computador Gamer</h2>
+                    <p> Computador Pichau Gamer Udyat II, intel i5-10400F, GeForce GTX 1650 4GB, 16GB DDR4, HD 1TB</p>
+                    <a href=""> COMPRAR</a>
+                </div>
+                <div class="card">
+                    <div class="card-image img-2"></div>
+                    <h2> COMPUTADOR GAMER</h2>
+                    <p> Computador Pichau Gamer Atena, Intel i5-10400F, GeForce RTX 2060 Super 8GB, 16GB DDR4, SSD M.2 480GB</p>
+                    <a href=""> COMPRAR</a>
+                </div>
+                <div class="card">
+                    <div class="card-image img-3"></div>
+                    <h2> COMPUTADOR GAMER </h2>
+                    <p> COMPUTADOR PICHAU GAMER, AMD RYZEN 7 5700G, GEFORCE RTX 3060 12GB, 16GB DDR4, SSD 960GB </p>
+                    <a href=""> COMPRAR</a>
+                </div>
+                <div class="card">
+                    <div class="card-image img-4"></div>
+                    <h2> COMPUTADOR GAMER </h2>
+                    <p> Computador Pichau Gamer Erínias, AMD Ryzen 5 5600, Radeon RX 6600 8GB, 16GB DDR4, SSD 980GB </p>
+                    <a href=""> COMPRAR</a>
+                </div>
+                <div class="card">
+                    <div class="card-image img-5"></div>
+                    <h2> COMPUTADOR GAMER </h2>
+                    <p> Computador Pichau Gamer Corsair iCue, i7-12700K, GeForce RTX 4070 Ti 12GB, 32GB DDR4, 2x SSD M.2 560GB </p>
+                    <a href=""> COMPRAR</a>
+                </div>
+                <div class="card">
+                    <div class="card-image img-6"></div>
+                    <h2> COMPUTADOR GAMER </h2>
+                    <p> COMPUTADOR PICHAU GAMER, INTEL I5-11400F, GEFORCE RTX 2060 6GB, 8GB DDR4, SSD 240GB</p>
+                    <a href=""> COMPRAR</a>
+                </div>
+                <div class="card">
+                    <div class="card-image img-7"></div>
+                    <h2> COMPUTADOR GAMER </h2>
+                    <p> COMPUTADOR PICHAU GAMER RÁ, AMD RYZEN 5 5600X, RADEON RX 6600 8GB, 8GB DDR4, SSD 240GB </p>
+                    <a href=""> COMPRAR</a>
+                </div>
+                <div class="card">
+                    <div class="card-image img-8"></div>
+                    <h2> COMPUTADOR GAMER </h2>
+                    <p> COMPUTADOR PICHAU GAMER, INTEL I3-12100F, GEFORCE GTX 1660 6GB, 8GB DDR4, SSD 240GB </p>
+                    <a href=""> COMPRAR</a>
+                </div>
+            </section>
+        </main>
 </body>
 </html>
