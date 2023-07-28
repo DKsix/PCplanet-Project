@@ -187,7 +187,10 @@ input {
     display: block;
     transition: 2s;
 }
-
+main{
+    margin-left: 25%;
+    margin-right: 25%;
+}
 
 
 
