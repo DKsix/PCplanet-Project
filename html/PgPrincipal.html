@@ -7,6 +7,256 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>PC Planet</title>
 </head>
+<style>
+    .container div{
+        display: flex;
+        flex: 1 1 300px;
+        margin: 10px;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        width: 100%;
+    }
+    .slider{
+        border-radius: 15px;
+        box-shadow: 1px 0px 5px 2px rgba(122, 122, 122, 0.478);
+        margin: 20px 0px;
+        width: 500px;
+        height: fit-content;
+        overflow: hidden;
+    }
+    .slides{
+        width: 400%;
+        height: 300px;
+        display: flex;
+    
+    }
+    .slides input{
+        display: none;
+    }
+    .slide{
+        width: 25%;
+        transition: 1s;
+        position: relative;
+    }
+    .slide img{
+        height: 100%;
+        width: 500px;
+    }
+    .manual-navigation{
+        position: relative;
+        width: 500px;
+        margin-top: -20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .manual-btn{
+        border-radius: 5px;
+        width: 15px;
+        height: 5px;
+        background-color: #F0F1F2;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .manual-btn:not(:last-child){
+        margin-right: 20px;
+    }
+    .manual-btn:hover{
+        background-color:#66B1F2
+    }
+    #radio1:checked ~ .first{
+        margin-left: 0;
+    }
+    #radio2:checked ~ .first{
+        margin-left: -25%;
+    }
+    #radio3:checked ~ .first{
+        margin-left: -50%;
+    }
+    #radio4:checked ~ .first{
+        margin-left: -75%;
+    }
+    #radio5:checked ~ .first{
+        margin-left: -100%;
+    }
+    #radio6:checked ~ .first{
+        margin-left: -125%;
+    }
+    .container{
+        width: 800px;
+        height: 400px;
+        background-color: #000;
+    }
+    label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .container2{
+        margin-left: 400px;
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+    }
+    .card{
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        transition: all 0.7s ease;
+    }
+    .card-img{
+        overflow: hidden;
+        background: transparent;
+        height: 300px;
+        background-size: cover;
+        transition: 0.3 ease-out;
+    }
+    .card-img > .img-1:hover{
+        opacity: 0.5;
+        transition: 0.3s ease;
+    }
+    .img-1{
+        transition: 0.3 ease-out;
+        opacity: 0.9;
+        border-radius: 10px;
+        background-image: url(/arquivos/Image/slider/setup-gamer.jpeg);
+    }
+    .card h2{
+        font-family: 'Poppins', sans-serif;
+        color: #F0F1F2;
+        font-weight: 600;
+        padding: 50px 20px 0px 30px;
+        margin: 0;
+    }
+    .card p{
+        text-shadow: 2px 2px 8px #000000;
+        color: #F0F1F2;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 10px 20px 0px 30px;
+    }
+    .card span{
+        font-weight: 1000;
+    }
+    .card button{
+        color: white;
+        margin: 10px 20px 0px 30px;
+        padding: 10px 15px;
+        border: 0;
+        font-weight: 700;
+        background-color: #4178BF;
+        font-size: 14px;
+        border-radius: 10px;
+        font-family: 'Poppins', sans-serif;
+        transition: 0.5s ease-in-out;
+    }
+    .card button:hover{
+        background-color: #3a99ec;
+        transition: 0.5s ease-in-out;
+    }
+    @media (max-width: 1300px) {
+        aside{
+            height: auto;
+        }
+        .slider{
+            height: 300px;
+            width: 500px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+        .slide img{
+            height: 300px;
+            width: 500px;
+        }
+        .manual-navigation{
+            width: 400px;
+        }
+        .container2{
+            width: 400px;
+            position: relative;
+            margin: 20px auto;
+            justify-content: center;
+            align-items: center;
+            top:0;
+            left: 0;
+            right: 0;
+        }
+        .container2{
+            height: 100%
+        }    
+    }
+    @media (max-width: 1050px) {
+        .slider{
+            height: 300px;
+            width: 400px;
+        }
+        .slide img{
+            height: 300px;
+            width: 400px;
+        }
+        .manual-navigation{
+            width: 400px;
+        }
+        .container2{
+            width: 400px;
+            position: relative;
+            top:0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+        
+    }
+    @media (max-width: 555px){
+        aside{
+            height: 100%;
+        }
+        .slider{
+            height: 200px;
+            width: 300px;
+        }
+        .slide img{
+            height: 200px;
+            width: 300px;
+        }
+        .manual-navigation{
+            padding-bottom: 10px;
+            bottom: 0;
+            position: absolute;
+            width: 300px;
+        }
+        .container2{
+            width: 300px;
+            position: relative;
+            top:0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+        .card-img{
+            width: 300px;
+            
+        }
+    }
+    @media (min-width: 1301){
+    }
+    aside{
+        height: 0px;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+}
+
+</style>
 <body>
     <header>
             <nav>
@@ -31,35 +281,146 @@
                     <div class="dropdown-content">
                         <ul>
                             <div class="menu">
-                            <a href="#"><li>Hardware</li></a>
-                            <a href=""><li>Computadores</li></a>
-                            <a href="#"><li>Periféricos</li></a>
-                            <a href=""><li>Monitores</li></a>
-                            <a href="#"><li>Consoles</li></a>
-                            <a href="#"><li>Eletronicos</li></a>
+                            <a target="_self" href="#"><li>Hardware</li></a>
+                            <a target="_self" href="/html/PgComputadores.html"><li>Computadores</li></a>
+                            <a target="_self" href="#"><li>Periféricos</li></a>
+                            <a target="_self" href="/html/PgMonitores.html"><li>Monitores</li></a>
+                            <a target="_self" href="#"><li>Consoles</li></a>
+                            <a target="_self" href="#"><li>Eletronicos</li></a>
                         </div>
                         </ul>
                         </div>
                 </div>
                 <div class="dropdown-content">
                 <ul>
-                    <a href="#"><li>Hardware</li></a>
-                    <a target="_self" href="/html/PgMonitores.html"><li>Computadores</li></a>
-                    <a href="#"><li>Periféricos</li></a>
-                    <a href="#"><li>Monitores</li></a>
-                    <a href="#"><li>Consoles</li></a>
-                    <a href="#"><li>Eletronicos</li></a>
+                    <a target="_self" href="#"><li>Hardware</li></a>
+                    <a target="_self" href="/html/PgComputadores.html"><li>Computadores</li></a>
+                    <a target="_self" href="#"><li>Periféricos</li></a>
+                    <a target="_self" href="/html/PgMonitores.html"><li>Monitores</li></a>
+                    <a target="_self" href="#"><li>Consoles</li></a>
+                    <a target="_self" href="#"><li>Eletronicos</li></a>
                 </ul>
                 </div>
                 <a  target="_self" href="/html/PgPrincipal.html"class="menu">Home</a>
-                <a href="#"class="menu">Computadores</a>
+                <a href="/html/PgComputadores.html"class="menu">Computadores</a>
                 <a href="#"class="menu">Periféricos</a>
                 <a target="_self" href="/html/PgMonitores.html"class="menu">Monitores</a>
                 <a href="#"class="menu">Contate-nos</a>
             </div>
             
     </header>
-    <main></main>
+    <main>
+        <article>
+            <section>
+                <div class="slider">
+                    <div class="cotainer">  
+                        <div class="slides">
+                            <input type="radio" name="radio-btn" id="radio1">
+                            <input type="radio" name="radio-btn" id="radio2">
+                            <input type="radio" name="radio-btn" id="radio3">
+                            <input type="radio" name="radio-btn" id="radio4">
+                            <input type="radio" name="radio-btn" id="radio5">
+                            <input type="radio" name="radio-btn" id="radio6">
+                            <div class="slide first">
+                                <img src="/arquivos/Image/slider/Placa-de-video.jpg" alt="imagem1">
+                            </div> 
+                            <div class="slide">
+                                <img src="/arquivos/Image/slider/processador.jpg" alt="imagem2">
+                            </div>
+                            <div class="slide">
+                                <img src="/arquivos/Image/slider/Placa-de-video.jpg" alt="imagem3">
+                            </div>
+                            <div class="slide">
+                                <img src="/arquivos/Image/slider/Placa-de-video.jpg" alt="imagem4">
+                            </div>
+                            <div class="slide">
+                                <img src="/arquivos/Image/slider/Placa-de-video.jpg" alt="imagem5">
+                            </div>
+                            <div class="slide">
+                                <img src="/arquivos/Image/slider/Placa-de-video.jpg" alt="imagem6">
+                            </div>
+                            </div>
+                                <div class="manual-navigation">
+                                    <label for="radio1" class="manual-btn"></label>
+                                    <label for="radio2" class="manual-btn"></label>
+                                    <label for="radio3" class="manual-btn"></label>
+                                    <label for="radio4" class="manual-btn"></label>
+                                    <label for="radio5" class="manual-btn"></label>
+                                    <label for="radio6" class="manual-btn"></label>
+                                </div>
+                        <aside class="container2">
+                            <div class="card">
+                                <div class="card-img img-1">
+                                    <h2>Computadores</h2>
+                                    <p>Escolha agora seu computador<br> e aperte o <span>PLAY!</span></p>
+                                    <a href="/html/PgComputadores.html"><button>Comprar</button></a>
+                                </div>
+                        </div>                 
+                    </aside> 
+                        </section> 
+    
+                    </div>
+                        <h2 id="principal">Ofertas</h2>
+                        <hr class="hr1">
+                        <hr class="hr2">
+        </article>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>PC Planet</h4>
+                    <ul>
+                        <div class="comunicação">
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i>pcplanet.@gmail.com</a></li>
+                            <li><a href="#"><i class="fa-solid fa-phone"></i>75-99134321</a></li>
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i>Rolândia, Paraná</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Localização</a></li>
+                        <li><a href="/html/localização.html">Nossas lojas</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Entrega</a></li>
+                        <li><a href="#">Garantia</a></li>
+                        <li><a href="#">Como comprar</a></li>
+                        <li><a href="#">Formas de pagamento</a></li>
+                        <li><a href="#">Termos e condições</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Loja Online</h4>
+                    <ul>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Nossos serviços</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Programa de afiliados</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <div class="form-sub">
+                        <input type="email" placeholder="Digite o seu e-mail" required>
+                        <div class="redes-sociais">
+                            <h4>Redes sociais</h4>
+                            <ul>
+                                <a href="#" class="face"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="/AV3/js/script.js"></script>
 </body>
 </html>

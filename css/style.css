@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 html{
     box-sizing: border-box;
     padding: 0;
@@ -96,13 +98,19 @@ input {
     font-weight: 100;
     position: relative;
 }
-@media (min-width: 1034px){
+@media (max-width: 1920px){
+    main{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+@media (min-width: 1050px){
     #carrinho2{
         display: none;
         
     } 
 }
-@media (max-width: 1034px) {
+@media (max-width: 1050px) {
     .navigation{
         display: none;
     }
@@ -120,6 +128,7 @@ input {
     .logo{
         font-size: 20px;
     }
+    
 }
 .dropdown {
     position: relative;
@@ -154,25 +163,26 @@ input {
     font-weight: bold;
 }
 .dropdown-content {
+    max-height: 0;
     display: none;
     opacity: 1;
     top: 37px;
-    padding-bottom: px;
+    transition: max-height 2s ease;
     position: absolute;
     background-color: #F0F1F2;
-    min-width: 150px;
+    min-width: 170px;
     box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
     margin: 0;
     z-index: 1;
 }
 .dropdown-content ul{
     list-style: none;
-    margin-left: 10px;
+    margin-left: 15px;
     padding: 0;
 }
 .dropdown-content li{
     color: #3a3a3a;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-left: 10px;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -185,13 +195,171 @@ input {
 }
 .dropdown:hover .dropdown-content {
     display: block;
-    transition: 2s;
+    transition: 2s ease-in;
+    max-height: 230px;
 }
-main{
-    margin-left: 25%;
-    margin-right: 25%;
+footer{
+    background-color: #3a3a3a;
+    padding: 50px;
+
+}
+.container-footer{
+    max-width: 1400px;
+    margin: auto;
+}
+.row-footer{
+    margin-left: 16%;
+    margin-right: 18%;
+    display: flex;
+    flex-wrap: wrap ;
+}
+.footer-col{
+    width: 25%;
+    padding: 0;
+}
+.footer-col h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    color: #F0F1F2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 14px;
+    color: #F0F1F2;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3 ease;
+}
+.footer-col ul a:hover{
+    color: #F0F1F2;
+    list-style: disc;
+}
+footer ul{
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.footer-col .redes-sociais{
+    margin-top: 30px;
+}
+.footer-col .redes-sociais a{
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px 10px 0;
+    border-radius: 50%;
+    color: #F0F1F2;
+    background: #918f8f;
+    transform: all 0.5s ease;
+}
+.footer-col .redes-sociais .face:hover{
+    color: #F0F1F2;
+    transition: 0.5s;
+    background-color: #1877f2;
+}
+.footer-col .redes-sociais .insta{
+    background: linear-gradient(45deg, #918f8f, #918f8f);
+}
+.footer-col .redes-sociais .insta:hover{
+    color: #F0F1F2;
+    transition: 0.5s;
+    background: linear-gradient(45deg, #ffca4f 0%,#ff6d45 25%,#e73d6a 50%,#c034ad 75%,#b32eb9 100%)
+}
+.footer-col .redes-sociais .insta{
+    background: linear-gradient(#3a3a3a );
+    transition: 0.5s ease;
 }
 
+.footer-col .redes-sociais .twitter:hover{
+    color: #F0F1F2;
+    transition: 0.5s;
+    background-color: #08aef1;
+}
+.footer-col .redes-sociais .youtube:hover{
+    color: #F0F1F2;
+    transition: 0.5s;
+    background-color: #ff0000;
+}
+.footer-col .form-sub input{
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border-radius: 10px;
+    border: 0;
+    background-color: #918f8f;
+}
+.footer-col .form-sub input::placeholder{
+    color: #F0F1F2;
+}
+.footer-col .form-sub button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #3a3a3a;
+    border-radius:  3px;
+    font-weight: bold;
+    background-color: #F0F1F2;
+}
+@media (max-width: 800px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:600px){
+    .footer-col{
+        width: 100%;
+    }
+}
+.comunicação i{
+    padding-right: 5px;
+}
+#principal{
+    text-align: center;
+    color: #3a3a3a;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hr1{
+    margin-top: 0;
+    position: relative;
+    justify-content: center;
+    bottom: 6px;
+    z-index: 1;
+    width: 120px;
+    font-size: 2px;
+    border: #66B1F2 solid 1px;
+}
+.hr2{
+    
+    border-radius: 10px;
+    border: #e0e2e2 solid 1px;
+    position: absolute;
+    bottom: 1px;
+    position: relative;
+    bottom: 10px;
+    font-size: 4px;
+}
 
 
 
