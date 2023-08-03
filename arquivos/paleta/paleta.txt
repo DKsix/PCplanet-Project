@@ -4,3 +4,4 @@ Paleta 2:
 #F0F1F2
 #D95A11
 #0D0D0D
+#3a3a3a

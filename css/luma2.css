@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 *{
-    margin: 0;
-    padding: 0;
     font-family: 'Roboto', 'sans-serif';
 }
 section{
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
 }
 .form-box i{
     margin: auto;
@@ -21,13 +18,14 @@ section{
     padding: 18px;
     font-size: 20px;
     border-radius: 20px;
-    background-color: blue;
+    color: #F0F1F2;
+    background-color: #3a3a3a
 }
 .form-box{
     padding: 20px;
     width: 400px;
     position: relative;
-    background: red;
+    background-color: #4178BF;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -94,6 +92,8 @@ input:focus~label, input:valid~label{
     align-items: center;
 }
 .remember input{
+    width: 20px;
+    height: 20px;
     opacity: 1;
     margin-right: 5px;
 }
@@ -110,7 +110,7 @@ button{
     text-transform: uppercase;
 }
 #Login{
-    background: rgba(0, 0, 0, 0.961);
+    background: #3a3a3a
 }
 .login{
     font-size: .9em;
@@ -125,12 +125,12 @@ button{
     margin: auto;
     margin: 0 50px 0 50px;
     position: relative;
-    background: red;
+    background: #4178BF;
     border-radius: 10px;
 }
 .container p{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .container i{
     margin: auto;
@@ -142,7 +142,8 @@ button{
     padding: 18px;
     font-size: 20px;
     border-radius: 20px;
-    background-color: blue;
+    color: #F0F1F2;
+    background-color: #3a3a3a;
 }
 #Cadastrar{
     margin: auto;
@@ -151,5 +152,14 @@ button{
     align-items: center;
     display: flex;
     width: 310px;
-    background: rgba(255, 238, 0, 0.961);
+    background: #3a3a3a;
+}
+@media (max-width: 1024px) {
+    section{
+        flex-direction: column;
+    }
+    .container{
+        margin: 20px;
+        width: 400px;
+    }
 }
