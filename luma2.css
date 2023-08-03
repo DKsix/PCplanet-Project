@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'sans-serif';
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+.form-box i{
+    margin: auto;
+    display: flex;
+    width: 4px;
+    height: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: blue;
+}
+.form-box{
+    padding: 20px;
+    width: 400px;
+    position: relative;
+    background: red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+}
+h2{
+    margin-top: 5px;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+}
+.inputbox{
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+    width: 310px;
+    margin: 50px 0px 30px 0px;
+    border: 2px solid #fff;
+}
+#senha{
+    margin: 0;
+}
+.inputbox label{
+    position: absolute;
+    top: 60%;
+    left: 5px;
+    transform: translateY(-65%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+    margin: 0;
+}
+input:focus~label, input:valid~label{
+    top: -30%;
+}
+.inputbox input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    margin-left: 10px;
+}
+.sarch-text{
+    margin-left: 10px;
+}
+.remember{
+    margin: 10px 0 20px 0;
+    display: flex;
+    font-size: 0.99rem;
+    color: #ffffff;
+    font-weight: 400;   
+    justify-content: center;
+    align-items: center;
+}
+.remember input{
+    opacity: 1;
+    margin-right: 5px;
+}
+button{
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#Login{
+    background: rgba(0, 0, 0, 0.961);
+}
+.login{
+    font-size: .9em;
+    color: #ffffff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.container{
+    padding: 20px;
+    width: 350px;
+    height: 370px;
+    margin: auto;
+    margin: 0 50px 0 50px;
+    position: relative;
+    background: red;
+    border-radius: 10px;
+}
+.container p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container i{
+    margin: auto;
+    display: flex;
+    width: 5px;
+    height: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: blue;
+}
+#Cadastrar{
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    width: 310px;
+    background: rgba(255, 238, 0, 0.961);
+}
