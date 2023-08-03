@@ -6,6 +6,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     margin: 10px 0;
 }
 .form-box i{
@@ -19,9 +20,10 @@ section{
     font-size: 20px;
     border-radius: 20px;
     color: #F0F1F2;
-    background-color: #3a3a3a
+    background-color: #3a3a3a;
 }
 .form-box{
+    box-shadow: 0px 1px 25px rgb(54, 54, 54);
     padding: 20px;
     width: 400px;
     position: relative;
@@ -44,13 +46,23 @@ h2{
     color: #fff;
     text-align: center;
 }
+
 .inputbox{
+    display: inline-flex;
     height: 40px;
     border-radius: 10px;
     position: relative;
-    width: 310px;
-    margin: 50px 0px 30px 0px;
+    width: 170px;
+    margin: 20px 0px 20px 10px;
     border: 2px solid #fff;
+}
+.nome{
+    margin-top: 30px;
+}
+.login{
+    display: block;
+    width: 355px;
+    margin: 25px 0px 20px 10px;
 }
 #senha{
     margin: 0;
@@ -79,23 +91,47 @@ input:focus~label, input:valid~label{
     color: #fff;
     margin-left: 10px;
 }
-.sarch-text{
+.ReceberMarketing input{
+    width: auto;
+}
+.ReceberMarketing {
+    margin: 20px 0 0px 10px;
+}
+.ConcordanciaTermos {
+    margin: 20px 0 10px 10px;
+}
+.ConcordanciaTermos input{
+    width: auto;
+}
+input[type="date"] {
+    appearance: none;
+    background: transparent;
+}
+input[type="date"] {
+    cursor: pointer;
+    display: inline-flex;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+    width: 170px;
+    color: #F0F1F2;
+    margin: 20px 0px 20px 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.datalabel{
+    position: absolute;
     margin-left: 10px;
+    transform: translateY(-65%);
+    color: #fff;
+    font-size: 1em; 
+    pointer-events: none;
+    transition: .5s;
+    margin: 0;
 }
-.remember{
-    margin: 10px 0 20px 0;
-    display: flex;
-    font-size: 0.99rem;
-    color: #ffffff;
-    font-weight: 400;   
-    justify-content: center;
-    align-items: center;
-}
-.remember input{
-    width: 20px;
-    height: 20px;
-    opacity: 1;
-    margin-right: 5px;
+#data{
+    display: none;
 }
 button{
     color: #ffffff;
@@ -109,57 +145,31 @@ button{
     font-weight: 600;
     text-transform: uppercase;
 }
-#Login{
-    background: #3a3a3a
+#Cadastrar{
+    background: #3a3a3a;
 }
-.login{
+.CriarConta{
     font-size: .9em;
     color: #ffffff;
     text-align: center;
     margin: 25px 0 10px;
 }
-.container{
-    padding: 20px;
-    width: 350px;
-    height: 370px;
-    margin: auto;
-    margin: 0 50px 0 50px;
-    position: relative;
-    background: #4178BF;
-    border-radius: 10px;
-}
-.container p{
-    text-align: center;
-    margin-bottom: 30px;
-}
-.container i{
-    margin: auto;
-    display: flex;
-    width: 5px;
-    height: 5px;
-    justify-content: center;
-    align-items: center;
-    padding: 18px;
-    font-size: 20px;
-    border-radius: 20px;
+.ReceberMarketing label{
+    font-family: "poppins",  ;
+    font-weight: 400;
     color: #F0F1F2;
-    background-color: #3a3a3a;
+    text-align: justify;
 }
-#Cadastrar{
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    width: 310px;
-    background: #3a3a3a;
+.ConcordanciaTermos label{
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 400;
+    color: #F0F1F2;
+    text-align: justify;
 }
-@media (max-width: 1024px) {
-    section{
-        flex-direction: column;
-    }
-    .container{
-        margin: 20px;
-        width: 400px;
-    }
+.ConcordanciaTermos a{
+    color: #F0F1F2;
+
+}
+.ConcordanciaTermos a:visited{
+    color: #F0F1F2;
 }
