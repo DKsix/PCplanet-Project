@@ -8,22 +8,25 @@
     <title>PC Planet</title>
 </head>
 <style>
+    .containerpai{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 20px 0;
+    }
     .container div{
         display: flex;
-        flex: 1 1 300px;
-        margin: 10px;
-        margin: auto;
-        align-items: center;
-        justify-content: center;
     }
     img{
         width: 100%;
     }
     .slider{
+        margin-right: 20px;
         border-radius: 15px;
         box-shadow: 1px 0px 5px 2px rgba(122, 122, 122, 0.478);
-        margin: 20px 0px;
-        width: 500px;
+        width: 600px;
         height: fit-content;
         overflow: hidden;
     }
@@ -43,11 +46,11 @@
     }
     .slide img{
         height: 100%;
-        width: 500px;
+        width: 700px;
     }
     .manual-navigation{
         position: relative;
-        width: 500px;
+        width: 100%;
         margin-top: -20px;
         display: flex;
         align-items: center;
@@ -85,23 +88,22 @@
     #radio6:checked ~ .first{
         margin-left: -125%;
     }
-    .container{
-        width: 800px;
-        height: 400px;
-        background-color: #000;
-    }
     label {
         display: block;
         font-size: 16px;
         margin-bottom: 5px;
     }
     .container2{
-        margin-left: 400px;
-        position: relative;
-        width: fit-content;
-        height: fit-content;
+        
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
     }
     .card{
+        box-shadow: 1px 0px 5px 2px rgba(122, 122, 122, 0.478);
         margin: 0;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         width: 300px;
@@ -116,15 +118,14 @@
         background-size: cover;
         transition: 0.3 ease-out;
     }
-    .card-img > .img-1:hover{
-        opacity: 0.5;
+    .img-1:hover{
         transition: 0.3s ease;
     }
     .img-1{
-        transition: 0.3 ease-out;
-        opacity: 0.9;
+        transition: 0.3s ease-out;
+        opacity: 1;
         border-radius: 10px;
-        background-image: url(/arquivos/Image/slider/setup-gamer.jpeg);
+        background-image: url(/arquivos/Image/slider/setup-gamer2.jpeg);
     }
     .card h2{
         font-family: 'Poppins', sans-serif;
@@ -160,39 +161,25 @@
         background-color: #3a99ec;
         transition: 0.5s ease-in-out;
     }
+    @media (max-width: 1920px) {
+        .containerpai{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .slider{
+            height: 300px;
+            width: 600px;
+        }
+        .slide img{
+            height: 300px;
+            width: 600px;
+        }
+        .manual-navigation{
+            width: 600px;
+            }
+    }
     @media (max-width: 1300px) {
-        aside{
-            height: auto;
-        }
-        .slider{
-            height: 300px;
-            width: 500px;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto;
-        }
-        .slide img{
-            height: 300px;
-            width: 500px;
-        }
-        .manual-navigation{
-            width: 400px;
-        }
-        .container2{
-            width: 400px;
-            position: relative;
-            margin: 20px auto;
-            justify-content: center;
-            align-items: center;
-            top:0;
-            left: 0;
-            right: 0;
-        }
-        .container2{
-            height: 100%
-        }    
-    }
-    @media (max-width: 1050px) {
         .slider{
             height: 300px;
             width: 400px;
@@ -204,58 +191,61 @@
         .manual-navigation{
             width: 400px;
         }
-        .container2{
-            width: 400px;
-            position: relative;
-            top:0;
-            left: 0;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto;
-        }
-        
     }
-    @media (max-width: 555px){
-        aside{
-            height: 100%;
-        }
-        .slider{
-            height: 200px;
-            width: 300px;
-        }
-        .slide img{
-            height: 200px;
-            width: 300px;
-        }
-        .manual-navigation{
-            padding-bottom: 10px;
-            bottom: 0;
-            position: absolute;
-            width: 300px;
-        }
-        .container2{
-            width: 300px;
-            position: relative;
-            top:0;
-            left: 0;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto;
-        }
-        .card-img{
-            width: 300px;
-            
-        }
-    }
-    @media (min-width: 1301){
-    }
-    aside{
-        height: 0px;
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-}
+    @media (max-width: 1024px) {
 
+        .slider{
+            height: 300px;
+            width: 400px;
+        }
+        .slide img{
+            height: 300px;
+            width: 400px;
+        }
+        .manual-navigation{
+            width: 400px;
+        }
+        .container2{
+            display: none;
+        }
+    }
+    @media (max-width: 800px){  
+        .slider{
+            margin: auto;
+            height: 250px;
+            width: 350px;
+        }
+        .slide img{
+            height: 250px;
+            width: 350px;
+        }
+        .manual-navigation{
+            width: 350px;
+        }
+    }
+    @media (max-width: 600px){
+        .container{
+            height: 200px;
+        }
+        .slides{
+            height: fit-content;
+        }
+        .slider{
+            margin: auto;
+            height: 200px;
+            width: 300px;
+        }
+        .slide img{
+            height: 200px;
+            width: 300px;
+        }
+        .manual-navigation{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 </style>
 <body>
     <header>
@@ -310,7 +300,7 @@
             
     </header>
     <main>
-        <article>
+        <article class="containerpai">
             <section>
                 <div class="slider">
                     <div class="cotainer">  
@@ -320,50 +310,50 @@
                             <input type="radio" name="radio-btn" id="radio3">
                             <input type="radio" name="radio-btn" id="radio4">
                             <input type="radio" name="radio-btn" id="radio5">
-                            <input type="radio" name="radio-btn" id="radio6">
                             <div class="slide first">
-                                <img src="/arquivos/Image/slider/Placa-de-video.jpg" alt="imagem1">
+                                <img src="/arquivos/Image/slider/processador2.jpg" alt="imagem1">
                             </div> 
                             <div class="slide">
-                                <img src="/arquivos/Image/slider/processador.jpg" alt="imagem2">
+                                <img src="/arquivos/Image/slider/Placa-de-video2.jpg" alt="imagem2">
                             </div>
                             <div class="slide">
-                                <img src="/arquivos/Image/slider/Placa-de-video.jpg" alt="imagem3">
+                                <img src="/arquivos/Image/slider/perifericos2.jpg" alt="imagem3">
                             </div>
                             <div class="slide">
-                                <img src="/arquivos/Image/slider/Placa-de-video.jpg" alt="imagem4">
+                                <img src="/arquivos/Image/slider/perifericos3.jpg" alt="imagem4">
                             </div>
                             <div class="slide">
-                                <img src="/arquivos/Image/slider/Placa-de-video.jpg" alt="imagem5">
+                                <img src="/arquivos/Image/slider/monitor.jpg" alt="imagem5">
                             </div>
-                            <div class="slide">
-                                <img src="/arquivos/Image/slider/Placa-de-video.jpg" alt="imagem6">
-                            </div>
-                            </div>
-                                <div class="manual-navigation">
-                                    <label for="radio1" class="manual-btn"></label>
-                                    <label for="radio2" class="manual-btn"></label>
-                                    <label for="radio3" class="manual-btn"></label>
-                                    <label for="radio4" class="manual-btn"></label>
-                                    <label for="radio5" class="manual-btn"></label>
-                                    <label for="radio6" class="manual-btn"></label>
-                                </div>
-                        <aside class="container2">
-                            <div class="card">
-                                <div class="card-img img-1">
-                                    <h2>Computadores</h2>
-                                    <p>Escolha agora seu computador<br> e aperte o <span>PLAY!</span></p>
-                                    <a href="/html/PgComputadores.html"><button>Comprar</button></a>
-                                </div>
-                        </div>                 
-                    </aside> 
-                        </section> 
-    
-                    </div>
-                        <h2 id="principal">Ofertas</h2>
-                        <hr class="hr1">
-                        <hr class="hr2">
+                        </div>
+                        <div class="manual-navigation">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label>
+                            <label for="radio4" class="manual-btn"></label>
+                            <label for="radio5" class="manual-btn"></label>
+                        </div>
+            </section> 
+            <aside class="container2">
+                <div class="card">
+                    <div class="card-img img-1">
+                        <h2>Computadores</h2>
+                        <p>Escolha agora seu computador<br> e aperte o <span>PLAY!</span></p>
+                        <a href="/html/PgComputadores.html"><button>Comprar</button></a>
+                        </div>
+                    </div>                
+                </aside> 
         </article>
+            <article class="Ofertas">
+                <h2 id="principal">Ofertas</h2>
+                <hr class="hr1">
+                <hr class="hr2">
+                <section>
+
+                </section>
+            </article>
+        
+        
     </main>
     <footer>
         <div class="container-footer">

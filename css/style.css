@@ -98,16 +98,14 @@ input {
     font-weight: 100;
     position: relative;
 }
-@media (max-width: 1920px){
+@media (max-width: 40000px){
     main{
-        margin-left: 25%;
-        margin-right: 25%;
+        margin: 0 25%;
     }
 }
-@media (min-width: 1050px){
+@media (min-width: 1051px){
     #carrinho2{
         display: none;
-        
     } 
 }
 @media (max-width: 1050px) {
@@ -129,6 +127,14 @@ input {
         font-size: 20px;
     }
     
+}
+@media (max-width: 375px){
+    
+}
+@media (max-width: 555px){
+    main{
+        margin: 0% 10%;
+    }
 }
 .dropdown {
     position: relative;
@@ -272,11 +278,12 @@ footer ul{
     background-color: #1877f2;
 }
 .footer-col .redes-sociais .insta{
-    background: linear-gradient(45deg, #918f8f, #918f8f);
+    opacity: 1;
 }
 .footer-col .redes-sociais .insta:hover{
     color: #F0F1F2;
     transition: 0.5s;
+    opacity: 1;
     background: linear-gradient(45deg, #ffca4f 0%,#ff6d45 25%,#e73d6a 50%,#c034ad 75%,#b32eb9 100%)
 }
 .footer-col .redes-sociais .insta{
@@ -320,15 +327,32 @@ footer ul{
     font-weight: bold;
     background-color: #F0F1F2;
 }
-@media (max-width: 800px){
+@media (max-width: 1024px){
     .footer-col{
+        flex-direction: column;
         width: 50%;
         margin-bottom: 30px;
     }
 }
-@media (max-width:600px){
+@media (max-width: 800px){
     .footer-col{
+        flex-direction: column;
+        width: 40%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 700px){
+    .footer-col{
+        flex-direction: column;
         width: 100%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 0px){
+    .footer-col{
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 30px;
     }
 }
 .comunicação i{
@@ -351,7 +375,6 @@ footer ul{
     border: #66B1F2 solid 1px;
 }
 .hr2{
-    
     border-radius: 10px;
     border: #e0e2e2 solid 1px;
     position: absolute;
