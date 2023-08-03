@@ -1,8 +1,8 @@
-@import url();
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: 'poppins', 'sans-serif';
+    font-family: 'Roboto', 'sans-serif';
 }
 section{
     display: flex;
@@ -10,98 +10,146 @@ section{
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: #00ff00;
+}
+.form-box i{
+    margin: auto;
+    display: flex;
+    width: 4px;
+    height: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: blue;
 }
 .form-box{
-    position: relative;
+    padding: 20px;
     width: 400px;
-    height: 450px;
+    position: relative;
     background: red;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+p{
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+}
 h2{
-    font-size: 2em;
+    margin-top: 5px;
+    font-size: 1.5em;
     color: #fff;
     text-align: center;
 }
 .inputbox{
+    height: 40px;
+    border-radius: 10px;
     position: relative;
-    margin: 30px 0;
     width: 310px;
-    border-bottom: 2px solid #fff;
+    margin: 50px 0px 30px 0px;
+    border: 2px solid #fff;
+}
+#senha{
+    margin: 0;
 }
 .inputbox label{
     position: absolute;
-    top:50%;
+    top: 60%;
     left: 5px;
-    transform: translateY(-50%);
+    transform: translateY(-65%);
     color: #fff;
     font-size: 1em;
     pointer-events: none;
     transition: .5s;
+    margin: 0;
 }
-input:focus~label,
-input:valid~label{
-top: -5px;
+input:focus~label, input:valid~label{
+    top: -30%;
 }
 .inputbox input{
     width: 100%;
-    height: 50px;
+    height: 40px;
     background: transparent;
     border: none;
     outline: none;
     font-size: 1em;
-    padding: 35px 0 5px;
     color: #fff;
+    margin-left: 10px;
 }
-.inputbox ion-icon{
-    position: absolute;
-    right: 8px;
-    color: #fff;
-    font-size: 1.2em;
-    top: 20px;
+.sarch-text{
+    margin-left: 10px;
 }
-.forget{
-    margin: -15px 0 15px;
-    font-size: .9em;
-    color: #fff;
+.remember{
+    margin: 10px 0 20px 0;
     display: flex;
+    font-size: 0.99rem;
+    color: #ffffff;
+    font-weight: 400;   
     justify-content: center;
+    align-items: center;
 }
-.forget label input{
-    margin-right: 3px; 
-}
-.forget label a{
-    color:#00ff00;
-    text-decoration: none;
-}
-.forget label a:hover{
-    text-decoration: underline;
+.remember input{
+    opacity: 1;
+    margin-right: 5px;
 }
 button{
+    color: #ffffff;
     width: 100%;
     height: 40px;
-    border-radius: 40px;
-    background: #fff;
+    border-radius: 10px;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
+    text-transform: uppercase;
 }
-.register{
+#Login{
+    background: rgba(0, 0, 0, 0.961);
+}
+.login{
     font-size: .9em;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     margin: 25px 0 10px;
 }
-.register p a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
+.container{
+    padding: 20px;
+    width: 350px;
+    height: 370px;
+    margin: auto;
+    margin: 0 50px 0 50px;
+    position: relative;
+    background: red;
+    border-radius: 10px;
 }
-.register p a:hover{
-    text-decoration: underline;
+.container p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container i{
+    margin: auto;
+    display: flex;
+    width: 5px;
+    height: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: blue;
+}
+#Cadastrar{
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    width: 310px;
+    background: rgba(255, 238, 0, 0.961);
 }
