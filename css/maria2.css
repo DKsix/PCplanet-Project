@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    font-family: 'Roboto', 'sans-serif';
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px 0;
+}
+.form-box i{
+    margin: auto;
+    display: flex;
+    width: 4px;
+    height: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: #F0F1F2;
+    background-color: #3a3a3a;
+}
+.form-box{
+    box-shadow: 0px 1px 25px rgb(54, 54, 54);
+    padding: 20px;
+    width: 400px;
+    position: relative;
+    background-color: #4178BF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+}
+h2{
+    margin-top: 5px;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox{
+    display: inline-flex;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+    width: 170px;
+    margin: 20px 0px 20px 10px;
+    border: 2px solid #fff;
+}
+.nome{
+    margin-top: 30px;
+}
+.login{
+    display: block;
+    width: 355px;
+    margin: 25px 0px 20px 10px;
+}
+#senha{
+    margin: 0;
+}
+.inputbox label{
+    position: absolute;
+    top: 60%;
+    left: 5px;
+    transform: translateY(-65%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+    margin: 0;
+}
+input:focus~label, input:valid~label{
+    top: -30%;
+}
+.inputbox input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    margin-left: 10px;
+}
+.ReceberMarketing input{
+    width: auto;
+}
+.ReceberMarketing {
+    margin: 20px 0 0px 10px;
+}
+.ConcordanciaTermos {
+    margin: 20px 0 10px 10px;
+}
+.ConcordanciaTermos input{
+    width: auto;
+}
+input[type="date"] {
+    appearance: none;
+    background: transparent;
+}
+input[type="date"] {
+    cursor: pointer;
+    display: inline-flex;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+    width: 170px;
+    color: #F0F1F2;
+    margin: 20px 0px 20px 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.datalabel{
+    position: absolute;
+    margin-left: 10px;
+    transform: translateY(-65%);
+    color: #fff;
+    font-size: 1em; 
+    pointer-events: none;
+    transition: .5s;
+    margin: 0;
+}
+#data{
+    display: none;
+}
+button{
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#Cadastrar{
+    background: #3a3a3a;
+}
+.CriarConta{
+    font-size: .9em;
+    color: #ffffff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.ReceberMarketing label{
+    font-family: "poppins",  ;
+    font-weight: 400;
+    color: #F0F1F2;
+    text-align: justify;
+}
+.ConcordanciaTermos label{
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 400;
+    color: #F0F1F2;
+    text-align: justify;
+}
+.ConcordanciaTermos a{
+    color: #F0F1F2;
+
+}
+.ConcordanciaTermos a:visited{
+    color: #F0F1F2;
+}
