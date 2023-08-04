@@ -7,7 +7,7 @@ section{
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .form-box i{
     margin: auto;
@@ -23,7 +23,6 @@ section{
     background-color: #3a3a3a;
 }
 .form-box{
-    box-shadow: 0px 1px 25px rgb(54, 54, 54);
     padding: 20px;
     width: 400px;
     position: relative;

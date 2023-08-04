@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 2%;
+
 }
 main{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,7 +42,6 @@ section.sobre{
     font-size: 50px;
 }
 .texto-sobre p{
-    margin: 20px 0;
     color: black;
     font-size: 14px;
     font-weight: bold;
