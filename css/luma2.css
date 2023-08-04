@@ -6,7 +6,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .form-box i{
     margin: auto;
@@ -119,11 +119,12 @@ button{
     margin: 25px 0 10px;
 }
 .container{
+    
     padding: 20px;
     width: 350px;
     height: 370px;
     margin: auto;
-    margin: 0 50px 0 50px;
+    margin: 0px 50px 0 50px;
     position: relative;
     background: #4178BF;
     border-radius: 10px;
@@ -159,7 +160,7 @@ button{
         flex-direction: column;
     }
     .container{
-        margin: 20px;
+        margin: 50px 0px 40px 0; 
         width: 400px;
     }
 }

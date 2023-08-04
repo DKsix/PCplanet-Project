@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>PC PLANET</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/luma3.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.nav-list a, .logo{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#carrinho a{
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ffffff
+}
+.nav-list #carrinho a:hover{
+    background: #ffffff;
+    color: black;
+    opacity: 1;
+}
+.nav-list a:hover{
+    opacity: 0.6;
+}
+.logo{
+    font-size: 43px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+body{
+    margin: 0;
+    background-color: #ffffff;
+}
+header{
+    width: 100%;
+}
+nav{
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #4178BF;
+    height: 12vh;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+.search-box{
+    display: flex;
+    background-color: #ffffff;
+    height: 20px;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+}
+.search-box a{
+    text-decoration: none;
+    color: #4178BF;
+    font-weight: bold;
+}
+.search-text{
+    font-size: 14px;
+    background: none;
+    border: 0;
+    outline: 0;
+}
+input {
+    width: 200px;
+}
+.navigation{
+    position: relative;
+    padding-left: 20%;
+    padding-right: 20%;
+    justify-content: space-evenly;
+    display: flex;
+    padding-bottom: 5px;
+    padding-top: 15px;
+    margin: 0 auto;
+    background-color: #F0F1F2;
+    box-shadow: 1px 0px 10px #0d0d0d7a;
+}
+.navigation a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #0D0D0D;
+    font-size: 18px;
+    font-weight: 100;
+    position: relative;
+}
+@media (min-width: 1051px){
+    #carrinho2{
+        display: none;
+    } 
+}
+@media (max-width: 1050px) {
+    .navigation{
+        display: none;
+    }
+    .search-box{
+        display: none;
+    }
+    .nav-list #carrinho{
+        display: none;
+    }
+    .nav-list{
+        font-size: 20px;
+    }
+}
+@media (max-width: 555px){
+    .logo{
+        font-size: 20px;
+    }
+    
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.navigation  span{
+    padding-bottom: 20px;
+}
+.navigation a{
+    padding-bottom: 10px;
+}
+.navigation a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    width: 0;
+    margin-top: 21px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #D95A11;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+.navigation a:hover::after{
+    width: 100%;
+}
+.menu a::after{
+    display: none;
+}
+#produtos{
+    font-weight: bold;
+}
+.dropdown-content {
+    max-height: 0;
+    display: none;
+    opacity: 1;
+    top: 37px;
+    transition: max-height 2s ease;
+    position: absolute;
+    background-color: #F0F1F2;
+    min-width: 170px;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+    margin: 0;
+    z-index: 1;
+}
+.dropdown-content ul{
+    list-style: none;
+    margin-left: 15px;
+    padding: 0;
+}
+.dropdown-content li{
+    color: #3a3a3a;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 10px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 10px;
+}
+.dropdown-content li:hover{
+    font-weight: bold;
+    list-style-type: disc;
+    transition: 2s ease-out;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: 2s ease-in;
+    max-height: 230px;
+}
+footer{
+    background-color: #3a3a3a;
+    padding: 50px;
+
+}
+.container-footer{
+    max-width: 1400px;
+    margin: auto;
+}
+.row-footer{
+    margin-left: 16%;
+    margin-right: 18%;
+    display: flex;
+    flex-wrap: wrap ;
+}
+.footer-col{
+    width: 25%;
+    padding: 0;
+}
+.footer-col h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    color: #F0F1F2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 14px;
+    color: #F0F1F2;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3 ease;
+}
+.footer-col ul a:hover{
+    color: #F0F1F2;
+    list-style: disc;
+}
+footer ul{
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.footer-col .redes-sociais{
+    margin-top: 30px;
+}
+.footer-col .redes-sociais a{
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px 10px 0;
+    border-radius: 50%;
+    color: #F0F1F2;
+    background: #918f8f;
+    transform: all 0.5s ease;
+}
+.footer-col .redes-sociais .face:hover{
+    color: #F0F1F2;
+    transition: 0.5s;
+    background-color: #1877f2;
+}
+.footer-col .redes-sociais .insta{
+    opacity: 1;
+}
+.footer-col .redes-sociais .insta:hover{
+    color: #F0F1F2;
+    transition: 0.5s;
+    opacity: 1;
+    background: linear-gradient(45deg, #ffca4f 0%,#ff6d45 25%,#e73d6a 50%,#c034ad 75%,#b32eb9 100%)
+}
+.footer-col .redes-sociais .insta{
+    background: linear-gradient(#3a3a3a );
+    transition: 0.5s ease;
+}
+
+.footer-col .redes-sociais .twitter:hover{
+    color: #F0F1F2;
+    transition: 0.5s;
+    background-color: #08aef1;
+}
+.footer-col .redes-sociais .youtube:hover{
+    color: #F0F1F2;
+    transition: 0.5s;
+    background-color: #ff0000;
+}
+.footer-col .form-sub input{
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border-radius: 10px;
+    border: 0;
+    background-color: #918f8f;
+}
+.footer-col .form-sub input::placeholder{
+    color: #F0F1F2;
+}
+.footer-col .form-sub button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #3a3a3a;
+    border-radius:  3px;
+    font-weight: bold;
+    background-color: #F0F1F2;
+}
+@media (max-width: 1024px){
+    .footer-col{
+        flex-direction: column;
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 800px){
+    .footer-col{
+        flex-direction: column;
+        width: 40%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 700px){
+    .footer-col{
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 0px){
+    .footer-col{
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+.comunicação i{
+    padding-right: 5px;
+}
+#principal{
+    text-align: center;
+    color: #3a3a3a;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hr1{
+    margin-top: 0;
+    position: relative;
+    justify-content: center;
+    bottom: 6px;
+    z-index: 1;
+    width: 120px;
+    font-size: 2px;
+    border: #66B1F2 solid 1px;
+}
+.hr2{
+    border-radius: 10px;
+    border: #e0e2e2 solid 1px;
+    position: absolute;
+    bottom: 1px;
+    position: relative;
+    bottom: 10px;
+    font-size: 4px;
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <a target="_self" href="/html/PgPrincipal.html"class='logo'>PC Planet</a>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li ><a href="#"><i class="fa-solid fa-comments"></i></a></li>
+                    <li><a href="/html/login.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-sun"></i></a></li>
+                    <li id="carrinho"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i>CARRINHO</a></li>   
+                    <li id="carrinho2"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+            </ul>
+            <div class="search-box">
+                <input type="text" class="search-text" placeholder="Digite o que você procura...">    
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            </div>
+        </nav>
+        <div class="navigation">
+            <div class="dropdown">
+                    <a href="#"><span id="produtos">Produtos</span></a>
+                <div class="dropdown-content">
+                    <ul>
+                        <div class="menu">
+                        <a target="_self" href="#"><li>Hardware</li></a>
+                        <a target="_self" href="/html/PgComputadores.html"><li>Computadores</li></a>
+                        <a target="_self" href="#"><li>Periféricos</li></a>
+                        <a target="_self" href="/html/PgMonitores.html"><li>Monitores</li></a>
+                        <a target="_self" href="#"><li>Consoles</li></a>
+                        <a target="_self" href="#"><li>Eletronicos</li></a>
+                    </div>
+                    </ul>
+                    </div>
+            </div>
+            <div class="dropdown-content">
+            <ul>
+                <a target="_self" href="#"><li>Hardware</li></a>
+                <a target="_self" href="/html/PgComputadores.html"><li>Computadores</li></a>
+                <a target="_self" href="#"><li>Periféricos</li></a>
+                <a target="_self" href="/html/PgMonitores.html"><li>Monitores</li></a>
+                <a target="_self" href="#"><li>Consoles</li></a>
+                <a target="_self" href="#"><li>Eletronicos</li></a>
+            </ul>
+            </div>
+            <a  target="_self" href="/html/PgPrincipal.html"class="menu">Home</a>
+            <a href="/html/PgComputadores.html"class="menu">Computadores</a>
+            <a href="#"class="menu">Periféricos</a>
+            <a target="_self" href="/html/PgMonitores.html"class="menu">Monitores</a>
+            <a href="#"class="menu">Contate-nos</a>
+        </div>
+        
+</header>
+<main>
+    <section class="sobre">
+        <div class="extras">
+            <img src="/arquivos/Image/foguete.png"/>
+        </div>
+        <div class="center">
+            <div class="texto-sobre">
+                <h1>Bem-vindo ao <span style="color:#66B1F2;">PC PLANET</span><br/>Sobre nós:</h1>
+                <p>Desde 2017, a PC PLANET tem sido a principal provedora de soluções em informática em Rolândia, no Paraná. Com uma equipe apaixonada por tecnologia e anos de experiência no setor, 
+                buscamos oferecer aos nossos clientes as melhores e mais inovadoras soluções para atender às suas necessidades tecnológicas.</p>
+                <button>Leia Mais</button>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>PC Planet</h4>
+                    <ul>
+                        <div class="comunicação">
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i>pcplanet.@gmail.com</a></li>
+                            <li><a href="#"><i class="fa-solid fa-phone"></i>75-99134321</a></li>
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i>Rolândia, Paraná</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Localização</a></li>
+                        <li><a href="/html/localização.html">Nossas lojas</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Entrega</a></li>
+                        <li><a href="#">Garantia</a></li>
+                        <li><a href="#">Como comprar</a></li>
+                        <li><a href="#">Formas de pagamento</a></li>
+                        <li><a href="#">Termos e condições</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Loja Online</h4>
+                    <ul>
+                        <li><a href="/html/descricao.html">Quem somos</a></li>
+                        <li><a href="#">Nossos serviços</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Programa de afiliados</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <div class="form-sub">
+                        <input type="email" placeholder="Digite o seu e-mail" required>
+                        <div class="redes-sociais">
+                            <h4>Redes sociais</h4>
+                            <ul>
+                                <a href="#" class="face"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

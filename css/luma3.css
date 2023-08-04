@@ -1,0 +1,143 @@
+.center{
+    justify-content: center;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+main{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+section.sobre{
+    height: calc(100% - 200px);
+    position: relative;
+}
+.extras{
+    position: absolute;
+    right: -350px;
+    bottom: -400px;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background-color: #66B1F2;
+    transition: 0.5s;
+    z-index: -1;
+}
+.extras img{
+    transition: 0.5s;
+    width: 600px;
+    position: absolute;
+    transform: rotate(20deg);
+}
+.texto-sobre{
+    transition: 0.5s;
+    margin-top: 50px;
+}
+.texto-sobre h1{
+    font-size: 50px;
+}
+.texto-sobre p{
+    margin: 20px 0;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 800px;
+}
+.texto-sobre button{
+    border: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #66B1F2;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+}
+@media (max-width: 1200px) {
+    .extras{
+        transition: 0.5s;
+        width: 700px;
+        height: 800px;
+    }
+    .extras img{
+        transition: 0.5s;
+        width: 400px;
+    }
+    .texto-sobre{
+        transition: 0.5s;
+        margin: 5% 20%;
+    }
+}
+@media (max-width: 1024px) {
+    .extras{
+        transition: 0.5s;
+        width: 700px;
+        height: 800px;
+    }
+    .extras img{
+        transition: 0.5s;
+        width: 400px;
+    }
+    .texto-sobre{
+        transition: 0.5s;
+        margin: 5% 19%;
+    }
+}
+@media (max-width: 800px) {
+    .extras{
+        transition: 0.5s;
+        width: 700px;
+        height: 700px;
+    }
+    .extras img{
+        transition: 0.5s;
+        width: 350px;
+    }
+    .texto-sobre{
+        transition: 0.5s;
+        margin: 10% 20%;
+    }
+}
+@media (max-width: 650px) {
+    .extras{
+        transition: 0.5s;
+        width: 600px;
+        height: 700px;
+    }
+    .extras img{
+        transition: 0.5s;
+        width: 300px;
+    }
+    .texto-sobre{
+        transition: 0.5s;
+        margin: 10% 20%;
+    }
+}
+@media (max-width: 500px) {
+    html{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .extras{
+        transition: 0.5s;
+        width: 600px;
+        height: 700px;
+    }
+    .extras img{
+        transition: 0.5s;
+        width: 300px;
+    }
+    .texto-sobre{
+        width: 300px;
+        height: 100px;
+        transition: 0.5s;
+        margin: 0;
+    }
+}
