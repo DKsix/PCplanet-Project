@@ -47,9 +47,7 @@ header{
     height: 12vh;
     width: 100%;
 }
-nav{
 
-}
 .nav-list {
     list-style: none;
     display: flex;
@@ -132,8 +130,10 @@ input {
     }
     
 }
-@media (max-width: 375px){
-    
+@media (max-width: 800px){
+    main{
+        margin: 0% 20%;
+    }
 }
 @media (max-width: 555px){
     main{

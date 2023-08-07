@@ -46,9 +46,6 @@ header{
     height: 12vh;
     width: 100%;
 }
-nav{
-
-}
 .nav-list {
     list-style: none;
     display: flex;

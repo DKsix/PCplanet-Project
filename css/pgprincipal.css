@@ -6,9 +6,6 @@
     flex-wrap: nowrap;
     margin: 20px 0;
 }
-.container div{
-    display: flex;
-}
 img{
     width: 100%;
 }
@@ -84,7 +81,6 @@ label {
     margin-bottom: 5px;
 }
 .container2{
-    
     margin: 0;
     display: flex;
     justify-content: center;
@@ -151,88 +147,291 @@ label {
     background-color: #3a99ec;
     transition: 0.5s ease-in-out;
 }
+.carrossel {
+    display: row;
+    position: relative;
+    width: 100%; /* Defina o tamanho do carrossel conforme desejado */
+    overflow: hidden;
+}
+
+.cards-container {
+    padding: 30px;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+
+.arrows {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    color: #0D0D0D;
+    transform: translateX(-50%);
+}
+
+.arrow {
+    border-radius: 5px;
+    justify-content: center;
+    background-color: #66B1F2;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.fa-chevron-left {
+    margin-left: 10px;
+    top: 50%;
+    position: absolute;
+}
+
+.fa-chevron-right  {
+    margin-right: 10px;
+    right: 0;
+    position: absolute;
+    top: 50%;
+}
+.card2{
+    padding-top: 5px;
+    box-shadow: 1px 1px 10px rgba(100, 100, 100, 0.384);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: white;
+    width: 210px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: all 0.7s ease;
+}
+.card2-image{
+    background: transparent;
+    height: 250px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.card2 h2{
+    margin-left: 10px;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 0px;
+}
+.card2 p{
+    margin-left: 10px;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 9px;
+    width: 190px;
+    height: 40px;
+    margin-right: 10px;
+    padding: 0px;
+    margin-bottom: 0;
+}
+.card2 a{
+    display: inline;
+    margin: 20px 10px 10px 10px;
+    align-items: center;
+    padding: 10px 60px 10px 60px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    display: block;
+    border-radius: 10px;
+    text-align: center; 
+    text-decoration: none;
+}
+.card2:hover{
+    box-shadow: 0px 0px 13px 0px #9797979d;
+    cursor: pointer;
+    margin-top:  -15px;
+    transition: all 0.7s ease;
+}
+#principal{
+    text-align: center;
+    color: #3a3a3a;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.preços{
+    display: block;
+    padding-top: 10px;
+    margin:  0px 0px 0px 10px;
+}
+.preços span{
+    font-size: 16px;
+    color: #66B1F2;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.preço-alto{
+    padding-top: 10px;
+    margin: 0;
+    margin:  0px;
+    margin: 0;
+}
+.preço-alto span{
+    font-size: 15px;
+    color: #66B1F2;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.desconto{
+    padding: 5px;
+    height: 20px;
+    width: 60px;
+    border-radius: 10px 0px 10px 0px;
+    background-color: #3a99ec;
+    position: relative;
+}
+.img--1{
+    background-image: url(/arquivos/Image/computadores/imagem1.jpg);
+    width: 210px;
+    height: 210px;
+}
+.img--2{
+    background-image: url(/arquivos/Image/computadores/imagem2.jpg);
+    width: 210px;
+    height: 210px;
+}
+.img--3{
+    background-image: url(/arquivos/Image/monitor/img01.jpg);
+    width: 210px;
+    height: 210px;
+}
+.img--4{
+    background-image: url(/arquivos/Image/monitor/img05.jpg);
+    width: 210px;
+    height: 210px;
+
+}
+.img--5{
+    background-image: url(/arquivos/Image/computadores/imagem5.jpg);
+    width: 210px;
+    height: 210px;
+}
+.img--6{
+    background-image: url(/arquivos/Image/monitor/img03.jpg);
+    width: 210px;
+    height: 210px;
+}
+.img--7{
+    background-image: url(/arquivos/Image/monitor/img06.png);
+    width: 210px;
+    height: 210px;
+    position: relative;
+    right: 15px;
+}
+.img--8{
+    background-image: url(/arquivos/Image/monitor/img07.jpg);
+    width: 210px;
+    height: 210px;
+}
+.img--9{
+    background-image: url(/arquivos/Image/monitor/img08.jpg);
+    width: 210px;
+    height: 210px;
+}
 @media (max-width: 1920px) {
     .containerpai{
+        transition: 0.5s;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
     .slider{
+        transition: 0.5s;
         height: 300px;
         width: 600px;
     }
     .slide img{
+        transition: 0.5s;
         height: 300px;
         width: 600px;
     }
     .manual-navigation{
         width: 600px;
+        transition: 0.5s;
         }
 }
 @media (max-width: 1300px) {
     .slider{
+        transition: 0.5s;
         height: 300px;
         width: 400px;
     }
     .slide img{
+        transition: 0.5s;
         height: 300px;
         width: 400px;
     }
     .manual-navigation{
+        transition: 0.5s;
         width: 400px;
     }
 }
 @media (max-width: 1024px) {
-
     .slider{
+        transition: 0.5s;
         height: 300px;
-        width: 400px;
+        width: 450px;
     }
     .slide img{
+        transition: 0.5s;
         height: 300px;
-        width: 400px;
+        width: 450px;
     }
     .manual-navigation{
-        width: 400px;
+        transition: 0.5s;
+        width: 450px;
     }
     .container2{
+        transition: 0.5s;
         display: none;
     }
 }
 @media (max-width: 800px){  
     .slider{
-        margin: auto;
+        transition: 0.5s;
         height: 250px;
-        width: 350px;
+        width: 400px;
     }
     .slide img{
+        transition: 0.5s;
         height: 250px;
-        width: 350px;
+        width: 400px;
     }
     .manual-navigation{
-        width: 350px;
+        transition: 0.5s;
+        margin-top: -65px;
+        width: 400px;
     }
 }
 @media (max-width: 600px){
     .container{
+        transition: 0.5s;
         height: 200px;
     }
     .slides{
+        transition: 0.5s;
         height: fit-content;
     }
     .slider{
+        transition: 0.5s;
         margin: auto;
         height: 200px;
-        width: 300px;
+        width: 350px;
     }
     .slide img{
+        transition: 0.5s;
         height: 200px;
-        width: 300px;
+        width: 350px;
     }
     .manual-navigation{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        transition: 0.5s;
+        width: 350px;
+        margin-top: -25px;
+    }
+    .carrossel {
+        width: 400px; /* Defina o tamanho do carrossel conforme desejado */
     }
 }
