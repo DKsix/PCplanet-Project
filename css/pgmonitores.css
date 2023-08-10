@@ -117,3 +117,36 @@
     font-weight: 400;
     text-decoration: line-through;
 }
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+#principal{
+    margin-top: 25px;
+}
+.title p{
+    margin: 30px 0px 0px 0px;
+}
+.row2{
+    margin-right: 25%;
+    right: 0;
+    position: absolute;
+    height: 0px;
+    
+}
+#order{
+    border: 0;
+    outline: 0;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.select{
+    height: 20px;
+    margin: 0;
+    border-bottom: 1px solid black;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+    outline: 0;
+}
