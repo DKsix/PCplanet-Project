@@ -3,3 +3,10 @@
     outline: 0;
     border: 0;
 }
+.resumo-table{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    outline: 1px solid black;
+}
