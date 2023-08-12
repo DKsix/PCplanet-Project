@@ -187,5 +187,52 @@ option{
     outline: 0;
     padding: 20px;
 }
+.container-page{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.list-page{
+    padding: 0;
+}
+.page-numbers ul{
+    margin-bottom: 40px;
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+}
+.page-numbers ul li{
+    
+    transition: 0.3s ease-in-out;
+    background-color: transparent;
+    margin: 0 0 0 10px;
+    padding: 6px 6px;
+    border-radius: 15px;
+}
+.list-page button{
+    font-family: "roboto" sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #3a3a3a;
+    cursor: pointer;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+}
+.page-numbers ul li:hover{
+    transition: 0.3s ease-in-out;
+    background-color: #66B1F2;
+}
+#escolhida{
+    background-color: #66B1F2;
+}
+#escolhida2{
+    opacity: 0.5;
+    background-color: transparent;
+}
 
 
