@@ -1,12 +1,431 @@
-#qttd{
-    width: 30px;
-    outline: 0;
-    border: 0;
+.cart-container{
+    width: 100%;
+    margin: 10px;
+    font-family: "Roboto";
+}
+.table-aside{
+    overflow-x: auto;
+    width: 100%;
+    border-radius: 5px;
 }
 .resumo-table{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    outline: 1px solid black;
+}
+thead tr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #4178BF;
+    border-bottom: 2px solid rgba(75, 137, 219, 0.959);
+}
+.colum-head p{
+    color: white;
+    font-weight: 400;
+    font-size: 21px;
+    margin: 10px;
+}
+thead p{
+    font-weight: 100;
+}
+.tbody1 tr{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+tbody tr{
+    display: flex;
+    width: 100%;
+    color: white;
+    background-color: #4178BF;
+}
+.vista{
+    margin-top: 20px;
+    text-align: center;
+}
+.vista p{
+    font-size: 11px;
+    margin: 0;
+}
+.parcelado{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.parcelado p{
+    font-size: 11px;
+    height: 100%;
+    margin: 0;
+}
+hr{
+    width: 40px;
+}
+.preço1{
+    font-size: 21px;
+    
+    font-weight: 500;
+    color: #66B1F2;
+}
+.preço2{
+    font-size: 21px;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: #D95A11; 
+}
+.total{
+    background-color: rgba(63, 130, 219, 0.966);
+}
+.total p{
+    font-size: 20px;
+}
+.subtotal p{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "poppins" sans-serif;
+}
+.comprar{
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+}
+.comprar button{
+    width: 100%;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    background-color: #66B1F2;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+}
+.comprar i{
+    margin-right: 10px;
+}
+.table-section{
+    overflow-x: auto;
+    width: 100%;
+    border-radius: 5px;
+}
+.produto-table{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.row1{
+    width: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.img-produto{
+    width: fit-content;
+    display: flex ;
+    justify-content: flex-start;
+    align-items: flex-s;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+.button{
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row; 
+}
+.button2{
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row; 
+}
+.button, .delete, .menos, .mais{
+    background-color: transparent;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    color: white;
+
+}
+.button2 .delete, .menos, .mais{
+    background-color: transparent;
+    appearance: none;
+    outline: 0;
+    border: 0;
+}
+.img-produto p{
+    display: inline;
+}
+.img-produto img{
+    width: 80px;
+    height: 80px;
+}
+.produto{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.th1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.produto th{
+    margin-left: 20px;
+}
+.produtos-row{
+    display: flex;
+    flex-direction: row;
+}
+.pc2{
+    padding: 15px 0;
+}
+.descricao p{
+    margin: 0 0 20px 0;
+}
+.pc{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.descricao h5{
+    margin: 0 auto;
+}
+.table-section{
+    margin-bottom: 15px;
+}
+.titulo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+.titulo i{
+    margin-right: 10px;
+    font-size: 14px;
+    color: white;
+    background-color: #4178BF;
+    padding: 10px;
+    border-radius: 10px;
+}
+.titulo h1{
+    color: #0D0D0D;
+    font-weight: 300;
+    font-family: "Roboto", Verdana;
+}
+@media (min-width: 1200px){
+    .button{
+        display: none;
+    }
+    .pc2{
+        display: none;
+    }
+    .card-container{
+        display: flex;
+        flex: wrap;
+        flex-direction: column;
+    }
+    
+}
+@media (max-width: 40000px){
+    main{
+        margin: 0 20%;
+    }
+}
+@media (max-width: 1200px) {
+    .pc{
+        display: none;
+    }
+    aside{
+        width: 100%;
+    }
+    main{
+        margin: 0 10%;
+    }
+    .descricao{
+        width: 400px;
+    }
+    .card-container{
+        display: flex;
+        flex: wrap;
+        flex-direction: column;
+    }
+}
+
+.descricao{
+    flex-direction: column;
+    display: flex;
+    width: 200px;
+    margin-right: 20px;
+}
+.th2 th{
+    margin-right: 10px;
+}
+#thead2 th{
+    padding: 15px;
+    width: fit-content;
+    display: table-column;
+    color: white;
+    background-color: #4178BF;
+}
+.produto{
+    width: 100%;
+}
+.tbody2 tr{    
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.th2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+td{
+    display: table-cell;
+}
+.th1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+}
+.cart-container{
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+section{
+    width: 70%;
+    margin-right: 10px;
+}
+aside{
+    width: 25%;
+}
+.desconto-container{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4178BF;
+}
+.desconto-container h4{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.desconto-container input{
+    width: 200px;
+    appearance: none;
+    outline: 0;
+    columns: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px 0;
+    background-color: transparent;
+    margin: 10px 5px 0px 0px
+}
+.desconto-container input::placeholder{
+    color: white;
+    font-weight: 500;
+    padding: 5px;
+    margin-right: 10px;
+}
+.desconto-container .row1{
+    display: flex;
+    flex-direction: row;
+}
+.desconto-container button{
+    cursor: pointer;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    color: #0D0D0D;
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.desconto-container i{
+    margin-right: 5px;
+    color: #0D0D0D;
+}
+
+.aplicar{
+    background-color: #66B1F2;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
+article{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    margin: 10px 0px 0px 0px;
+}
+.frete-container{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4178BF;
+}
+.frete-container h4{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.frete-container input{
+    width: 200px;
+    appearance: none;
+    outline: 0;
+    columns: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px 0;
+    background-color: transparent;
+    margin: 10px 5px 0px 0px
+}
+.frete-container input::placeholder{
+    color: white;
+    font-weight: 500;
+    padding: 5px;
+    margin-right: 10px;
+}
+.frete-container .row1{
+    display: flex;
+    flex-direction: row;
+}
+.frete-container button{
+    cursor: pointer;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.frete-container i{
+    margin-right: 5px;
+    color: #0D0D0D;
+}
+.calcular{
+    background-color: #66B1F2;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
 }

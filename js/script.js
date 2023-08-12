@@ -1,4 +1,4 @@
-const carousel = document.querySelector('.carousel');
+const carousel = document.querySelector('.carrossel');
 const cardsContainer = document.querySelector('.cards-container');
 const cards = document.querySelectorAll('.card2');
 const arrowLeft = document.querySelector('.arrow.left');

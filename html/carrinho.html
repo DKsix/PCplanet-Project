@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="/css/carrinho.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -62,49 +62,161 @@
         </nav>
     </header>
     <main>
-        <section>
-            <div class="tabele-carrinho">
-                <table>
-                    <div class="nav-table">
-                        <th>Produto</th>
-                        <th>Qtdd</th>
-                        <th>Preço</th>
+        <div class="titulo">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h1>Meu Carrinho</h1>
+        </div>
+        <div class="cart-container">
+            <section>
+                <div class="table-section">
+                    <table class="produto-table">
+                        <thead id="thead2">
+                            <tr class="produto">
+                                <th class="th1">Produto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="pc2">
+                                <th>
+                                    <div class="produtos-row">
+                                        <div class="row1">
+                                            <div class="img-produto">
+                                                <img src="/arquivos/Image/computadores/imagem9-removebg-preview.png" alt="produto">
+                                                <div class="button">
+                                                    <button class="menos"><i class="fa-solid fa-minus"></i></button>
+                                                    <span>1</span>
+                                                    <button class="mais"><i class="fa-solid fa-plus"></i></button>
+                                                    <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <div class="descricao">
+                                                <h5>Cabo Extensor Premium 24P Pichau PS100, RGB, 240mm, Branco, PCH-PS100-24PRGBWHT</h5>
+                                                <br>
+                                                <p>1xR$176,35</p>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </tbody>
+                            <tbody class="tbody2">
+                                <tr class="pc">
+                                    <th>
+                                        <div class="produtos-row">
+                                            <div class="row1">
+                                                <div class="img-produto">
+                                                    <img src="/arquivos/Image/computadores/imagem9-removebg-preview.png" alt="produto">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="descricao">
+                                            <h5>Cabo Extensor Premium 24P Pichau PS100, RGB, 240mm, Branco, PCH-PS100-24PRGBWHT</h5>
+                                            <br>
+                                            
+                                    </td>
+                                    <td>
+                                        <div class="button2">
+                                            <button class="menos"><i class="fa-solid fa-minus"></i></button>
+                                            <span>1</span>
+                                            <button class="mais"><i class="fa-solid fa-plus"></i></button>
+                                            
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>1xR$176,35</p>
+                                    </td>
+                                    <td>
+                                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            
+                        
+                    </table>
+                </div>
+                    <article>
+                        <div class="desconto-container">
+                            <h4>Cupom de desconto:</h4>
+                            <div class="row1">
+                                <input type="text" placeholder="Cupom">
+                            <div class="aplicar">
+                                <button><i class="fa-solid fa-tag"></i>APLICAR</button>
+                            </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="frete-container">
+                            <h4>Cupom e Prazos:</h4>
+                            <div class="row1">
+                            <input type="text" placeholder="CEP*">
+                            <div class="calcular">
+                                <button><i class="fa-solid fa-truck"></i>CALCULAR</button>
+                            </div>
+                            </div>
+                        </div>
+                    </article>
+            </section>
+            <aside>
+                <div class="table-aside">
+                    <table class="resumo-table">
+                        <thead>
+                            <tr class="colum-head">
+                                <th>
+                                    <p>Resumo</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody1">
+                            <div class="subtotal">
+                                <tr class="subtotal">
+                                    <th>
+                                        <p>Subtotal</p>
+                                    </th>
+                                    <td>
+                                        <p>R$ 176,35</p>
+                                    </td>
+                                </tr>
+                            </div>
+                            <div class="total">
+                                <tr class="total">
+                                    <th >
+                                        <p>Total</p>
+                                    </th>
+                                    <td>
+                                        <p>176,35</p>
+                                    </td>
+                                </tr>
+                            </div>
+                            <tr>
+                                <td>
+                                    <div class="vista">
+                                        <p style="color: #66B1F2;">à vista</p>
+                                        <span class="preço1">R$ 149,90</span>
+                                        <p>no PIX com 15% de desconto</p>
+                                    </div>
+                                    <div class="hr">
+                                        <hr>
+                                    </div>
+                                    <div class="parcelado">
+                                        <span class="preço2">R$ 176,35</span>
+                                        <p>em até 12x de <span style=" font-weight: 700; color: #D95A11;">14,90</span></p>
+                                        <p>sem juros no cartão</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
                     </div>
-                    <td><img src="" alt="Prdouto"></td>
-                    <td><p>Informações do produto</p></td>
-                    <td><input type="number" name="Quantidade" id="qttd"></td>
-                    <td><p></p></td>
-                </table>
-            </div>
-        </section>
-        <aside>
-            <table class="resumo-table">
-                <thead>
-                    <tr class="colum-head"></tr>
-                    <th>
-                        <p>Resumo</p>
-                    </th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>
-                            <p>Subtotal</p>
-                        </th>
-                        <td>
-                            <p>R$ 176,35</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <p>Total</p>
-                        </th>
-                        <td>
-                            <p>176,35</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </aside>
+                    <div class="comprar">
+                        <button><i class="fa-solid fa-cart-shopping"></i>Finalizar pedido</button>
+            </aside>
+        </div>
+
+        </div>
     </main>
     <footer>
         <div class="container-footer">

@@ -65,7 +65,31 @@
         </nav>
     </header>
         <main>
-            <h2 id="principal">Computadores</h2>
+            <div class="title">
+                <div class="row1">
+                    <h2 id="principal">Computadores</h2>
+                </div>
+                <div class="row2">
+                    <p>Ordernar por:</p>
+                    <div class="select-container">
+                        <select name="order" id="order">
+                            <div class="options">
+                                <option hidden  value="Relevância">Relevância</option>
+                                <!-----
+                                <option value="Titulo A-Z">Titulo A-Z"</option>
+                                <option value="Titulo Z-A">Titulo Z-A"</option>
+                                <option value="Menor valor">Menor valor</option>
+                                <option value="Maior valor">Maior valor</option>
+                                ---->
+                            </div>
+                        </select>
+                        <div class="icon-container">
+                            <i class="fa-solid fa-caret-up" id="cima"></i>
+                            <i class="fa-solid fa-caret-down" id="baixo"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <hr class="hr1">
             <hr class="hr2">
             <section class="container">
