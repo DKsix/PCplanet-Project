@@ -171,3 +171,6 @@ button{
 .ConcordanciaTermos a:visited{
     color: #F0F1F2;
 }
+input:focus~label, input:valid~label{
+    top: -30%;
+}

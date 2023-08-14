@@ -37,6 +37,9 @@ body{
 header{
     width: 100%;
 }
+.logo img{
+    width: 250px;
+}
 .container-header{
     margin: auto;
     display: flex;
@@ -49,6 +52,7 @@ header{
 }
 
 .nav-list {
+    justify-content: flex-end;
     list-style: none;
     display: flex;
 }
@@ -72,13 +76,14 @@ header{
     font-weight: bold;
 }
 .search-text{
+    width: 100%;
     font-size: 14px;
     background: none;
     border: 0;
     outline: 0;
 }
-input {
-    width: 200px;
+.search-text input {
+    width: 400px;
 }
 .navigation{
     position: relative;
@@ -144,6 +149,9 @@ input {
     .row2{
         display: none;
     }
+    .logo img{
+        width: 200px;
+    }
 }
 @media (max-width: 555px){
     main{
@@ -152,8 +160,46 @@ input {
     .row2{
         display: none;
     }
+    .logo{
+        margin-left: 0 !important;
+    }
+    .logo img{
+        width: 190px;
+    }
 }
-
+@media (max-width: 450px){
+    .logo img{
+        width: 150px;
+    }
+}
+@media (max-width: 400px){
+    .logo img{
+        width: 100px;
+    }
+}
+@media (max-height: 800px){
+    .search-box{
+        padding: 3px !important;
+        height: 20px !important;
+    }
+    .search-text{
+        margin-left: 10px;
+        height: fit-content;
+    }
+    .search-box a{
+        height: 0;
+    }
+    .search-box i{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .search-text input{
+        font-size: 6px !important;
+    }
+    .nav{
+        height: 90px !important;
+    }
+}
 .dropdown {
     position: relative;
     display: inline-block;
@@ -302,24 +348,32 @@ footer ul{
     transition: 0.5s;
     background-color: #1877f2;
 }
+.footer-col .redes-sociais .face{
+    transition: 0.5s;
+}
 .footer-col .redes-sociais .insta{
     opacity: 1;
 }
 .footer-col .redes-sociais .insta:hover{
     color: #F0F1F2;
-    transition: 0.5s;
-    opacity: 1;
+    transition: 0.5s !important;
     background: linear-gradient(45deg, #ffca4f 0%,#ff6d45 25%,#e73d6a 50%,#c034ad 75%,#b32eb9 100%)
 }
 .footer-col .redes-sociais .insta{
     background: linear-gradient(#3a3a3a );
-    transition: 0.5s ease;
+    transition: 0.5s ease !important;
 }
 
 .footer-col .redes-sociais .twitter:hover{
     color: #F0F1F2;
     transition: 0.5s;
     background-color: #08aef1;
+}
+.footer-col .redes-sociais .twitter{
+    transition: 0.5s;
+}
+.footer-col .redes-sociais .youtube{
+    transition: 0.5s;
 }
 .footer-col .redes-sociais .youtube:hover{
     color: #F0F1F2;

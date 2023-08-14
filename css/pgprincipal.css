@@ -374,11 +374,9 @@ label {
     height: 210px;
 }
 .img--7{
-    background-image: url(/arquivos/Image/monitor/img06.png);
+    background-image: url(/arquivos/Image/monitor/img21.jpg);
     width: 210px;
     height: 210px;
-    position: relative;
-    right: 15px;
 }
 .img--8{
     background-image: url(/arquivos/Image/monitor/img07.jpg);
@@ -386,7 +384,12 @@ label {
     height: 210px;
 }
 .img--9{
-    background-image: url(/arquivos/Image/computadores/imagem9.jpg);
+    background-image: url(/arquivos/Image/monitor/img09.jpg);
+    width: 210px;
+    height: 210px;
+}
+.img---9{
+    background-image: url(/arquivos/Image/computadores/imagem18.jpg);
     width: 210px;
     height: 210px;
 }
@@ -631,6 +634,7 @@ label {
         width: 400px;
     }
 }
+
 .card3{
     padding-top: 5px;
     box-shadow: 1px 1px 10px rgba(100, 100, 100, 0.384);

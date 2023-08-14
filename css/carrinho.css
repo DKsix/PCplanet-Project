@@ -93,6 +93,7 @@ hr{
     display: flex;
 }
 .comprar button{
+    transition: 0.5s;
     width: 100%;
     appearance: none;
     outline: 0;
@@ -162,6 +163,7 @@ hr{
 }
 
 .img-produto img{
+    cursor: pointer;
     width: 100px;
     height: 100px;
 }
@@ -186,6 +188,7 @@ hr{
     padding: 15px 0;
 }
 .descricao p{
+    cursor: pointer;
     margin: 0 0 20px 0;
 }
 .pc{
@@ -196,6 +199,7 @@ hr{
     align-items: center;
 }
 .descricao h5{
+    cursor: pointer;
     margin: 0 auto;
 }
 .table-section{
@@ -221,7 +225,7 @@ hr{
     font-weight: 300;
     font-family: "Roboto", Verdana;
 }
-@media (min-width: 1201px){
+@media (min-width: 1337px){
     .button{
         display: none;
     }
@@ -234,7 +238,7 @@ hr{
         margin: 0 20%;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1337px) {
     .pc{
         display: none;
     }
@@ -264,6 +268,16 @@ hr{
     .cart-container{
         display: flex;
         flex-direction: column;
+    }
+}
+@media (max-width: 1000px) {
+    .descricao h5{
+        width: 50% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .descricao p{
+        margin-left: 20px;
     }
 }
 @media (max-width: 880px) {
@@ -343,6 +357,11 @@ hr{
         width: 100% !important;
         flex-direction: column !important;
     }
+    .descricao h5{
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+    }
+    
 }
 .img-produto{
     margin-left: 10px;
@@ -526,10 +545,24 @@ article{
     margin-top: 10px;
 }
 .descricao2{
+    cursor: pointer;
     flex-direction: column;
     display: flex;
     width: 200px;
     margin-right: 20px;
+}
+.calcular button span{
+    font-weight: 500;
+    color: white;
+}
+.calcular i{
+    color: white;
+}
+.aplicar i{
+    color: white;
+}
+.aplicar button span{
+    color: white;
 }
 .row1 input::placeholder{
     color: white;
@@ -543,4 +576,48 @@ article{
 }
 #cupom{
     margin-right: 20px;
+}
+
+.button button{
+    margin: 0 3px;
+    border-radius: 50px;
+    transition: 0.5s;
+    padding: 10px 12px;
+}
+.button button:hover{
+    transition: 0.5s;
+    background-color: #66B1F2;
+}
+.button2 button{
+    border-radius: 50px;
+    transition: 0.5s;
+    padding: 10px 12px;
+}
+.button2 button:hover{
+    transition: 0.5s;
+    background-color: #66B1F2;
+}
+.delete{
+    border-radius: 50px;
+    transition: 0.5s;
+    padding: 10px 12px;
+}
+.delete button:hover{
+    transition: 0.5s;
+    background-color: #66B1F2;
+}
+.button span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button2 span{
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.comprar button:hover{
+    transition: 0.5s;
+    color: rgba(228, 227, 227, 0.89);
 }

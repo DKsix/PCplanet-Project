@@ -327,6 +327,9 @@ footer ul{
         width: 40%;
         margin-bottom: 30px;
     }
+    .logo img{
+        width: 200px !important;
+    }
 }
 @media (max-width: 700px){
     .footer-col{
@@ -340,6 +343,24 @@ footer ul{
         flex-direction: column;
         width: 100%;
         margin-bottom: 30px;
+    }
+}
+@media (max-width: 555px){
+    .logo{
+        margin-left: 0 !important;
+    }
+    .logo img{
+        width: 190px !important;
+    }
+}
+@media (max-width: 450px){
+    .logo img{
+        width: 150px !important;
+    }
+}
+@media (max-width: 400px){
+    .logo img{
+        width: 100px !important;
     }
 }
 .comunicação i{
@@ -369,4 +390,7 @@ footer ul{
     position: relative;
     bottom: 10px;
     font-size: 4px;
+}
+.logo img{
+    width: 250px;
 }

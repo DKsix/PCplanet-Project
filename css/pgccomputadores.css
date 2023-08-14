@@ -132,13 +132,19 @@
     font-weight: 400;
     text-decoration: line-through;
 }
+.title{
+    display: flex;
+    justify-content: center;
+}
+#principal{
+    margin-top: 25px;
+}
 .title p{
     font-size: 10px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 30px 0px 0px 20px;
 }
 .row2{
-    top: 160px;
     margin-right: 25%;
     right: 0;
     position: absolute;
