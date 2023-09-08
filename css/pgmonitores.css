@@ -21,42 +21,42 @@
     border-radius: 15px 15px 0 0;
 }
 .img-1{
-    background-image: url(/arquivos/Image//monitor/img03.jpg);
+    background-image: url(../arquivos/Image//monitor/img03.jpg);
     width: 210px;
     height: 200px;
 }
 .img-2{
-    background-image: url(/arquivos/Image//monitor/img05.jpg);
+    background-image: url(../arquivos/Image//monitor/img05.jpg);
     width: 210px;
     height: 200px;
 }
 .img-3{
-    background-image: url(/arquivos/Image//monitor/img09.jpg);
+    background-image: url(../arquivos/Image//monitor/img09.jpg);
     width: 210px;
     height: 210px;
 }
 .img-4{
-    background-image: url(/arquivos/Image//monitor/img19.jpg);
+    background-image: url(../arquivos/Image//monitor/img19.jpg);
     width: 210px;
     height: 200px;
 }
 .img-5{
-    background-image: url(/arquivos/Image//monitor/img18.jpg);
+    background-image: url(../arquivos/Image//monitor/img18.jpg);
     width: 210px;
     height: 200px;
 }
 .img-6{
-    background-image: url(/arquivos/Image//monitor/img21.jpg);
+    background-image: url(../arquivos/Image//monitor/img21.jpg);
     width: 210px;
     height: 200px;
 }
 .img-7{
-    background-image: url(/arquivos/Image//monitor/img07.jpg);
+    background-image: url(../arquivos/Image//monitor/img07.jpg);
     width: 210px;
     height: 200px;
 }
 .img-8{
-    background-image: url(/arquivos/Image//monitor/img09.jpg);
+    background-image: url(../arquivos/Image//monitor/img09.jpg);
     width: 210px;
     height: 200px;
 }

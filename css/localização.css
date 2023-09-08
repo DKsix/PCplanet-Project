@@ -20,7 +20,7 @@
     border-radius: 15px
 }
 .img-1{
-    background-image: url(/arquivos/Image/Loja/Loja.jpg);
+    background-image: url(../arquivos/Image/Loja/Loja.jpg);
     width:  840px;
     height: 840px;
 }
