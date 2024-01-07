@@ -21,32 +21,32 @@
     border-radius: 15px 15px 0 0;
 }
 .img-1{
-    background-image: url(../arquivos/Image//monitor/img03.jpg);
+    background-image: url(../arquivos/Image//monitor/img01.jpg);
     width: 210px;
     height: 200px;
 }
 .img-2{
-    background-image: url(../arquivos/Image//monitor/img05.jpg);
+    background-image: url(../arquivos/Image//monitor/img02.jpg);
     width: 210px;
     height: 200px;
 }
 .img-3{
-    background-image: url(../arquivos/Image//monitor/img09.jpg);
+    background-image: url(../arquivos/Image//monitor/img03.jpg);
     width: 210px;
     height: 210px;
 }
 .img-4{
-    background-image: url(../arquivos/Image//monitor/img19.jpg);
+    background-image: url(../arquivos/Image//monitor/img04.jpg);
     width: 210px;
     height: 200px;
 }
 .img-5{
-    background-image: url(../arquivos/Image//monitor/img18.jpg);
+    background-image: url(../arquivos/Image//monitor/img05.jpg);
     width: 210px;
     height: 200px;
 }
 .img-6{
-    background-image: url(../arquivos/Image//monitor/img21.jpg);
+    background-image: url(../arquivos/Image//monitor/img06.jpg);
     width: 210px;
     height: 200px;
 }
@@ -56,7 +56,7 @@
     height: 200px;
 }
 .img-8{
-    background-image: url(../arquivos/Image//monitor/img09.jpg);
+    background-image: url(../arquivos/Image//monitor/img08.jpg);
     width: 210px;
     height: 200px;
 }
@@ -68,6 +68,7 @@
     padding: 0px;
 }
 .card p{
+    font-weight: 0;
     text-overflow: ellipsis;
     overflow: hidden;
     margin-top: 0;
