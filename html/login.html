@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <link rel="stylesheet" href="../css/login.css">
     <link rel="shortcut icon" href="../arquivos/favicon/favicon.ico" type="image/x-icon">
@@ -8,20 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Login/Cadastro</title>
 </head>
+
 <body>
     <header>
         <div class="container-header">
-            <a target="_self" href="../html/PgPrincipal.html"class='logo'><img src="../arquivos/Image/logo2.png" alt="logo"></a>
+            <a target="_self" href="../html/PgPrincipal.html" class='logo'><img src="../arquivos/Image/logo2.png"
+                    alt="logo"></a>
             <div class="nav">
                 <ul class="nav-list">
-                    <li ><a href="#"><i class="fa-solid fa-comments"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-comments"></i></a></li>
                     <li><a href="../html/login.html"><i class="fa-solid fa-user"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-sun"></i></a></li>
-                    <li id="carrinho"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i>CARRINHO</a></li>   
-                    <li id="carrinho2"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>   
+                    <li id="carrinho"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i>CARRINHO</a></li>
+                    <li id="carrinho2"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
                 <div class="search-box">
-                    <input type="text" class="search-text" placeholder="Digite o que você procura...">    
+                    <input type="text" class="search-text" placeholder="Digite o que você procura...">
                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
             </div>
@@ -29,35 +32,59 @@
         <nav>
             <div class="navigation">
                 <div class="dropdown">
-                        <a href="#"><span id="produtos">Produtos</span></a>
+                    <a href="#"><span id="produtos">Produtos</span></a>
                     <div class="dropdown-content">
                         <ul>
                             <div class="menu">
-                            <a target="_self" href="#"><li>Hardware</li></a>
-                            <a target="_self" href="../html/PgComputadores.html"><li>Computadores</li></a>
-                            <a target="_self" href="#"><li>Periféricos</li></a>
-                            <a target="_self" href="../html/PgMonitores.html"><li>Monitores</li></a>
-                            <a target="_self" href="#"><li>Consoles</li></a>
-                            <a target="_self" href="#"><li>Eletronicos</li></a>
-                        </div>
+                                <a target="_self" href="#">
+                                    <li>Hardware</li>
+                                </a>
+                                <a target="_self" href="../html/PgComputadores.html">
+                                    <li>Computadores</li>
+                                </a>
+                                <a target="_self" href="#">
+                                    <li>Periféricos</li>
+                                </a>
+                                <a target="_self" href="../html/PgMonitores.html">
+                                    <li>Monitores</li>
+                                </a>
+                                <a target="_self" href="#">
+                                    <li>Consoles</li>
+                                </a>
+                                <a target="_self" href="#">
+                                    <li>Eletronicos</li>
+                                </a>
+                            </div>
                         </ul>
-                        </div>
+                    </div>
                 </div>
                 <div class="dropdown-content">
-                <ul>
-                    <a target="_self" href="#"><li>Hardware</li></a>
-                    <a target="_self" href="../html/PgComputadores.html"><li>Computadores</li></a>
-                    <a target="_self" href="#"><li>Periféricos</li></a>
-                    <a target="_self" href="../html/PgMonitores.html"><li>Monitores</li></a>
-                    <a target="_self" href="#"><li>Consoles</li></a>
-                    <a target="_self" href="#"><li>Eletronicos</li></a>
-                </ul>
+                    <ul>
+                        <a target="_self" href="#">
+                            <li>Hardware</li>
+                        </a>
+                        <a target="_self" href="../html/PgComputadores.html">
+                            <li>Computadores</li>
+                        </a>
+                        <a target="_self" href="#">
+                            <li>Periféricos</li>
+                        </a>
+                        <a target="_self" href="../html/PgMonitores.html">
+                            <li>Monitores</li>
+                        </a>
+                        <a target="_self" href="#">
+                            <li>Consoles</li>
+                        </a>
+                        <a target="_self" href="#">
+                            <li>Eletronicos</li>
+                        </a>
+                    </ul>
                 </div>
-                <a  target="_self" href="../html/PgPrincipal.html"class="menu">Home</a>
-                <a href="../html/PgComputadores.html"class="menu">Computadores</a>
-                <a href="#"class="menu">Periféricos</a>
-                <a target="_self" href="../html/PgMonitores.html"class="menu">Monitores</a>
-                <a href="#"class="menu">Contate-nos</a>
+                <a target="_self" href="../html/PgPrincipal.html" class="menu">Home</a>
+                <a href="../html/PgComputadores.html" class="menu">Computadores</a>
+                <a href="#" class="menu">Periféricos</a>
+                <a target="_self" href="../html/PgMonitores.html" class="menu">Monitores</a>
+                <a href="#" class="menu">Contate-nos</a>
             </div>
         </nav>
     </header>
@@ -77,9 +104,9 @@
                         <label for="">Senha</label>
                     </div>
                     <div classs="lembrar">
-                            <label for="" class="remember"><input type="checkbox" id="">Lembrar meus Dados</label>
+                        <label for="" class="remember"><input type="checkbox" id="">Lembrar meus Dados</label>
                     </div>
-                    <button id="Login">Acessar Conta</button>    
+                    <button id="Login">Acessar Conta</button>
                 </form>
             </div>
         </div>
@@ -87,11 +114,12 @@
             <div class="containerpai">
                 <div class="container">
                     <form action="../html/cadastro.html" target="_blank">
-                    <i class="fa-solid fa-user-plus fa-flip-horizontal"></i>
-                    <h2>Novo Cliente</h2>
-                    <p>Criar uma conta é fácil! Informe seus dados e uma senha para aproveitar todos os beneficios de ter uma conta.</p>
-                    <button id="Cadastrar">Cadastre-se</button>
-                </form>
+                        <i class="fa-solid fa-user-plus fa-flip-horizontal"></i>
+                        <h2>Novo Cliente</h2>
+                        <p>Criar uma conta é fácil! Informe seus dados e uma senha para aproveitar todos os beneficios
+                            de ter uma conta.</p>
+                        <button id="Cadastrar">Cadastre-se</button>
+                    </form>
                 </div>
             </div>
         </aside>
@@ -146,10 +174,11 @@
                             </ul>
                         </div>
                     </div>
-                    </div>
                 </div>
             </div>
         </div>
+        </div>
     </footer>
 </body>
+
 </html>
