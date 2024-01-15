@@ -124,13 +124,13 @@ label {
 .img-1:hover{
     transition: 0.3s ease;
 }
-.img-1{
+.imgBanner-1{
     transition: 0.3s ease-out;
     opacity: 1;
     border-radius: 10px;
     background-image: url(../arquivos/Image/slider/setup-gamer2.jpeg);
 }
-.img-2{
+.imgBanner-2{
     transition: 0.3s ease-out;
     opacity: 1;
     border-radius: 10px;
@@ -207,7 +207,7 @@ label {
 .carrossel {
     display: row;
     position: relative;
-    width: 909px;
+    width: 915px;
     overflow: hidden;
 }
 
@@ -339,147 +339,91 @@ label {
     background-color: #3a99ec;
     position: relative;
 }
-.img--1{
-    background-image: url(../arquivos/Image/computadores/imagem1.jpg);
-    width: 210px;
-    height: 210px;
-}
-.img--2{
-    background-image: url(../arquivos/Image/computadores/imagem2.jpg);
-    width: 210px;
-    height: 210px;
-}
-.img--3{
-    background-image: url(../arquivos/Image/monitor/img01.jpg);
-    width: 210px;
-    height: 210px;
-}
-.img--4{
-    background-image: url(../arquivos/Image/monitor/img05.jpg);
-    width: 210px;
-    height: 210px;
 
-}
-.img--5{
-    background-image: url(../arquivos/Image/computadores/imagem5.jpg);
+/* Imagens computadores */
+.imgPC-1{
+    background-image: url(../arquivos/Image/computadores/imgPC1-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--6{
-    background-image: url(../arquivos/Image/monitor/img03.jpg);
+.imgPC-2{
+    background-image: url(../arquivos/Image/computadores/imgPC2-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--7{
-    background-image: url(../arquivos/Image/monitor/img21.jpg);
+.imgPC-3{
+    background-image: url(../arquivos/Image/computadores/imgPC3-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--8{
-    background-image: url(../arquivos/Image/monitor/img07.jpg);
+.imgPC-4{
+    background-image: url(../arquivos/Image/computadores/imgPC4-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--9{
-    background-image: url(../arquivos/Image/monitor/img09.jpg);
+.imgPC-5{
+    background-image: url(../arquivos/Image/computadores/imgPC5-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img---9{
-    background-image: url(../arquivos/Image/computadores/imagem18.jpg);
+.imgPC-6{
+    background-image: url(../arquivos/Image/computadores/imgPC6-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--10{
-    background-image: url(../arquivos/Image/computadores/imagem10.jpg);
+.imgPC-7{
+    background-image: url(../arquivos/Image/computadores/imgPC7-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--11{
-    background-image: url(../arquivos/Image/computadores/imagem11.jpg);
+.imgPC-8{
+    background-image: url(../arquivos/Image/computadores/imgPC8-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--12{
-    background-image: url(../arquivos/Image/computadores/imagem12.jpg);
+/* Imagens Monitores */
+
+.imgMonitor-1{
+    background-image: url(../arquivos/Image/monitor/imgMonitor1-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--13{
-    background-image: url(../arquivos/Image/computadores/imagem13.jpg);
+.imgMonitor-2{
+    background-image: url(../arquivos/Image/monitor/imgMonitor2-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--14{
-    background-image: url(../arquivos/Image/computadores/imagem14.jpg);
+.imgMonitor-3{
+    background-image: url(../arquivos/Image/monitor/imgMonitor3-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--15{
-    background-image: url(../arquivos/Image/computadores/imagem15.jpg);
+.imgMonitor-4{
+    background-image: url(../arquivos/Image/monitor/imgMonitor4-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--16{
-    background-image: url(../arquivos/Image/computadores/imagem16.jpg);
+.imgMonitor-5{
+    background-image: url(../arquivos/Image/monitor/imgMonitor5-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--17{
-    background-image: url(../arquivos/Image/computadores/imagem17.jpg);
+.imgMonitor-6{
+    background-image: url(../arquivos/Image/monitor/imgMonitor6-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--18{
-    background-image: url(../arquivos/Image/computadores/imagem18.jpg);
+.imgMonitor-7{
+    background-image: url(../arquivos/Image/monitor/imgMonitor7-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--19{
-    background-image: url(../arquivos/Image//monitor/img01.jpg);
+.imgMonitor-8{
+    background-image: url(../arquivos/Image/monitor/imgMonitor8-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img--20{
-    background-image: url(../arquivos/Image//monitor/img03.jpg);
-    width: 210px;
-    height: 210px;
-}
-.img--21{
-    background-image: url(../arquivos/Image//monitor/img05.jpg);
-    width: 210px;
-    height: 210px;
-}
-.img--22{
-    background-image: url(../arquivos/Image//monitor/img09.jpg);
-    width: 210px;
-    height: 210px;
-}
-.img--23{
-    background-image: url(../arquivos/Image//monitor/img19.jpg);
-    width: 210px;
-    height: 210px;
-}
-.img--24{
-    background-image: url(../arquivos/Image//monitor/img18.jpg);
-    width: 210px;
-    height: 210px;
-}
-.img--25{
-    background-image: url(../arquivos/Image//monitor/img21.jpg);
-    width: 210px;
-    height: 210px;
-}
-.img--26{
-    background-image: url(../arquivos/Image//monitor/img07.jpg);
-    width: 210px;
-    height: 210px;
-}
-.img--27{
-    background-image: url(../arquivos/Image//monitor/img09.jpg);
-    width: 210px;
-    height: 210px;
-}
+
 
 
 @media (max-width: 1920px) {
@@ -745,7 +689,7 @@ label {
 .carrossel2 {
     display: row;
     position: relative;
-    width: 909px;
+    width: 915px;
     overflow: hidden;
 }
 
@@ -784,7 +728,7 @@ label {
 .carrossel3 {
     display: row;
     position: relative;
-    width: 909px;
+    width: 915px;
     overflow: hidden;
 }
 .cards-container3 {

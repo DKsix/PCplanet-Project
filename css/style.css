@@ -24,6 +24,9 @@ html{
 .nav-list a:hover{
     opacity: 0.6;
 }
+.nav-list{
+    margin: 16px 0 !important;
+}
 .logo{
     margin-left: 20px;
     font-size: 43px;
@@ -32,7 +35,7 @@ html{
 }
 body{
     margin: 0;
-    background-color: #ffffff;
+    background-color:#F0F1F2
 }
 header{
     width: 100%;
@@ -61,6 +64,7 @@ header{
     margin-left: 32px;
 }
 .search-box{
+    
     display: flex;
     background-color: #ffffff;
     height: 20px;
@@ -93,9 +97,8 @@ header{
     display: flex;
     padding-bottom: 5px;
     padding-top: 15px;
-    margin: 0 auto;
+    margin: 0 auto; 
     background-color: #F0F1F2;
-    box-shadow: 1px 0px 10px #0d0d0d7a;
 }
 .navigation a{
     font-family: Arial, Helvetica, sans-serif;

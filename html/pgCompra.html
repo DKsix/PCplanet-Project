@@ -1,19 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../arquivos/favicon/favicon.ico" type="image/x-icon">
+    <title id="tituloPg"></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/pgccomputadores.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>PC Planet</title>
+    <link rel="shortcut icon" href="../arquivos/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/pgCompra.css">
 </head>
-<style>
-
-</style>
-
 <body>
     <header>
         <div class="container-header">
@@ -93,107 +88,73 @@
         </nav>
     </header>
     <main>
-        <div class="title">
-            <div class="row1">
-                <h2 id="principal">Computadores</h2>
-            </div>
-            <div class="row2">
-                <p>Ordernar por:</p>
-                <div class="select-container">
-                    <select name="order" id="order">
-                        <div class="options">
-                            <option hidden value="Relevância">Relevância</option>
-                            <!-----
-                                <option value="Titulo A-Z">Titulo A-Z"</option>
-                                <option value="Titulo Z-A">Titulo Z-A"</option>
-                                <option value="Menor valor">Menor valor</option>
-                                <option value="Maior valor">Maior valor</option>
-                                ---->
+        <div class="navigationProgress">
+            <ul class="navigationProgressUl">
+                <li><a href="./PgPrincipal.html"><i class="fa-solid fa-house"></i></a></li>
+                <span><i class="fa-solid fa-angle-right"></i></span>
+                <li id="categoria"></li>
+                <span><i class="fa-solid fa-angle-right"></i></span>
+                <li id="produto"></li>
+            </ul>
+        </div>
+        <section id="produto-view-all">
+            <div class="container-produto">
+                <div class="produto">
+                    <div class="produto-view"></div>
+                    <div class="produto-buy">
+                        <h1 id="produto-name">COMPUTADOR PICHAU GAMER AFRODITE, AMD RYZEN 5 5500, GEFORCE RTX 2060 6GB, 16GB DDR4, SSD M.2 480GB</h1>
+                        <div class="produto-low-details">
+                            <div class="marca">
+                                <p>Marca:</p>
+                                <span>Pichau</span>
+                            </div>
+                            <div class="produto-stars">
+                                <span><i class="fa-regular fa-star"></i></span>
+                                <span><i class="fa-regular fa-star"></i></span>
+                                <span><i class="fa-regular fa-star"></i></span>
+                                <span><i class="fa-regular fa-star"></i></span>
+                                <span><i class="fa-regular fa-star"></i></span>
+                                <span id="qtd-stars">(0)</span>
+                            </div>
                         </div>
-                    </select>
-                    <div class="icon-container">
-                        <i class="fa-solid fa-caret-up" id="cima"></i>
-                        <i class="fa-solid fa-caret-down" id="baixo"></i>
+                        <div class="venda-entrega">
+                            <p>Vendido e entregue por:</p>
+                            <span>Pichau |</span>
+                            <span id="status-produto" style="color:#1F9050;">Em estoque</span>
+                        </div>
+                        <div class="price-avista-buy-container">
+                            <div class="price-container">
+                                <div class="price-avista-container">
+                                    <div class="price-avista-details">
+                                        <p class="price-avista-metodo">à vista</p>
+                                        <span id="price-avista">R$ 4.202,41</span>
+                                        <p class="price-desconto">no <span id="pix">pix</span> com <span>15% OFF</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buy-container">
+                                <button>
+                                    <div class="buy-button">
+                                        <div class="icon-buy">
+                                            <i class="fa-solid fa-cart-plus"></i>
+                                        </div>
+                                        <div class="txt-buy">
+                                            <span>COMPRAR</span>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="price-parcelado-container">
+                            <span id="price-parcelado">R$ 4.944,01</span>
+                            <p class="price-parcelas">Em até 10x de <span id="price-parcelas">R$ 494,7</span>3 sem juros no cartão</p>
+                            <p class="price-desconto">Ou em 1x no cartão com até <span>5% off</span></p>
+                            <button id="price-parcelado-opcoes">Ver mais opções de pagamento</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <hr class="hr1">
-        <hr class="hr2">
-        <section class="container">
-            <div class="card">
-                <div class="card-image imgPC-1"></div>
-                <h2> Computador Gamer</h2>
-                <p> Computador Gamer intel i5-10400F GTX 1650 4GB 16GB DDR4, HD 1TB</p>
-                <h3 class="preços">R$3.411,45 <span>R$4.839,20</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card">
-                <div class="card-image imgPC-2"></div>
-                <h2> COMPUTADOR GAMER</h2>
-                <p>Computador Gamer Intel i5-10400F RTX 2060 Super 8GB 16GB DDR4, SSD M.2 480GB </p>
-                <h3 class="preços">R$4.340,95 <span>R$6.046,70</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card">
-                <div class="card-image imgPC-3"></div>
-                <h2> COMPUTADOR GAMER </h2>
-                <p> Computador Gamer AMD RYZEN 7 5700G RTX 3060 12GB 16GB DDR4, SSD 960GB </p>
-                <h3 class="preços">R$6.235,28 <span>R$9.110,30</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card">
-                <div class="card-image imgPC-4"></div>
-                <h2> COMPUTADOR GAMER </h2>
-                <p> Computador Gamer AMD Ryzen 5 5600 RX 6600 8GB 16GB DDR4, SSD 980GB </p>
-                <h3 class="preços">R$4.587,99 <span>R$ 6.451,50</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card">
-                <div class="card-image imgPC-5"></div>
-                <h2> COMPUTADOR GAMER </h2>
-                <p> Computador Gamer i7-12700K RTX 4070 Ti 12GB 32GB DDR4, 2x SSD M.2 560GB </p>
-                <h3 class="preço-alto">R$12.501,06<span class="preço-alto">R$13.299,60</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card">
-                <div class="card-image imgPC-6"></div>
-                <h2> COMPUTADOR GAMER </h2>
-                <p> Computador Gamer AMD RYZEN 5 5600 GTX 1660 SUPER 6GB 16GB DDR4, SSD M.2 480GB</p>
-                <h3 class="preços">R$4.340,95 <span>R$6.046,70</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card">
-                <div class="card-image imgPC-7"></div>
-                <h2> COMPUTADOR GAMER </h2>
-                <p> Computador Gamer AMD RYZEN 5 5600X RX 6600 8GB 8GB DDR4, SSD 240GB </p>
-                <h3 class="preços">R$6.327,30 <span>R$8.270,58</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card">
-                <div class="card-image imgPC-8"></div>
-                <h2> COMPUTADOR GAMER </h2>
-                <p> Computador gamer INTEL I3-12100F GTX 1660 6GB 8GB DDR4, SSD 240GB </p>
-                <h3 class="preços">R$5.450,00 <span>R$6.632,50</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
         </section>
-        <article>
-            <div class="container-page">
-                <div class="page-numbers">
-                    <ul class="list-page">
-                        <li id="escolhida2"><button><i class="fa-solid fa-angle-left"></i></button></li>
-                        <li id="escolhida"><button>1</button></li>
-                        <li><button>2</button></li>
-                        <li><button>3</button></li>
-                        <li><button>4</button></li>
-                        <li><button>...</button></li>
-                        <li><button>40</button></li>
-                        <li><button><i class="fa-solid fa-angle-right"></i></button></li>
-                    </ul>
-                </div>
-            </div>
-        </article>
     </main>
     <footer>
         <div class="container-footer">
@@ -251,5 +212,4 @@
         </div>
     </footer>
 </body>
-
 </html>

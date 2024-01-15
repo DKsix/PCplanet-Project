@@ -20,45 +20,45 @@
     background-size: cover;
     border-radius: 15px 15px 0 0;
 }
-.img-1{
-    background-image: url(../arquivos/Image//monitor/img01.jpg);
-    width: 210px;
-    height: 200px;
-}
-.img-2{
-    background-image: url(../arquivos/Image//monitor/img02.jpg);
-    width: 210px;
-    height: 200px;
-}
-.img-3{
-    background-image: url(../arquivos/Image//monitor/img03.jpg);
+.imgMonitor-1{
+    background-image: url(../arquivos/Image/monitor/imgMonitor1-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img-4{
-    background-image: url(../arquivos/Image//monitor/img04.jpg);
+.imgMonitor-2{
+    background-image: url(../arquivos/Image/monitor/imgMonitor2-01.jpg);
     width: 210px;
-    height: 200px;
+    height: 210px;
 }
-.img-5{
-    background-image: url(../arquivos/Image//monitor/img05.jpg);
+.imgMonitor-3{
+    background-image: url(../arquivos/Image/monitor/imgMonitor3-01.jpg);
     width: 210px;
-    height: 200px;
+    height: 210px;
 }
-.img-6{
-    background-image: url(../arquivos/Image//monitor/img06.jpg);
+.imgMonitor-4{
+    background-image: url(../arquivos/Image/monitor/imgMonitor4-01.jpg);
     width: 210px;
-    height: 200px;
+    height: 210px;
 }
-.img-7{
-    background-image: url(../arquivos/Image//monitor/img07.jpg);
+.imgMonitor-5{
+    background-image: url(../arquivos/Image/monitor/imgMonitor5-01.jpg);
     width: 210px;
-    height: 200px;
+    height: 210px;
 }
-.img-8{
-    background-image: url(../arquivos/Image//monitor/img08.jpg);
+.imgMonitor-6{
+    background-image: url(../arquivos/Image/monitor/imgMonitor6-01.jpg);
     width: 210px;
-    height: 200px;
+    height: 210px;
+}
+.imgMonitor-7{
+    background-image: url(../arquivos/Image/monitor/imgMonitor7-01.jpg);
+    width: 210px;
+    height: 210px;
+}
+.imgMonitor-8{
+    background-image: url(../arquivos/Image/monitor/imgMonitor8-01.jpg);
+    width: 210px;
+    height: 210px;
 }
 
 .card h2{

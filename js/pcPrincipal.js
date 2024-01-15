@@ -48,7 +48,7 @@ cardWidth = responsividadeTranslate(larguraPagina, cardWidth)
 cardWidth2 = responsividadeTranslate(larguraPagina, cardWidth2)
 cardWidth3 = responsividadeTranslate(larguraPagina, cardWidth3)
 
-// Slider 1 funções
+// Slider Ofertas funções
 function updateCarouselPosition() {
     const translateXValue = -currentIndex * cardWidth;
     cardsContainer.style.transform = `translateX(${translateXValue}px)`;
@@ -70,7 +70,7 @@ arrowRight.addEventListener('click', () => {
 });
 
 
-// Slider 2 funções
+// Slider Computadores funções
 function updateCarouselPosition2() {
     const translateXValue2 = -currentIndex2 * cardWidth2;
     cardsContainer2.style.transform = `translateX(${translateXValue2}px)`;
@@ -92,7 +92,7 @@ arrowRight2.addEventListener('click', () => {
 });
 
 
-// Slider 3 funções
+// Slider Monitores funções
 arrowLeft3.addEventListener('click', () => {
     if (currentIndex3 > 0) {
         currentIndex3--;

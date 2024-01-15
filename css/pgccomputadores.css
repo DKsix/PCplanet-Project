@@ -19,46 +19,46 @@
     background-size: cover;
     border-radius: 15px 15px 0 0;
 }
-.img-1{
-    background-image: url(../arquivos/Image/computadores/imagem1.jpg);
+.imgPC-1{
+    background-image: url(../arquivos/Image/computadores/imgPC1-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img-2{
-    background-image: url(../arquivos/Image/computadores/imagem2.jpg);
+.imgPC-2{
+    background-image: url(../arquivos/Image/computadores/imgPC2-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img-3{
-    background-image: url(../arquivos/Image/computadores/imagem3.jpg);
+.imgPC-3{
+    background-image: url(../arquivos/Image/computadores/imgPC3-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img-4{
-    background-image: url(../arquivos/Image/computadores/imagem4.jpg);
+.imgPC-4{
+    background-image: url(../arquivos/Image/computadores/imgPC4-01.jpg);
     width: 210px;
     height: 210px;
 
 }
-.img-5{
-    background-image: url(../arquivos/Image/computadores/imagem5.jpg);
+.imgPC-5{
+    background-image: url(../arquivos/Image/computadores/imgPC5-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img-6{
-    background-image: url(../arquivos/Image/computadores/imagem14.jpg);
+.imgPC-6{
+    background-image: url(../arquivos/Image/computadores/imgPC6-01.jpg);
     width: 210px;
     height: 210px;
     position: relative;
     right: 15px;
 }
-.img-7{
-    background-image: url(../arquivos/Image/computadores/imagem7.jpg);
+.imgPC-7{
+    background-image: url(../arquivos/Image/computadores/imgPC7-01.jpg);
     width: 210px;
     height: 210px;
 }
-.img-8{
-    background-image: url(../arquivos/Image/computadores/imagem8.jpg);
+.imgPC-8{
+    background-image: url(../arquivos/Image/computadores/imgPC8-01.jpg);
     width: 210px;
     height: 210px;
 }
