@@ -30,6 +30,7 @@ form.addEventListener('submit', event => {
     const cpf = document.getElementById('cpf').value
     const rg = document.getElementById('rg').value
     const email = document.getElementById('email').value
+    const senha = document.getElementById('password').value
 
 
     auxUser = [nome, sobrenome, cpf, rg, email]
@@ -58,4 +59,41 @@ form.addEventListener('submit', event => {
 
 
 function guardarDados() {
+}
+
+function validarCpf(cpf){
+    let validacao = false
+
+    const cpf = document.getElementById('cpf').value
+    let tamanhoCpf = cpf.length; 
+    if (tamanhoCpf == 11){
+        
+    } else{
+        validacao= true
+    }
+    return validacao;
+}
+function validarRg(rg){
+    let validacao = false
+
+    const rg = document.getElementById('rg').value
+    let tamanhoRg = rg.length; 
+    if (tamanhoRg == 10){
+        
+    } else{
+        validacao= true
+    }
+    return validacao;
+}
+function validarSenha(senha){
+    let validacao = false
+
+    const senha = document.getElementById('password').value
+    let tamanhoSenha = .length; 
+    if (tamanhoRg == 10){
+        
+    } else{
+        validacao= true
+    }
+    return validacao;
 }
