@@ -117,4 +117,15 @@ function validarNome(){
     if (nome.includes(numeros)=false){
         validacao=true
     }
+    return validacao;
+}
+
+function validarSobrenome(){
+    let validacao=false
+    const sobrenome= document.getElementById('sobrenome').value
+    numeros = [0,1,2,3,4,5,6,7,8,9]
+    if (sobrenome.includes(numeros)=false){
+        validacao=true
+    }
+    return validacao
 }
