@@ -284,7 +284,7 @@ label {
 }
 .card2 a{
     display: inline;
-    margin: 20px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
     align-items: center;
     padding: 10px 60px 10px 60px;
     position: absolute;
@@ -298,7 +298,7 @@ label {
 .card2:hover{
     box-shadow: 0px 0px 13px 0px #9797979d;
     cursor: pointer;
-    margin-top:  -15px;
+    margin-top:  -10px;
     transition: all 0.7s ease;
 }
 #principal{
@@ -307,12 +307,17 @@ label {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .preços{
+    padding: 5px;
     display: block;
     padding-top: 10px;
     margin:  0px 0px 0px 10px;
 }
 .preços span{
-    font-size: 16px;
+    width: 100%;
+    position: absolute;
+    margin-bottom: 10px;
+    margin-left: 0.4rem;
+    font-size: 0.9rem;
     color: #66B1F2;
     font-weight: 400;
     text-decoration: line-through;
@@ -646,7 +651,7 @@ label {
 }
 .card3 a{
     display: inline;
-    margin: 20px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
     align-items: center;
     padding: 10px 60px 10px 60px;
     position: absolute;
@@ -660,7 +665,7 @@ label {
 .card3:hover{
     box-shadow: 0px 0px 13px 0px #9797979d;
     cursor: pointer;
-    margin-top:  -15px;
+    margin-top:  -10px;
     transition: all 0.7s ease;
 }
 .arrows2 {
@@ -776,7 +781,7 @@ label {
 }
 .card4 a{
     display: inline;
-    margin: 20px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
     align-items: center;
     padding: 10px 60px 10px 60px;
     position: absolute;
@@ -790,7 +795,7 @@ label {
 .card4:hover{
     box-shadow: 0px 0px 13px 0px #9797979d;
     cursor: pointer;
-    margin-top:  -15px;
+    margin-top:  -10px;
     transition: all 0.7s ease;
 }
 

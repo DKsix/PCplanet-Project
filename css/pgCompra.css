@@ -11,7 +11,10 @@ main{
 }
 /* Progresso de navegação dentro do site */
 .navigationProgress{
-    margin-left: 1.875rem;
+    margin-top: 1.rem;
+    margin-left: 0.313rem;
+    width: 100%;
+    height: 100%;
 }
 .navigationProgress ul {
     margin: 0;
@@ -21,10 +24,10 @@ main{
     list-style: none;
 }
 .navigationProgress li {
-    padding: 0.625rem 0;
+    padding: 0.313rem 0;
 }
 .navigationProgress span {
-    padding: 0.625rem 1.25rem;
+    padding: 0.313rem 1.25rem;
 }
 .navigationProgress i {
     font-size: 0.625rem;
@@ -32,16 +35,18 @@ main{
 }
 /* produto */
 .produto{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
     width: 100%;
     display: flex;
     flex-direction: row;
 }
 .produto-buy{
+    margin-left: 0.965rem;
     width: 100%;
 }
-#produto-view-all{
-    margin-top: 0.625rem;
-}
+
 /* Nome do produto */
 #produto-name {
     color: #3a3a3a;
@@ -67,25 +72,14 @@ main{
     color: #333333;
     margin-left: 0.1rem;
 }
+.produto-stars{
+    margin-right: .625rem;
+}
 .produto-stars i {
     color: #FFB400;
 }
 #qtd-stars {
     color: #7F858D;
-}
-/* Texto vendido e entregue por ? */
-.venda-entrega{
-    padding: 8px 0;
-    display: flex;
-    flex-direction: row;
-}
-.venda-entrega span{
-    color: #333333;
-    font-weight: 600;
-    margin-left: .2rem;
-}
-#status-produto {
-    font-weight: 700;
 }
 /* Preço a vista  */
 .price-container{
@@ -95,8 +89,12 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.322); 
+    padding: .938rem 0 0 0 ;
+    margin: .625rem 0 0 0;
 }
 .price-avista-container{
+    height: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -109,6 +107,16 @@ main{
     font-weight: 700;
     font-size: 1.8rem;
 }
+.icon-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-price i{
+    font-size: 1.5rem;
+    margin-right: 0.936rem;
+    color: #333333;
+}
 .price-desconto{
     font-size: 0.8rem;
     color:#333333;
@@ -119,11 +127,15 @@ main{
     font-size: 0.9rem;
     font-weight: bold;
 }
+#pix{
+    color: #1F9050;
+}
 /* Botão comprar */
 .buy-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: .625rem;
 }
 .buy-container button{
     cursor: pointer;
@@ -137,6 +149,7 @@ main{
     display: flex;
     flex-direction: row;
 }
+
 .icon-buy{
     margin-right: 0.5rem;
     font-size: 1.5rem;
@@ -155,10 +168,13 @@ main{
 
 /* Preço parcelado */
 .price-parcelado-container{
-    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.625rem;
+
 }
 #price-parcelado{
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #D95A11;
 }
@@ -169,12 +185,202 @@ main{
     background-color: none;
     text-decoration: underline;
 }
+#price-parcelas{
+    color: #D95A11;
+    font-weight: bold;
+}
 /* Produto View */
 .produto-view{
+    flex-direction: row;
+    display: flex;
     width: 100%;
-    height: 450px;
+    height: 31.25;
 }
-#pix{
-    color: #1F9050;
+/* produto view carrosel */
+.produto-view-container-carrosel{
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+}
+.card-produto-carrosel{
+    padding-bottom: .965rem;
+    width: 100%;
+}
+.card-produto-carrosel img{
+    width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.123);
+}
+/* produto view principal */
+.produto-view-container-principal{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.produto-view-principal-imagem{
+    width: 100%;
+}
+.produto-view-principal-imagem{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 50px 0 10px;
+}
+.produto-view-principal-imagem img{
+    border-radius: 5px;
+    margin-left: 0.325rem;
+    margin-right: 0.625rem;
+    width: 100%;
+    height: 100%;
+}
+/* Calcular frete */
+#input-frete{
+    padding: 0px .625rem;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    border-radius: 5px;
+    height: 40px
+}
+#input-frete:focus{
+    outline: 0;
+}
+input:focus~label, input:valid~label{
+    top: -30%;
+}
+.calcular-frete-container label{
+    position: absolute;
+    top: 60%;
+    left: 5px;
+    transform: translateY(-65%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+    margin: 0;
+}
+.calcular-frete-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+/* button frete */
+
+.button-frete-container{
+    width: 100px;
+    margin-left: 10px;
+}
+.button-frete button{
+    font-family: system-ui ;
+    font-size: 0.938rem;
+    font-weight: 600;
+    color: #4178BF;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4178BF;
 }
 
+/* Especificações Section */
+.especificacoes-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2.25rem 0;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Especificações titulo */
+.especificacoes-titulo{
+    display: flex;
+    flex-direction: row;
+}
+.especificacoes-titulo h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.especificacoes-titulo i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+/* Especificações sumário */
+.especificacoes-sumario{
+    padding: 10px;
+}
+.table-espec th{
+    padding: 0.525rem 0;
+    text-align: start;
+    padding: 0.625rem;
+} 
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+tr{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 1500px) {
+    main{
+        margin: 0 15% !important; 
+    }
+    .produto{
+        padding: 10px 10px 10px 10px;
+    }
+    .especificacoes-section{
+        padding: 10px;
+    }
+}
+@media (max-width: 1000px) {
+    main{
+        margin: 0.625rem !important; 
+    }
+    .produto{
+        padding: 0px
+    }
+    .especificacoes-section{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    main{
+        margin: 0 !important;
+    }
+    .produto{
+        flex-direction: column;
+    }
+    .produto-buy{
+        margin-left: .305rem;
+    }
+}

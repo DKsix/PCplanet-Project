@@ -118,3 +118,9 @@ function updateCarouselPosition3() {
 
 
 
+
+// Rederecionar para página de compra 
+
+function IrParaPaginaDeCompra(idDoElemento){
+    window.location.href = "../html/pgCompra.html?id=" + idDoElemento;
+}

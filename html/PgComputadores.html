@@ -121,56 +121,56 @@
         <hr class="hr1">
         <hr class="hr2">
         <section class="container">
-            <div class="card">
+            <div class="card" id="PC-0" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgPC-1"></div>
                 <h2> Computador Gamer</h2>
                 <p> Computador Gamer intel i5-10400F GTX 1650 4GB 16GB DDR4, HD 1TB</p>
                 <h3 class="preços">R$3.411,45 <span>R$4.839,20</span></h3>
                 <a href=""> COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="PC-1" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgPC-2"></div>
                 <h2> COMPUTADOR GAMER</h2>
                 <p>Computador Gamer Intel i5-10400F RTX 2060 Super 8GB 16GB DDR4, SSD M.2 480GB </p>
                 <h3 class="preços">R$4.340,95 <span>R$6.046,70</span></h3>
                 <a href=""> COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="PC-2" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgPC-3"></div>
                 <h2> COMPUTADOR GAMER </h2>
                 <p> Computador Gamer AMD RYZEN 7 5700G RTX 3060 12GB 16GB DDR4, SSD 960GB </p>
                 <h3 class="preços">R$6.235,28 <span>R$9.110,30</span></h3>
                 <a href=""> COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="PC-3" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgPC-4"></div>
                 <h2> COMPUTADOR GAMER </h2>
                 <p> Computador Gamer AMD Ryzen 5 5600 RX 6600 8GB 16GB DDR4, SSD 980GB </p>
                 <h3 class="preços">R$4.587,99 <span>R$ 6.451,50</span></h3>
                 <a href=""> COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="PC-4" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgPC-5"></div>
                 <h2> COMPUTADOR GAMER </h2>
                 <p> Computador Gamer i7-12700K RTX 4070 Ti 12GB 32GB DDR4, 2x SSD M.2 560GB </p>
                 <h3 class="preço-alto">R$12.501,06<span class="preço-alto">R$13.299,60</span></h3>
                 <a href=""> COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="PC-5" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgPC-6"></div>
                 <h2> COMPUTADOR GAMER </h2>
                 <p> Computador Gamer AMD RYZEN 5 5600 GTX 1660 SUPER 6GB 16GB DDR4, SSD M.2 480GB</p>
                 <h3 class="preços">R$4.340,95 <span>R$6.046,70</span></h3>
                 <a href=""> COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="PC-6" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgPC-7"></div>
                 <h2> COMPUTADOR GAMER </h2>
                 <p> Computador Gamer AMD RYZEN 5 5600X RX 6600 8GB 8GB DDR4, SSD 240GB </p>
                 <h3 class="preços">R$6.327,30 <span>R$8.270,58</span></h3>
                 <a href=""> COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="PC-7" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgPC-8"></div>
                 <h2> COMPUTADOR GAMER </h2>
                 <p> Computador gamer INTEL I3-12100F GTX 1660 6GB 8GB DDR4, SSD 240GB </p>
@@ -204,7 +204,7 @@
                         <div class="comunicação">
                             <li><a href="#"><i class="fa-solid fa-envelope"></i>pcplanet.@gmail.com</a></li>
                             <li><a href="#"><i class="fa-solid fa-phone"></i>75-99134321</a></li>
-                            <li><a href="#"><i class="fa-solid fa-location-dot"></i>Rolândia, Paraná</a></li>
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i>Monte Santo, Bahia</a></li>
                         </div>
                     </ul>
                 </div>
@@ -251,5 +251,10 @@
         </div>
     </footer>
 </body>
+<script>
+    function IrParaPaginaDeCompra(idDoElemento){
+        window.location.href = "../html/pgCompra.html?id=" + idDoElemento;
+    }
+</script>
 
 </html>

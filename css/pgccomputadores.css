@@ -49,8 +49,6 @@
     background-image: url(../arquivos/Image/computadores/imgPC6-01.jpg);
     width: 210px;
     height: 210px;
-    position: relative;
-    right: 15px;
 }
 .imgPC-7{
     background-image: url(../arquivos/Image/computadores/imgPC7-01.jpg);
@@ -114,7 +112,10 @@
     margin:  0px;
 }
 .preços span{
-    font-size: 16px;
+    position: absolute;
+    margin-bottom: 5px;
+    margin-left: 0.5rem;
+    font-size: 1rem;
     color: #66B1F2;
     font-weight: 400;
     text-decoration: line-through;

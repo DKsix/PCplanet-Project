@@ -121,21 +121,21 @@
         <hr class="hr1">
         <hr class="hr2">
         <section class="container">
-            <div class="card">
+            <div class="card"  id="MT-0" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgMonitor-1"></div>
                 <h2> Monitor Gamer </h2>
                 <p> Monitor Pichau Centauri 27 pol IPS 1ms 165Hz freesync</p>
                 <h3 class="preços">R$ 1499,90 <span>R$ 1865,90</span></h3>
                 <a href="">COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="MT-1" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgMonitor-2"></div>
                 <h2> Monitor Gamer </h2>
                 <p> Monitor Pichau Centauri 24 pol IPS 165Hz 1ms</p>
                 <h3 class="preços">R$ 689,99<span>R$ 911,75</span></h3>
                 <a href="">COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="MT-2" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgMonitor-3">
                 </div>
                 <h2> Monitor Gamer </h2>
@@ -143,7 +143,7 @@
                 <h3 class="preços">R$ 1.999,99<span>R$ 2.452,93</span></h3>
                 <a href="">COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="MT-3" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgMonitor-4">
                 </div>
                 <h2> Monitor Gamer</h2>
@@ -151,7 +151,7 @@
                 <h3 class="preços">R$ 2.199,97<span>R$ 2.688,20</span></h3>
                 <a href="">COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="MT-4" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgMonitor-5">
                 </div>
                 <h2> Monitor Gamer</h2>
@@ -159,7 +159,7 @@
                 <h3 class="preços">R$ 2.039,97<span>R$ 2.499,96</span></h3>
                 <a href="">COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="MT-5" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgMonitor-6">
                 </div>
                 <h2> Monitor Gamer</h2>
@@ -167,7 +167,7 @@
                 <h3 class="preços">R$ 1.931,72 <span>R$2.372,61</span></h3>
                 <a href="">COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="MT-6" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgMonitor-7">
                 </div>
                 <h2> Monitor Profissional</h2>
@@ -175,7 +175,7 @@
                 <h3 class="preços">R$ 1.499,99 <span>R$ 3.529,41</span></h3>
                 <a href="">COMPRAR</a>
             </div>
-            <div class="card">
+            <div class="card" id="MT-7" onclick="IrParaPaginaDeCompra(this.id)">
                 <div class="card-image imgMonitor-8">
                 </div>
                 <h2> Monitor Gamer</h2>
@@ -210,7 +210,7 @@
                         <div class="comunicação">
                             <li><a href="#"><i class="fa-solid fa-envelope"></i>pcplanet.@gmail.com</a></li>
                             <li><a href="#"><i class="fa-solid fa-phone"></i>75-99134321</a></li>
-                            <li><a href="#"><i class="fa-solid fa-location-dot"></i>Rolândia, Paraná</a></li>
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i>Monte Santo, Bahia</a></li>
                         </div>
                     </ul>
                 </div>
@@ -257,5 +257,9 @@
         </div>
     </footer>
 </body>
-
+<script>
+    function IrParaPaginaDeCompra(idDoElemento){
+        window.location.href = "../html/pgCompra.html?id=" + idDoElemento;
+    }
+</script>
 </html>
