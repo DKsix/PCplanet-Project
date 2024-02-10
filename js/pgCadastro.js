@@ -97,3 +97,16 @@ function validarSenha(senha){
     }
     return validacao;
 }
+function validarEmail(){
+    validacao = false
+    const email = document.getElementById('email').value
+    if (email.includes("@")=true){
+        validacao = true
+    }
+    else if(email.includes(".com")=true){
+        validacao=true
+    }
+    else if(email.indexof("@")-1 != " "){
+        validacao = true
+    }
+}
