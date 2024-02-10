@@ -89,11 +89,11 @@ function validarSenha(senha){
     let validacao = false
 
     const senha = document.getElementById('password').value
-    let tamanhoSenha = .length; 
-    if (tamanhoRg == 10){
-        
+    let tamanhoSenha = senha.length; 
+    if (tamanhoSenha > 8){
+        validacao = true
     } else{
-        validacao= true
+        validacao = false
     }
     return validacao;
 }
