@@ -98,7 +98,7 @@ function validarSenha(senha){
     return validacao;
 }
 function validarEmail(){
-    validacao = false
+    let validacao = false
     const email = document.getElementById('email').value
     if (email.includes("@")=true){
         validacao = true
@@ -108,5 +108,13 @@ function validarEmail(){
     }
     else if(email.indexof("@")-1 != " "){
         validacao = true
+    } return validacao;
+}
+function validarNome(){
+    let validacao=false
+    const nome= document.getElementById('nome').value
+    numeros = [0,1,2,3,4,5,6,7,8,9]
+    if (nome.includes(numeros)=false){
+        validacao=true
     }
 }
