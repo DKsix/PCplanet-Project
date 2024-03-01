@@ -1,23 +1,36 @@
+// Exportando classe computador
 import { Computador } from '../js/computador.js'
+// Exportando classe monitor
 import { Monitor } from '../js/monitor.js'
 
-var endereço = ["../js/computadores.json", "../js/monitores.json"]
 
+
+// colocando url da pagina em uma constante
 const urlParams = new URLSearchParams(window.location.search);
+// Pegando id do elemento que foi passado pelo url
 const idDoElemento = urlParams.get('id');
 
+// Pegando o ultimo caracter do id para saber qual será o computador/monitor
 var IDdoProdutoReal = idDoElemento.charAt(idDoElemento.length - 1)
-console.log(IDdoProdutoReal)
+
+// Pegando as 2 primeiras caracteres do id para saber se vai ser computador ou monitor
 var IDModeloProduto = idDoElemento.slice(0, 2);
-console.log(IDModeloProduto)
 
-
+// Declarando var main
 var main = document.getElementById("main")
 
+function irParaCarrinho(){
+    window.location.href = "../html/carrinho.html?id=" + idDoElemento;
+}
 
+
+
+// Convertendo a lista de computadores json em um objeto
 function convertJsonToDadosComputador(ComputadorList) {
+    // instanciando o objeto da classe computador
     const computador = new Computador()
 
+    // convertendo os dados json para o objeto
     computador.id = ComputadorList.id;
     computador.nome = ComputadorList.nome;
     computador.marca = ComputadorList.marca;
@@ -40,9 +53,12 @@ function convertJsonToDadosComputador(ComputadorList) {
 }
 
 
+// Convertendo a lista de monitor json em um objeto
 function convertJsonToDadosMonitor(MonitorList) {
+    // instanciando o objeto da classe monitor
     const monitor = new Monitor()
     
+    // convertendo os dados json para o objeto
     monitor.id = MonitorList.id;
     monitor.nome = MonitorList.nome;
     monitor.marca = MonitorList.marca;
@@ -64,12 +80,18 @@ function convertJsonToDadosMonitor(MonitorList) {
     return monitor;
 }
 
-
+// Função para carregar os dados do computador
 function carregarDadosComputador() {
+    
+    // Utilizando fetch api para buscar o arquivo json
     fetch("../js/computadores.json")
+        // pegando a resposta e transformmando em json
         .then((response) => response.json())
+        // pegando a resposta em json e transformando na computadorList
         .then(ComputadorList => {
+            // Executando a função de conversão de json para objeto na var computador, pegando os dados do json de acordo com o ID. 
             var computador = convertJsonToDadosComputador(ComputadorList[IDdoProdutoReal])
+            // constante newHtml com toda a pagina de compra trocando os dados de acordo com o arquivo.
             const newHtml = `<div class="navigationProgress">
             <ul class="navigationProgressUl">
                 <li><a href="./PgPrincipal.html"><i class="fa-solid fa-house"></i></a></li>
@@ -136,13 +158,13 @@ function carregarDadosComputador() {
                                 </div>
                             </div>
                             <div class="buy-container">
-                                <button>
+                                <button id="buttonCompra">
                                     <div class="buy-button">
                                         <div class="icon-buy">
                                             <i class="fa-solid fa-cart-plus"></i>
                                         </div>
                                         <div class="txt-buy">
-                                            <span>COMPRAR</span>
+                                            <span onclick="irParaCarrinho()">COMPRAR</span>
                                         </div>
                                     </div>
                                 </button>
@@ -223,17 +245,22 @@ function carregarDadosComputador() {
                 </div>
             </div>
         </section>`
+            // Colocando todo o html na main utilizando innerHTML
             main.innerHTML += newHtml
         })
 }
 
-
+// Função para carregar os dados do computador
 function carregarDadosMonitor() {
+    // Utilizando fetch api para buscar o arquivo json
     fetch("../js/monitores.json")
+        // pegando a resposta e transformmando em json
         .then((response) => response.json())
+        // pegando a resposta em json e transformando na monitor list
         .then(monitoresList => {
+            // Executando a função de conversão de json para objeto na var monitor, pegando os dados do json de acordo com o ID. 
             var monitor = convertJsonToDadosMonitor(monitoresList[IDdoProdutoReal])
-            console.log(monitor)
+            // constante newHtml com toda a pagina de compra trocando os dados de acordo com o arquivo.
             const newHtml = `<div class="navigationProgress">
             <ul class="navigationProgressUl">
                 <li><a href="./PgPrincipal.html"><i class="fa-solid fa-house"></i></a></li>
@@ -383,13 +410,20 @@ function carregarDadosMonitor() {
                 </div>
             </div>
         </section>`
+            // Colocando todo o html na main utilizando innerHTML
             main.innerHTML += newHtml
         })
 }
 
+// De acordo se o id for equivalente a "PC" vai carregar os dados de computador.
 if (IDModeloProduto == "PC"){
     carregarDadosComputador()
+// caso não for "PC" vai carregar os dados dos monitores. 
 } else{
     carregarDadosMonitor()
 }
+
+
+console.log("foi")
+
 

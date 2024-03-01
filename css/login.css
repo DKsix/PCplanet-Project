@@ -44,7 +44,20 @@ h2{
     color: #fff;
     text-align: center;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill-selected {
+    /* Estilos que você deseja aplicar */
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+}
 .inputbox{
+    background-color: transparent;
     height: 40px;
     border-radius: 10px;
     position: relative;
@@ -68,6 +81,12 @@ h2{
 }
 input:focus~label, input:valid~label{
     top: -30%;
+}
+input::-moz-focus-inner{
+    background-color: transparent;
+}
+input-internal-autofill-selected{
+    background-color: transparent !important;
 }
 .inputbox input{
     width: 100%;
@@ -163,4 +182,34 @@ button{
         margin: 50px 0px 40px 0; 
         width: 400px;
     }
+}
+
+#errorEmail{
+    color: #ffffff;
+    margin-top: 0.2rem;
+    display: none;
+}
+#errorSenha{
+    color: #ffffff;
+    margin-top: 0.2rem;
+    display: none;
+}
+.error i{
+    margin-left: 0px !important;
+    margin-right: 7px !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+    width: 14px !important;
+    height: 14px !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+    border-radius: 20px !important;
+    color: #F0F1F2 !important;
+    background-color: transparent !important;
+}
+h6{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
 }

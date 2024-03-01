@@ -26,10 +26,6 @@
                     <li id="carrinho"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i>CARRINHO</a></li>
                     <li id="carrinho2"><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
-                <div class="search-box">
-                    <input type="text" class="search-text" placeholder="Digite o que você procura...">
-                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-                </div>
             </div>
         </div>
         <nav>
@@ -92,100 +88,68 @@
         </nav>
     </header>
     <main>
-        <div class="titulo">
+        <div class="tituloCarrinho">
             <i class="fa-solid fa-cart-shopping"></i>
             <h1>Meu Carrinho</h1>
         </div>
         <div class="cart-container">
-            <section>
-                <div class="table-section">
-                    <table class="produto-table">
-                        <thead id="thead2">
-                            <tr class="produto">
-                                <th class="th1">Produto</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="pc2">
-                                <th>
-                                    <div class="produtos-row">
-                                        <div class="row1">
-                                            <div class="img-produto">
-                                                <img src="../arquivos/Image/computadores/imagem9-removebg-preview.png"
-                                                    alt="produto">
-                                                <div class="button">
-                                                    <button class="menos"><i class="fa-solid fa-minus"></i></button>
-                                                    <span>1</span>
-                                                    <button class="mais"><i class="fa-solid fa-plus"></i></button>
-                                                    <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="descricao">
-                                            <h5>Computador gamer INTEL I3-12100F GTX 1660 6GB 8GB DDR4, SSD 240GB</h5>
-                                            <br>
-                                            <p>1xR$4.655,00</p>
-                                        </div>
+            <section id="section1">
+                <div class="produtoContainer">
+                    <div class="produtoSubContainer">
+                        <div class="produtoRow1">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            <h1>PRODUTO</h1>
+                        </div>
+                        <div class="produtoRow2">
+                            <div class="img">
+                                <img src="../arquivos/Image/computadores/imgPC1-01.jpg" alt="">
+                            </div>
+                            <div class="produtoRow2Details">
+                                <div class="marcaProduto">Pichau</div>
+                                <div class="nomeProduto"> <p>
+                                    COMPUTADOR PICHAU, AMD RYZEN 5 5500, RADEON RX 550 2GB, 16GB DDR4, SSD 480GB
+                                </p></div>
+                            </div>
+                            <div class="produtoRow2QuantPreco">
+                                <div class="produtoQuantidade">
+                                    <button><i class="fa-solid fa-angle-left"></i></button>
+                                    <div class="quantidade">
+                                        <label for="">Quant.</label>
+                                        <input type="text" placeholder="1">
                                     </div>
-                                </th>
-                            </tr>
-                        </tbody>
-                        <tbody class="tbody2">
-                            <tr class="pc">
-                                <th>
-                                    <div class="produtos-row">
-                                        <div class="row1">
-                                            <div class="img-produto">
-                                                <img src="../arquivos/Image/computadores/imagem9-removebg-preview.png"
-                                                    alt="produto">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <td>
-                                    <div class="descricao2">
-                                        <h5>Computador gamer INTEL I3-12100F GTX 1660 6GB 8GB DDR4, SSD 240GB</h5>
-                                        <br>
-
-                                </td>
-                                <td>
-                                    <div class="button2">
-                                        <button class="menos"><i class="fa-solid fa-minus"></i></button>
-                                        <span>1</span>
-                                        <button class="mais"><i class="fa-solid fa-plus"></i></button>
-
-                                    </div>
-                                </td>
-                                <td>
-                                    <p>1xR$4.655,00</p>
-                                </td>
-                                <td>
-                                    <div class="button2">
-                                        <button class="delete"><i class="fa-solid fa-trash"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-
-
-                    </table>
+                                    <button><i class="fa-solid fa-angle-right"></i></button>
+                                </div>
+                                <div class="produtoRemove">
+                                    <i class="fa-solid fa-trash"></i>
+                                    <button>Remover</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="container-desconto">
-                    <article id="cupom" class="desconto-container">
-                        <h4>Cupom de desconto:</h4>
-                        <div class="row1">
-                            <input type="text" placeholder="Cupom">
-                            <div class="aplicar">
-                                <button><i class="fa-solid fa-tag"></i><span>APLICAR</span></button>
+
+
+
+                <div class="detailsContainer">
+                    <article id="cupom" class="descontoContainer">
+                        <div class="descontoSubContainer">
+                            <h4>Cupom de desconto:</h4>
+                            <div class="row1">
+                                <input type="text" placeholder="Cupom">
+                                <div class="aplicar">
+                                    <button><i class="fa-solid fa-tag"></i><span>APLICAR</span></button>
+                                </div>
                             </div>
                         </div>
                     </article>
-                    <article class="desconto-container">
-                        <h4>Cupom e Prazos:</h4>
-                        <div class="row1">
-                            <input type="text" placeholder="CEP*">
-                            <div class="calcular">
-                                <button><i class="fa-solid fa-truck"></i><span>CALCULAR</span></button>
+                    <article class="freteContainer">
+                        <div class="freteSubContainer">
+                            <h4>Frete e Prazos:</h4>
+                            <div class="row1">
+                                <input type="text" placeholder="CEP*">
+                                <div class="aplicar">
+                                    <button><i class="fa-solid fa-truck"></i><span>CALCULAR</span></button>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -193,59 +157,42 @@
             </section>
             <aside class="table-container">
                 <div class="table-aside">
-                    <table class="resumo-table">
-                        <thead>
-                            <tr class="colum-head">
+                    <table id="tabelaResumo">
+                        <div class="tituloResumo">
+                            <h1>RESUMO</h1>
+                        </div>
+                        <tbody>
+                            <tr id="valorProdutos">
                                 <th>
-                                    <p>Resumo</p>
+                                    <p>Valor dos produtos:</p>
                                 </th>
-                            </tr>
-                        </thead>
-                        <tbody class="tbody1">
-                            <div class="subtotal">
-                                <tr class="subtotal">
-                                    <th>
-                                        <p>Subtotal</p>
-                                    </th>
-                                    <td>
-                                        <p>R$ 4.655,00</p>
-                                    </td>
-                                </tr>
-                            </div>
-                            <div class="total">
-                                <tr class="total">
-                                    <th>
-                                        <p>Total</p>
-                                    </th>
-                                    <td>
-                                        <p>R$ 4.655,00</p>
-                                    </td>
-                                </tr>
-                            </div>
-                            <tr>
                                 <td>
-                                    <div class="vista">
-                                        <p style="color: #fff;">à vista</p>
-                                        <span class="preço1">R$ 4.190,50</span>
-                                        <p>no PIX com 15% de desconto</p>
-                                    </div>
-                                    <div class="hr">
-                                        <hr>
-                                    </div>
-                                    <div class="parcelado">
-                                        <span class="preço2">R$ 4.655,00</span>
-                                        <p>em até 12x de <span style=" font-weight: 700; color: #D95A11;">R$
-                                                387.91</span></p>
-                                        <p>sem juros no cartão</p>
-                                    </div>
+                                    <p>R$ 420,30</p>
+                                </td>
+                            </tr>
+                            <tr id="frete">
+                                <th>
+                                    <p>Frete:</p>
+                                </th>
+                                <td>
+                                    <p>R$ 30,32</p>
+                                </td>
+                            </tr>
+                            <tr id="total">
+                                <th>
+                                    <p id="totalTexto">Total:</p>
+                                </th>
+                                <td>
+                                    <p>R$ 450,62</p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                    <div class="comprarContainer">
+                        <button><i class="fa-solid fa-cart-shopping" ></i>Finalizar pedido</button>
+                    </div>
 
                 </div>
-                <div class="comprar">
-                    <button><i class="fa-solid fa-cart-shopping"></i>Finalizar pedido</button>
             </aside>
         </div>
 

@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-*{
+
+* {
     font-family: 'Roboto', 'sans-serif';
 }
-section{
+
+section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     margin: 20px 0;
 }
-.form-box i{
+
+.form-box i {
     margin: auto;
     display: flex;
     width: 4px;
@@ -22,7 +25,25 @@ section{
     color: #F0F1F2;
     background-color: #3a3a3a;
 }
-.form-box{
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill-selected {
+    /* Estilos que você deseja aplicar */
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+input {
+    color-scheme: dark;
+}
+
+.form-box {
     padding: 20px;
     width: 400px;
     position: relative;
@@ -32,21 +53,23 @@ section{
     justify-content: center;
     align-items: center;
 }
-p{
+
+p {
     font-size: 0.9em;
     font-weight: 300;
     color: #ffffff;
     margin-top: 20px;
     text-align: center;
 }
-h2{
+
+h2 {
     margin-top: 5px;
     font-size: 1.5em;
     color: #fff;
     text-align: center;
 }
 
-.inputbox{
+.inputbox {
     display: inline-flex;
     height: 40px;
     border-radius: 10px;
@@ -55,18 +78,22 @@ h2{
     margin: 20px 0px 20px 10px;
     border: 2px solid #fff;
 }
-.nome{
+
+.nome {
     margin-top: 30px;
 }
-.login{
+
+.login {
     display: block;
     width: 355px;
     margin: 25px 0px 20px 10px;
 }
-#senha{
+
+#senha {
     margin: 0;
 }
-.inputbox label{
+
+.inputbox label {
     position: absolute;
     top: 60%;
     left: 5px;
@@ -77,10 +104,13 @@ h2{
     transition: .5s;
     margin: 0;
 }
-input:focus~label, input:valid~label{
+
+input:focus~label,
+input:valid~label {
     top: -30%;
 }
-.inputbox input{
+
+.inputbox input {
     width: 100%;
     height: 40px;
     background: transparent;
@@ -90,22 +120,28 @@ input:focus~label, input:valid~label{
     color: #fff;
     margin-left: 10px;
 }
-.ReceberMarketing input{
+
+.ReceberMarketing input {
     width: auto;
 }
+
 .ReceberMarketing {
     margin: 20px 0 0px 10px;
 }
+
 .ConcordanciaTermos {
     margin: 20px 0 10px 10px;
 }
-.ConcordanciaTermos input{
+
+.ConcordanciaTermos input {
     width: auto;
 }
+
 input[type="date"] {
     appearance: none;
     background: transparent;
 }
+
 input[type="date"] {
     cursor: pointer;
     display: inline-flex;
@@ -118,20 +154,23 @@ input[type="date"] {
     border: 2px solid #fff;
     border-radius: 10px;
 }
-.datalabel{
+
+.datalabel {
     position: absolute;
     margin-left: 10px;
     transform: translateY(-65%);
     color: #fff;
-    font-size: 1em; 
+    font-size: 1em;
     pointer-events: none;
     transition: .5s;
     margin: 0;
 }
-#data{
+
+#data {
     display: none;
 }
-button{
+
+button {
     color: #ffffff;
     width: 100%;
     height: 40px;
@@ -143,34 +182,42 @@ button{
     font-weight: 600;
     text-transform: uppercase;
 }
-#Cadastrar{
+
+#Cadastrar {
     background: #3a3a3a;
 }
-.CriarConta{
+
+.CriarConta {
     font-size: .9em;
     color: #ffffff;
     text-align: center;
     margin: 25px 0 10px;
 }
-.ReceberMarketing label{
-    font-family: "poppins",  ;
+
+.ReceberMarketing label {
+    font-family: "poppins", ;
     font-weight: 400;
     color: #F0F1F2;
     text-align: justify;
 }
-.ConcordanciaTermos label{
+
+.ConcordanciaTermos label {
     font-family: 'Roboto', 'sans-serif';
     font-weight: 400;
     color: #F0F1F2;
     text-align: justify;
 }
-.ConcordanciaTermos a{
+
+.ConcordanciaTermos a {
     color: #F0F1F2;
 
 }
-.ConcordanciaTermos a:visited{
+
+.ConcordanciaTermos a:visited {
     color: #F0F1F2;
 }
-input:focus~label, input:valid~label{
+
+input:focus~label,
+input:valid~label {
     top: -30%;
 }
