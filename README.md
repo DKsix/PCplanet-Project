@@ -1,6 +1,8 @@
-# AV3
-PROJETO DE DESENVOLVIMENTO DE APLICAÇÃO WEB --------- TEMA: Loja de produtos de informática
+# PC Planet 
+Projeto desenvolvido na disciplina de desenvolvimento WEB durante o ensino médio integrado a informática
+
+TEMA: Loja de produtos de informática
 
 Professor: Lázaro
 
-Grupo: Dudu, Luma e Maria 
+Grupo: Carlos Eduardo Moraes Campos, Luma Barbosa Lordelo e Maria Luiza Pinheiro de Souza Silva 
