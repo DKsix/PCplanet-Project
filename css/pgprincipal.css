@@ -166,10 +166,6 @@ label {
     font-family: 'Poppins', sans-serif;
     transition: 0.5s ease-in-out;
 }
-.card7 button:hover{
-    background-color: #3a99ec;
-    transition: 0.5s ease-in-out;
-}
 .card7 h2{
     font-family: 'Poppins', sans-serif;
     color: #F0F1F2;
@@ -211,7 +207,7 @@ label {
     overflow: hidden;
 }
 
-.cards-container {
+.cardsContainerOfertas {
     padding: 1.25rem 0;
     display: flex;
     transition: all 0.5s ease;
@@ -295,7 +291,7 @@ label {
     text-align: center; 
     text-decoration: none;
 }
-.card2:hover{
+.card-hover:hover{
     box-shadow: 0px 0px 13px 0px #9797979d;
     cursor: pointer;
     margin-top:  -10px;
@@ -662,26 +658,6 @@ label {
     text-align: center; 
     text-decoration: none;
 }
-.card3:hover{
-    box-shadow: 0px 0px 13px 0px #9797979d;
-    cursor: pointer;
-    margin-top:  -10px;
-    transition: all 0.7s ease;
-}
-.arrows2 {
-    display: inline;
-    align-items: center;
-    justify-content: center;
-    color: #0D0D0D;
-    transform: translateX(-50%);
-}
-.arrow2 {
-    border-radius: 5px;
-    justify-content: center;
-    background-color: #66B1F2;
-    padding: 5px 10px;
-    cursor: pointer;
-}
 .container3{
     padding-top: 10px;
     margin: 0;
@@ -698,7 +674,7 @@ label {
     overflow: hidden;
 }
 
-.cards-container2 {
+.cardsContainerComputadores {
     padding: 1.25rem 0;
     display: flex;
     transition: all 0.5s ease;
@@ -736,7 +712,7 @@ label {
     width: 915px;
     overflow: hidden;
 }
-.cards-container3 {
+.cardsContainerMonitores {
     padding: 1.25rem 0;
     display: flex;
     transition: all 0.5s ease;
@@ -791,27 +767,6 @@ label {
     border-radius: 10px;
     text-align: center; 
     text-decoration: none;
-}
-.card4:hover{
-    box-shadow: 0px 0px 13px 0px #9797979d;
-    cursor: pointer;
-    margin-top:  -10px;
-    transition: all 0.7s ease;
-}
-
-.arrows3 {
-    display: inline;
-    align-items: center;
-    justify-content: center;
-    color: #0D0D0D;
-    transform: translateX(-50%);
-}
-.arrow3 {
-    border-radius: 5px;
-    justify-content: center;
-    background-color: #66B1F2;
-    padding: 5px 10px;
-    cursor: pointer;
 }
 .cards-containers{
     display: flex;

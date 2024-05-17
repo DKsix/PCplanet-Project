@@ -19,7 +19,7 @@ var IDModeloProduto = idDoElemento.slice(0, 2);
 // Declarando var main
 var main = document.getElementById("main")
 
-function irParaCarrinho(){
+function irParaCarrinho() {
     window.location.href = "../html/carrinho.html?id=" + idDoElemento;
 }
 
@@ -57,7 +57,7 @@ function convertJsonToDadosComputador(ComputadorList) {
 function convertJsonToDadosMonitor(MonitorList) {
     // instanciando o objeto da classe monitor
     const monitor = new Monitor()
-    
+
     // convertendo os dados json para o objeto
     monitor.id = MonitorList.id;
     monitor.nome = MonitorList.nome;
@@ -81,10 +81,10 @@ function convertJsonToDadosMonitor(MonitorList) {
 }
 
 // Função para carregar os dados do computador
-function carregarDadosComputador() {
-    
+async function  carregarDadosComputador() {
+
     // Utilizando fetch api para buscar o arquivo json
-    fetch("../js/computadores.json")
+    await fetch("../js/computadores.json")
         // pegando a resposta e transformmando em json
         .then((response) => response.json())
         // pegando a resposta em json e transformando na computadorList
@@ -107,7 +107,7 @@ function carregarDadosComputador() {
                     <div class="produto-view">
                         <div class="produto-view-container-carrosel">
                             <div class="card-produto-carrosel" id="card-produto-carrosel-1">
-                                <img src="../arquivos/Image/computadores/${computador.image01}" alt="">
+                                <img id='image01' src="../arquivos/Image/computadores/${computador.image01}" alt="">
                             </div>
                             <div class="card-produto-carrosel" id="card-produto-carrosel-2">
                                 <img src="../arquivos/Image/computadores/${computador.image02}" alt="">
@@ -293,7 +293,6 @@ function carregarDadosMonitor() {
                                 <img src="../arquivos/Image/monitor/${monitor.image01}" alt="">
                             </div>
                         </div>
-
                     </div>
                     <div class="produto-buy">
                         <h1 id="produto-name">${monitor.nome}</h1>
@@ -412,18 +411,20 @@ function carregarDadosMonitor() {
         </section>`
             // Colocando todo o html na main utilizando innerHTML
             main.innerHTML += newHtml
+            console.log('hello world')
         })
 }
 
 // De acordo se o id for equivalente a "PC" vai carregar os dados de computador.
-if (IDModeloProduto == "PC"){
+if (IDModeloProduto == "PC") {
     carregarDadosComputador()
-// caso não for "PC" vai carregar os dados dos monitores. 
-} else{
+    // caso não for "PC" vai carregar os dados dos monitores. 
+} else {
     carregarDadosMonitor()
 }
 
-
 console.log("foi")
+
+
 
 

@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../arquivos/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/pgComputadores.css">
+    <link rel="shortcut icon" href="../arquivos/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/pgMeuPerfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>PC Planet</title>
-</head>
-<style>
 
-</style>
+</head>
 
 <body>
     <header>
@@ -93,107 +90,72 @@
         </nav>
     </header>
     <main>
-        <div class="title">
-            <div class="row1">
-                <h2 id="principal">Computadores</h2>
-            </div>
-            <div class="row2">
-                <p>Ordernar por:</p>
-                <div class="select-container">
-                    <select name="order" id="order">
-                        <div class="options">
-                            <option hidden value="Relevância">Relevância</option>
-                            <!-----
-                                <option value="Titulo A-Z">Titulo A-Z"</option>
-                                <option value="Titulo Z-A">Titulo Z-A"</option>
-                                <option value="Menor valor">Menor valor</option>
-                                <option value="Maior valor">Maior valor</option>
-                                ---->
-                        </div>
-                    </select>
-                    <div class="icon-container">
-                        <i class="fa-solid fa-caret-up" id="cima"></i>
-                        <i class="fa-solid fa-caret-down" id="baixo"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr class="hr1">
-        <hr class="hr2">
-        <section class="container">
-            <div class="card" id="PC-0" onclick="IrParaPaginaDeCompra(this.id)">
-                <div class="card-image imgPC-1"></div>
-                <h2> Computador Gamer</h2>
-                <p> Computador Gamer Ryzen 5 5500, RX 550 2GB</p>
-                <h3 class="preços">R$2.099,99 <span>R$3.239,20</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card" id="PC-1" onclick="IrParaPaginaDeCompra(this.id)">
-                <div class="card-image imgPC-2"></div>
-                <h2> Computador Gamer</h2>
-                <p>Computador Gamer Ryzen 5 5500, RTX 2060 6GB</p>
-                <h3 class="preços">R$4.340,95 <span>R$4.944,01</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card" id="PC-2" onclick="IrParaPaginaDeCompra(this.id)">
-                <div class="card-image imgPC-3"></div>
-                <h2> Computador Gamer</h2>
-                <p> Computador Gamer Ryzen 7 5700G, GTX 1630 4GB</p>
-                <h3 class="preços">R$2.110,54<span>R$2.482,99</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card" id="PC-3" onclick="IrParaPaginaDeCompra(this.id)">
-                <div class="card-image imgPC-4"></div>
-                <h2> Computador Gamer</h2>
-                <p> Computador Gamer Ryzen 5 5600X, RX 7800 XT 16GB</p>
-                <h3 class="preços">R$8.299,99<span>R$9.764,69</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card" id="PC-4" onclick="IrParaPaginaDeCompra(this.id)">
-                <div class="card-image imgPC-5"></div>
-                <h2> Computador Gamer</h2>
-                <p> Computador Gamer Ryzen 9 7950X3D 7800 XT 16GB</p>
-                <h3 class="preço-alto">R$12.501,06<span class="preço-alto">R$13.299,60</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card" id="PC-5" onclick="IrParaPaginaDeCompra(this.id)">
-                <div class="card-image imgPC-6"></div>
-                <h2> Computador Gamer</h2>
-                <p> Computador Gamer AMD RYZEN 5 5600 GTX 1660 SUPER 6GB 16GB DDR4, SSD M.2 480GB</p>
-                <h3 class="preços">R$14.889,99<span>R$17.517,64</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card" id="PC-6" onclick="IrParaPaginaDeCompra(this.id)">
-                <div class="card-image imgPC-7"></div>
-                <h2> Computador Gamer</h2>
-                <p> Computador Gamer Ryzen 9 7950X3D RTX 4080 16GB</p>
-                <h3 class="preços">R$37.534,05<span>R$ 44.157,70</span></h3>
-                <a href=""> COMPRAR</a>
-            </div>
-            <div class="card" id="PC-7" onclick="IrParaPaginaDeCompra(this.id)">
-                <div class="card-image imgPC-8"></div>
-                <h2> Computador Gamer</h2>
-                <p> Computador Gamer Ryzen 9 5950X RTX 4070 TI 12GB </p>
-                <h3 class="preços">R$6.235,28<span>R$7.235,28</span></h3>
-                <a href=""> COMPRAR</a>
+        <section>
+            <div class="titleContainer">
+                <i class="fa-solid fa-user"></i>
+                <h1>Meus Dados</h1>
             </div>
         </section>
-        <article>
-            <div class="container-page">
-                <div class="page-numbers">
-                    <ul class="list-page">
-                        <li id="escolhida2"><button><i class="fa-solid fa-angle-left"></i></button></li>
-                        <li id="escolhida"><button>1</button></li>
-                        <li><button>2</button></li>
-                        <li><button>3</button></li>
-                        <li><button>4</button></li>
-                        <li><button>...</button></li>
-                        <li><button>40</button></li>
-                        <li><button><i class="fa-solid fa-angle-right"></i></button></li>
-                    </ul>
+        <section id="sectionContainer">
+            <div class="dadosContainer">
+                <div class="title">
+                    <i class="fa-solid fa-list-ul"></i>
+                    <h3>Dados Básicos</h3>
+                </div>
+                <div class="alterarContainer">
+                    <div class="formContainer">
+                        <form action="meuPerfil.php">
+                            <div class="formRow">
+                                <label for="nome">Nome</label>
+                                <input type="text" name="nome" id="nome" placeholder="">
+                            </div>
+                            <div class="formRow">
+                                <label for="sobrenome">Sobrenome</label>
+                                <input type="text" name="sobrenome" id="sobrenome" placeholder="">
+                            </div>
+                            <div class="formRow">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email" placeholder="">
+                            </div>
+                            <div class="formRow">
+                                <label for="cpf">CPF</label>
+                                <input type="text" name="cpf" id="cpf" placeholder="">
+                            </div>
+                            <div class="formRow">
+                                <label for="novaSenha">Nova Senha</label>
+                                <input type="text" name="novaSenha" id="novaSenha">
+                            </div>
+                            <div class="formRow">
+                                <label for="confirmarNovaSenha">Confirmar Nova Senha</label>
+                                <input type="text" name="confirmarNovaSenha" id="confirmarNovaSenha">
+                            </div>
+                            <div class="formRow">
+                                <label for="senhaAtual">Senha Atual</label>
+                                <input type="text" name="senhaAtual" id="senhaAtual">
+                            </div>
+                        </form>
                 </div>
             </div>
-        </article>
+            </div>
+            <div class="navContainer">
+                <div class="row active">
+                    <i class="fa-regular fa-user"></i>
+                    <h4>Dados</h4>
+                </div>
+                <div class="row">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <h4>Pedidos</h4>
+                </div>
+                <div class="row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>Endereços</h4>
+                </div>
+                <div class="row">
+                    <i class="fa-solid fa-door-open"></i>
+                    <h4>Sair</h4>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="container-footer">
@@ -250,11 +212,7 @@
         </div>
         </div>
     </footer>
+
 </body>
-<script>
-    function IrParaPaginaDeCompra(idDoElemento){
-        window.location.href = "../html/pgCompra.html?id=" + idDoElemento;
-    }
-</script>
 
 </html>

@@ -1,0 +1,146 @@
+main {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 25% !important;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    color: #0D0D0D;
+}
+
+.titleContainer i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.625rem;
+}
+
+.titleContainer h1 {
+    font-size: 2em;
+}
+
+#sectionContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.dadosContainer {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.dadosContainer h3 {
+    margin: 10px 5px;
+}
+
+.navContainer {
+    margin-left: 1.563rem;
+    min-width: 235px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.navContainer>.row {
+    border: 0.5px solid #a7a7a73b;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.active {
+    background-color: #ffffff49 !important;
+}
+
+.navContainer>.row>i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.650rem;
+    margin-left: 1rem;
+}
+
+.navContainer>.row>h4 {
+    font-size: 14px;
+    margin: 0.725rem 0.313rem;
+}
+
+.formContainer {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    padding: 10px 0 25px 0;
+}
+
+.formRow {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-top: 5px;
+}
+
+.formRow input {
+    min-width: 100px;
+    width: 180px;
+    padding: 6px;
+    border: 1px solid #a7a7a79d;
+}
+
+.formRow label {
+    color: #0f0f0f;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+.title h3{
+    margin-top: 15px;
+    margin-bottom: 17px;
+    font-size: 21px;
+}
+.title i{
+    margin-left: 0.500rem;
+    font-size: 14px;
+    color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill-selected {
+    /* Estilos que você deseja aplicar */
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+@media (max-width: 950px){
+    #sectionContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .navContainer{
+        margin: 0;
+        margin-bottom: 45px;
+    }
+    .formContainer{
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 950px){
+    main{
+        margin: 10% !important;
+    }
+}
