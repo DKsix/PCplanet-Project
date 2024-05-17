@@ -1,0 +1,11 @@
+{
+    "name": "duduk/php-testes",
+    "autoload": {
+        "psr-4": {
+            "api\\": "api"
+        }
+    },
+    "require": {
+        "firebase/php-jwt": "^6.10"
+    }
+}
