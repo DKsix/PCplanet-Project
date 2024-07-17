@@ -5,7 +5,7 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
 
-include_once ("../config.php");
+include_once ("/xampp/htdocs/PCplanet-Project/php/config.php");
 $conn = getConnection($hostname, $user, $password, $database);
 
 $key = 'pcplanetsecretkey123';
@@ -137,31 +137,33 @@ if ($action == "profile-user-edit") {
     $data = json_decode($json, true);
     $senhaAtual = md5($data['senhaAtual']);
     $senhaNova =  md5($data['senhaNova']);
-    $nome = $data['nome'];
+    $email = ($data['email']);
 
+    $sql = "SELECT senha FROM usuarios WHERE email = ?";
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $stmt->bind_result($senhaDB);
+        $stmt->fetch();
+        $stmt->close();
+    }
+    print($senhaDB);
     
+    $sql = "UPDATE usuarios SET senha = ? WHERE email = ? AND senha = ?";
 
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("sss", $senhaNova, $email, $senhaAtual);
+        if ($stmt->execute()) {
+            $return["status"] = "Senha atualizada com sucesso.";
+        } else {
+            $return["status"] = "Erro ao atualizar a senha: " . $stmt->error;
+        }
+        $stmt->close();
+    } else {
+        $return["status"] = "Erro ao preparar a declaração: " . $conn->error;
+    }
 
-
-    //     $nomeNovo = $_POST["nome"];
-    //     $novaSenha = md5($_POST["novaSenha"]);
-    //     $confirmarNovaSenha = md5($_POST["confirmarNovaSenha"]);
-    //     $senhaAtual = md5($_POST["senhaAtual"]);
-
-    //     print ('<br></br>' . $senhaAtual);
-    //     print ('<br></br>' . $senha);
-
-    //     if ($novaSenha == $confirmarNovaSenha && $senhaAtual == $senha) {
-    //         $sql = "UPDATE usuarios SET nome = '$nomeNovo', senha = '$novaSenha' WHERE nome = '$nome' AND cpf = '$cpf';";
-    //         $result = $conn->query($sql);
-    //         header('location: pgMeuPerfil.php');
-    //         print ("<script>console.log('alteração feita')");
-    //     } else {
-    //         print ('<br></br>' . 'senha errada');
-    //     }
-    // }
-
-    die(json_encode($nome));
+    die(json_encode($return));
 }
 
 

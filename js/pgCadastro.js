@@ -1,211 +1,187 @@
 // declaração variáveis
 const form = document.querySelector('form')
 const btnCadastrar = document.getElementById('cadastrar')
+const nome = document.getElementById('nome')
+const cpf = document.getElementById('cpf')
+const rg = document.getElementById('rg')
+const email = document.getElementById('email')
+const senha = document.getElementById('password')
+document.getElementById('submit').disabled = true;
+
+cpf.addEventListener('input', () => {
+    var cpfValue = cpf.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    var value;
+    // Adiciona os separadores nos locais apropriados
+    if (cpfValue.length > 3 && cpfValue.length <= 6) {
+        cpf.value = cpfValue.substring(0, 3) + '.' + cpfValue.substring(3);
+    } else if (cpfValue.length > 6 && cpfValue.length <= 9) {
+        cpf.value = cpfValue.substring(0, 3) + '.' + cpfValue.substring(3, 6) + '.' + cpfValue.substring(6);
+    } else if (cpfValue.length > 9) {
+        cpf.value = cpfValue.substring(0, 3) + '.' + cpfValue.substring(3, 6) + '.' + cpfValue.substring(6, 9) + '-' + cpfValue.substring(9);
+    } else {
+        cpf.cpfValue = value;
+    }
+});
+rg.addEventListener('input', () => {
+    var rgValue = rg.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    // Adiciona os separadores nos locais apropriados
+    if (rgValue.length > 2 && rgValue.length <= 5) {
+        rg.value = rgValue.substring(0, 2) + '.' + rgValue.substring(2);
+    } else if (rgValue.length > 5 && rgValue.length <= 8) {
+        rg.value = rgValue.substring(0, 2) + '.' + rgValue.substring(2, 5) + '.' + rgValue.substring(5);
+    } else if (rgValue.length > 8) {
+        rg.value = rgValue.substring(0, 2) + '.' + rgValue.substring(2, 5) + '.' + rgValue.substring(5, 8) + '-' + rgValue.substring(8);
+    }
+});
+function showError(input) {
+    input.addEventListener('focusout', () => {
+        var resultado = validarInput(input)
+        if (resultado != true) {
+            document.getElementById('error' + input.id).style.display = "flex"
+            document.getElementById('text' + input.id).innerHTML = `${resultado}`
+            document.getElementById('submit').disabled = true;
+        } else if (resultado == true) {
+            document.getElementById('error' + input.id).style.display = "none"
+            if (validarNome(nome.value) && validarCPF(cpf.value) && validarEmail(email.value) && validarRG(rg.value) && validarSenha(senha.value) === true) {
+                document.getElementById('submit').disabled = false;
+            }
+        }
+    })
+}
+showError(nome)
+showError(cpf)
+showError(rg)
+showError(email)
+showError(senha)
+
+
+function validarInput(input) {
+    if (input.id === 'nome') {
+        return resultado = validarNome(input.value)
+    } else if (input.id === 'cpf') {
+        return resultado = validarCPF(input.value)
+    } else if (input.id === 'rg') {
+        return resultado = validarRG(input.value)
+    }
+    else if (input.id === 'email') {
+        return resultado = validarEmail(input.value)
+    }
+    else if (input.id === 'password') {
+        return resultado = validarSenha(input.value)
+    }
+}
+
+
+// Validações
+function validarNome(nome) {
+    var regex = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    return regex.test(nome) ? true : 'Por favor, insira o nome completo.';
+}
+
+function validarCPF(cpf) {
+    var regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+    if (regex.test(cpf) === true) {
+        if (validarCPFbolada(cpf)) {
+            return true
+        }
+    }
+    return 'Por favor, insira um CPF válido.'
+}
+function validarCPFbolada(cpf) {
+    cpf = cpf.replace(/\D/g, '');
+    if (cpf.toString().length != 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+    var result = true;
+    [9, 10].forEach(function (j) {
+        var soma = 0, r;
+        cpf.split(/(?=)/).splice(0, j).forEach(function (e, i) {
+            soma += parseInt(e) * ((j + 2) - (i + 1));
+        });
+        r = soma % 11;
+        r = (r < 2) ? 0 : 11 - r;
+        if (r != cpf.substring(j, j + 1)) result = false;
+    });
+    return result;
+}
+
+function validarRG(rg) {
+    var regex = /^\d{2}\.\d{3}\.\d{3}-\d{1}$/;
+    return regex.test(rg) ? true : 'Por favor, insira um RG válido.';
+}
+
+function validarEmail(email) {
+    var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email) ? true : 'Por favor, insira um email válido.';
+}
+
+function validarSenha(senha) {
+    var regex = /^(?=.*\d).{6,}$/;
+    return regex.test(senha) ? true : 'A senha pelo menos 6 caracteres.';
+}
+
+if (validarNome(nome.value) && validarCPF(cpf.value) && validarEmail(email.value) && validarRG(rg.value) && validarSenha(senha.value) === true) {
+    document.getElementById('submit').disabled = false;
+}
 
 // Evento do submit para cadastrar
 form.addEventListener('submit', event => {
-    // utilizado pra definir como evento padrão ao dar submit, para não recarregar a pagina. 
+    // Utilizado pra definir como evento padrão ao dar submit, para não recarregar a pagina. 
     event.preventDefault();
 
-    // declarando variáveis dos inputs
-    const nome = document.getElementById('nome').value
-    const sobrenome = document.getElementById('sobrenome').value
-    const cpf = document.getElementById('cpf').value
-    const rg = document.getElementById('rg').value
-    const email = document.getElementById('email').value
-    const senha = document.getElementById('password').value
+    let nomeValido = nome.value
+    let cpfValido = cpf.value.replace(/\D/g, '');
+    let rgValido = rg.value.replace(/\D/g, '');
+    let emailValido = email.value
+    let senhaValido = senha.value
 
-    // declaração de variáveis que iram receber o retorno das funções de validações
-    const validacaoNome = validarNome(nome)
-    const validacaoSobrenome = validarSobrenome(sobrenome)
-    const validacaoCPF = validarCpf(cpf)
-    const validacaoRg = validarRg(rg)
-    const validacaoEmail = validarEmail(email)
-    const validacaoSenha = validarSenha(senha)
-
-    // declaração variável de validação final
-    var validacaoFinal = false
-
-    // teste se passou por todas as validações finais e dando valor true para a validação final. 
-    if (validacaoNome && validacaoSobrenome && validacaoCPF && validacaoRg && validacaoEmail && validacaoSenha == true) {
-        validacaoFinal = true
-    }
-    // Executando a função para acionar um alerta de acorda com a validação que foi indicada como falsa.
-    AlertarDeAcordoComValidacao(validacaoNome, validacaoSobrenome, validacaoCPF, validacaoRg, validacaoEmail, validacaoSenha);
-
-    // Se a validação final for verdadeira começa a parte de cadastro do usuário.
-    if (validacaoFinal === true) {
-        // variável que inicializa um objeto salvando as propiedades do usuário.
-        const dadosUsuario = { nome, sobrenome, rg, cpf, email, senha };
-        // variável usuariosJson recupera o valor armazenado no armazenamento local com a chave 'usuarios'
-        const usuariosJson = localStorage.getItem('usuarios');
-        let usuarios;
-
-        // Faz a verificação se a variável usuariosJson não é algo nulo, que não há nada dentro dela.
-        if (usuariosJson) {
-            // Caso ela não seja nula, é utilizado o JSON.parse para transformar a string json armazenada nela em objeto para a variável usuarios 
-            usuarios = JSON.parse(usuariosJson);
-        } else {
-            // Caso ela seja nula a variável usuarios cria uma lista vázia para armazenar os dados.
-            usuarios = [];
-        }
-        // O dados da variável dadosUsuario é empurrado para dentro da lista usuarios
-        usuarios.push(dadosUsuario);
-        // Os dados são transformados em json e colocados no armazenamento local
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-        // função trocar de pagina
-        function TrocarDePagina(){
-            window.location.href = 'login.html';
-        }
-        // delay para trocar de pagina
-        setTimeout(TrocarDePagina, 800)
-    }
-}
-)
-
-// Funções de validação
-
-// Função para validar se o cpf tem 11 caracteres
-function validarCpf(cpf) {
-    let validacao = false
-    let tamanhoCpf = cpf.length;
-    if (tamanhoCpf == 11) {
-        validacao = true
-    } else {
-        validacao = false
-    }
-    return validacao;
-}
-// Função para validar Email
-function validarEmail(email) {
-    let validacao = false
-    if (email.includes("@") && (email.includes(".com")) && (email[email.indexOf("@") - 1] != " ") && (email[email.indexOf("@") + 1] != " ") && (email.indexOf("@") - 1 != -1) && (email[email.indexOf("@") + 1] != ".") === true) {
-        validacao = true
-    } else {
-        validacao = false
-    } return validacao;
-}
-// Função para validar RG
-function validarRg(rg) {
-    let validacao = false
-    let tamanhoRg = rg.length;
-
-    if (tamanhoRg === 10) {
-        validacao = true
-    } else {
-        validacao = false
-    }
-    return validacao;
-}
-// Função para validar senha
-function validarSenha(senha) {
-    let validacao = false
-    let tamanhoSenha = senha.length;
-    if (tamanhoSenha >= 8) {
-        validacao = true
-    } else {
-        validacao = false
-    }
-    return validacao;
-}
-// Função para validar nome
-function validarNome(nome) {
-    let validacao = true
-    console.log(nome)
-    const numeros = "0123456789";
-    for (let i = 0; i < nome.length; i++) {
-        if (numeros.includes(nome[i])) {
-            validacao = false;
-            break;
-        }
-    }
-    return validacao;
-}
-// Função para validar sobrenome
-function validarSobrenome(sobrenome) {
-    let validacao = true
-    const numeros = "0123456789";
-    for (let i = 0; i < sobrenome.length; i++) {
-        if (numeros.includes(sobrenome[i])) {
-            validacao = false;
-            break;
-        }
-    }
-    return validacao;
-}
-
-// Função para executar os alertas
-function AlertarDeAcordoComValidacao(validacaoNome, validacaoSobrenome, validacaoCPF, validacaoRg, validacaoEmail, validacaoSenha) {
-    if (validacaoNome === false) {
-        Toastify({
-            text: "Nome invalido",
-            position: 'center',
-            duration: 3000,
-            style: {
-                'border-radius': '20px',
-                background: "linear-gradient(to right, #4178BF, #66B1F2)",
-            },
-        }).showToast()
-    } else if (validacaoSobrenome === false) {
-        Toastify({
-            text: "Sobrenome invalido",
-            position: 'center',
-            duration: 3000,
-            style: {
-                'border-radius': '20px',
-                background: "linear-gradient(to right, #4178BF, #66B1F2)",
-            },
-        }).showToast()
-    } else if (validacaoCPF === false) {
-        Toastify({
-            text: "CPF invalido",
-            position: 'center',
-            duration: 3000,
-            style: {
-                'border-radius': '20px',
-                background: "linear-gradient(to right, #4178BF, #66B1F2)",
-            },
-        }).showToast()
-    } else if (validacaoRg === false) {
-        Toastify({
-            text: "RG invalido",
-            position: 'center',
-            duration: 3000,
-            style: {
-                'border-radius': '20px',
-                background: "linear-gradient(to right, #4178BF, #66B1F2)",
-            },
-        }).showToast()
-    } else if (validacaoEmail === false) {
-        Toastify({
-            text: "Email invalido",
-            position: 'center',
-            duration: 3000,
-            style: {
-                'border-radius': '20px',
-                background: "linear-gradient(to right, #4178BF, #66B1F2)",
-            },
-        }).showToast()
-    } else if (validacaoSenha === false) {
-        Toastify({
-            text: "Senha invalida",
-            position: 'center',
-            duration: 3000,
-            style: {
-                'border-radius': '20px',
-                background: "linear-gradient(to right, #4178BF, #66B1F2)",
-            },
-        }).showToast()
-    } else {
-        Toastify({
-            text: "Registro concluido",
-            position: 'center',
-            duration: 3000,
-            style: {
-                'border-radius': '20px',
-                background: "linear-gradient(to right, #4178BF, #66B1F2)",
-            },
-        }).showToast()
+    let data = {
+        nome: nomeValido,
+        cpf: cpfValido,
+        rg: rgValido,
+        email: emailValido,
+        senha: senhaValido,
     };
-};
+    
+    // Configurar as opções para a solicitação Fetch
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+        },
+        body: JSON.stringify(data)
+    };
+
+    // Enviar a solicitação usando Fetch
+    fetch('http://localhost/Estudos.php/phpTestes/CRUD%20para%20o%20site/api/api.php?action=register-user', options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro na requisição: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(response => {
+            console.log(response)
+            if (response.errorCode === 1062) {
+                importAlerts().then((alerts) => {
+                    const alertsToastify = new alerts.default();
+                    alertsToastify.showAlert('Já existe um cadastro para o e-mail ou documento informado.');
+                });
+            } else if ((response.status === "success")) {
+                importAlerts().then((alerts) => {
+                    const alertsToastify = new alerts.default();
+                    alertsToastify.showAlert('Cadastro realizado!');
+                    window.location.href = "../html/login.html"
+                });
+            }
+        })
+        .catch(error => {
+            console.log(error);
+        });
+
+    // Função para importar o módulo de alertas
+    function importAlerts() {
+        return import('./alerts.js');
+    }
+})
+

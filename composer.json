@@ -1,11 +1,9 @@
 {
-    "name": "duduk/php-testes",
+    "name": "duduk/p-cplanet-project",
     "autoload": {
         "psr-4": {
-            "api\\": "api"
+            "Duduk\\PCplanetProject\\": "src/"
         }
     },
-    "require": {
-        "firebase/php-jwt": "^6.10"
-    }
+    "require": {}
 }

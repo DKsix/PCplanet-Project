@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
-
+<script>
+    const token = localStorage.getItem('token')
+    if (!token) {
+        redirect()
+    }
+</script>
 <body>
     <header>
         <div class="container-header">
@@ -90,52 +95,63 @@
         </nav>
     </header>
     <main>
-        <section>
-            <div class="titleContainer">
-                <i class="fa-solid fa-user"></i>
-                <h1>Meus Dados</h1>
-            </div>
-        </section>
         <section id="sectionContainer">
-            <div class="dadosContainer">
-                <div class="title">
-                    <i class="fa-solid fa-list-ul"></i>
-                    <h3>Dados Básicos</h3>
+            <div class="mainContainer">
+                <div class="titleContainer">
+                    <i class="fa-solid fa-user"></i>
+                    <h1>Meus Dados</h1>
                 </div>
-                <div class="alterarContainer">
-                    <div class="formContainer">
-                        <form action="meuPerfil.php">
-                            <div class="formRow">
-                                <label for="nome">Nome</label>
-                                <input type="text" name="nome" id="nome" placeholder="">
-                            </div>
-                            <div class="formRow">
-                                <label for="sobrenome">Sobrenome</label>
-                                <input type="text" name="sobrenome" id="sobrenome" placeholder="">
-                            </div>
-                            <div class="formRow">
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email" placeholder="">
-                            </div>
-                            <div class="formRow">
-                                <label for="cpf">CPF</label>
-                                <input type="text" name="cpf" id="cpf" placeholder="">
-                            </div>
-                            <div class="formRow">
-                                <label for="novaSenha">Nova Senha</label>
-                                <input type="text" name="novaSenha" id="novaSenha">
-                            </div>
-                            <div class="formRow">
-                                <label for="confirmarNovaSenha">Confirmar Nova Senha</label>
-                                <input type="text" name="confirmarNovaSenha" id="confirmarNovaSenha">
-                            </div>
-                            <div class="formRow">
-                                <label for="senhaAtual">Senha Atual</label>
-                                <input type="text" name="senhaAtual" id="senhaAtual">
-                            </div>
-                        </form>
+                <div class="dadosContainer">
+                    <div class="title">
+                        <i class="fa-solid fa-list-ul"></i>
+                        <h3>Dados Básicos</h3>
+                    </div>
+                    <div class="alterarContainer">
+                        <div class="formContainer">
+                            <form action="meuPerfil.php">
+                                <div class="formRow">
+                                    <label for="nome">Nome completo</label>
+                                    <input type="text" name="nome" id="nome" placeholder="" disabled>
+                                </div>
+                                <div class="formRow">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" placeholder="" disabled>
+                                </div>
+                                <div class="formRow">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" name="cpf" id="cpf" placeholder="" disabled>
+                                </div>
+                                <div class="formRow">
+                                    <label for="novaSenha">Nova Senha</label>
+                                    <input type="password" name="novaSenha" id="novaSenha">
+                                </div>
+                                <div id="errornovaSenha" class="error">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    <h6 id="textnovaSenha"></h6>
+                                </div>
+                                <div class="formRow">
+                                    <label for="confirmarNovaSenha">Confirmar Nova Senha</label>
+                                    <input type="password" name="confirmarNovaSenha" id="confirmarNovaSenha">
+                                </div>
+                                <div id="errorconfirmarNovaSenha" class="error">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    <h6 id="textconfirmarNovaSenha"></h6>
+                                </div>
+                                <div class="formRow">
+                                    <label for="senhaAtual">Senha Atual</label>
+                                    <input type="password" name="senhaAtual" id="senhaAtual">
+                                </div>
+                                <div id="errorsenhaAtual" class="error">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    <h6 id="textsenhaAtual"></h6>
+                                </div>
+                                <div class="formRow">
+                                    <input type="submit" name="Enviar" id="submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </div>
             </div>
             <div class="navContainer">
                 <div class="row active">
@@ -150,7 +166,7 @@
                     <i class="fa-solid fa-location-dot"></i>
                     <h4>Endereços</h4>
                 </div>
-                <div class="row">
+                <div class="row" id="logout" onclick="encerrar()">
                     <i class="fa-solid fa-door-open"></i>
                     <h4>Sair</h4>
                 </div>
@@ -214,5 +230,5 @@
     </footer>
 
 </body>
-
+<script src="../js/pgMeuPerfil.js"></script>
 </html>

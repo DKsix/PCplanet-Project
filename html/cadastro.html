@@ -2,6 +2,9 @@
 <html lang="pt-br">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="shortcut icon" href="../arquivos/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
@@ -92,45 +95,87 @@
     <section class="containerpai">
         <div class="form-box">
             <div class="form-value">
-                <form>
-                    <i class="fa-solid fa-user-plus fa-flip-horizontal"></i>
+                <form action="pgCadastro.php" method="post">
+                    <i class="fa-solid fa-user"></i>
                     <h2>Criar minha conta</h2>
                     <p>Informe seus dados abaixo para criar sua conta</p>
-                    <div class="inputbox nome">
-                        <input type="text" required id="nome">
-                        <label for="">Nome</label>
-                    </div>
-                    <div class="inputbox">
-                        <input type="text" required id="sobrenome">
-                        <label for="">Sobrenome</label>
-                    </div>
-                    <div class="inputbox">
-                        <input type="text" required id="cpf">
-                        <label for="">CPF</label>
-                    </div>
-                    <div class="inputbox">
-                        <input type="text" required id="rg">
-                        <label for="">RG</label>
-                    </div>
-                    <div class="inputbox login">
-                        <input type="text" required id="email">
-                        <label for="">E-mail </label>
-                    </div>
-                    <div class="inputbox login">
-                        <input type="password" required id="password">
-                        <label for="">Senha</label>
-                    </div>
-                    <div class="ReceberMarketing">
-                        <input type="checkbox" id="marketing">
-                        <label for="">Aceito receber marketing da PcPlanet no e-mail</label>
-                    </div>
-                    <div class="ConcordanciaTermos">
-                        <input type="checkbox" required id="termos">
-                        <label for="">Estou ciente e CONCORDO com os <a href="">termos de aceite</a> e <a
-                                href="">políticas de privacidade</a> da PcPlanet.</label>
-                    </div>
-                    <div class="CriarConta">
-                        <button id="Cadastrar" type="submit">Criar conta</button>
+                    <div class="formContainer">
+                        <div class="inputContainer">
+                            <div class="inputbox nome">
+                                <input type="text" name="nome" required id="nome">
+                                <label for="">Nome completo*</label>
+                            </div>
+                            <div id="errornome" class="error">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <h6 id="textnome"></h6>
+                            </div>
+                        </div>
+                        <div class="inputContainer">
+                            <div class="inputbox">
+                                <input type="text" name="cpf" required id="cpf" maxlength="14" aria-invalid="true"
+                                    placeholder="___.__.__-__">
+                                <label for="">CPF*</label>
+                            </div>
+                            <div id="errorcpf" class="error">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <h6 id="textcpf"></h6>
+                            </div>
+                        </div>
+                        <div class="inputContainer">
+                            <div class="inputbox">
+                                <input type="text" name="rg" required id="rg" maxlength='12'>
+                                <label for="">RG*</label>
+                            </div>
+                            <div id="errorrg" class="error">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <h6 id="textrg"></h6>
+                            </div>
+                        </div>
+                        <div class="inputContainer">
+                            <div class="inputbox ">
+                                <input type="text" name="email" required id="email">
+                                <label for="">E-mail* </label>
+                            </div>
+                            <div id="erroremail" class="error">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <h6 id="textemail"></h6>
+                            </div>
+                        </div>
+                        <div class="inputContainer">
+                            <div class="inputbox ">
+                                <input type="password" name="senha" required id="password">
+                                <label for="">Senha*</label>
+                            </div>
+                            <div id="errorpassword" class="error">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <h6 id="textpassword"></h6>
+                            </div>
+                        </div>
+                        <div class="inputContainer">
+                            <div class="inputbox ">
+                                <input type="password" name="confirmarSenha" required id="confirmPassword">
+                                <label for="confirmarSenha">Confirmar senha*</label>
+                            </div>
+                            <div id="errorconfirmPassword" class="error">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <h6 id="textconfirmPassword"></h6>
+                            </div>
+                        </div>
+                        <div class="inputCheck">
+                            <input type="checkbox" id="marketing">
+                            <label for="marketing" class="marketing">Aceito receber marketing da PcPlanet no
+                                e-mail</label>
+                        </div>
+                        <div class="inputCheck">
+                            <input type="checkbox" required id="termos">
+                            <label for="termos">
+                                <p>Estou ciente e CONCORDO com os <a href="">termos de aceite</a> e <a href="">políticas
+                                        de privacidade</a> da PcPlanet.</p>
+                            </label>
+                        </div>
+                        <div class="CriarConta">
+                            <input type="submit" id="submit" name="submit" value="Criar conta"></input>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -192,6 +237,7 @@
         </div>
     </footer>
 </body>
-    <script src="../js/pgCadastro.js" type="module"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="../js/pgCadastro.js"></script>
+
 </html>

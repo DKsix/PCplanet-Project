@@ -2,6 +2,9 @@
 <html lang="pt-br">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="shortcut icon" href="../arquivos/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
@@ -93,46 +96,42 @@
     <section class="containerpai">
         <div class="form-box">
             <div class="form-value">
-                <form action="" id="form-login">
+                <form action="pgLogin.php" method="post">
                     <i class="fa-solid fa-lock"></i>
                     <h2>Já tem uma conta?</h2>
                     <p>Informe seus dados abaixo para acessá-lá</p>
-                    <div class="inputbox">
-                        <input type="text" required class="search-text" id="email">
-                        <label for="">Email</label>
-                        <div id="errorEmail" class="error">
+                    <div class="inputContainer">
+                        <div class="inputbox">
+                            <input type="text" name="email" required class="search-text" id="email">
+                            <label for="">Email</label>
+                        </div>
+                        <div id="erroremail" class="error">
                             <i class="fa-solid fa-triangle-exclamation"></i>
-                            <h6>É necessário informar um e-mail válido.</h6>
+                            <h6 id="textemail"></h6>
                         </div>
                     </div>
-                    <div class="inputbox">
-                        <input type="password" required class="search-text" id="senha">
-                        <label for="">Senha</label>
-                        <div id="errorSenha" class="error">
+                    <div class="inputContainer">
+                        <div class="inputbox">
+                            <input type="password" name="password" required class="search-text" id="password">
+                            <label for="">Senha</label>
+                        </div>
+                        <div id="errorpassword" class="error">
                             <i class="fa-solid fa-triangle-exclamation"></i>
-                            <h6>É necessário informar uma senha válida.</h6>
+                            <h6 id="textpassword">É necessário informar uma senha válida.</h6>
                         </div>
                     </div>
-                    <div classs="lembrar">
-                        <label for="" class="remember"><input type="checkbox" id="">Lembrar meus Dados</label>
+                    <div class="inputCheck">
+                        <input type="checkbox" name="remember" id="remember" class="remember">
+                        <label for="remember" class="remember">Lembrar meus Dados</label>
                     </div>
-                    <button id="Login">Acessar Conta</button>
+                    <input type="submit" class="submit" id="submit" name="submit" value='Acessar Conta'></input>
+                    <div class="register">
+                        <a href="./cadastro.html">Ainda não tem uma conta? <span>Registre-se!</span></a>
+                    </div>
                 </form>
+
             </div>
         </div>
-        <aside>
-            <div class="containerpai">
-                <div class="container">
-                    <form action="../html/cadastro.html" target="_blank">
-                        <i class="fa-solid fa-user-plus fa-flip-horizontal"></i>
-                        <h2>Novo Cliente</h2>
-                        <p>Criar uma conta é fácil! Informe seus dados e uma senha para aproveitar todos os beneficios
-                            de ter uma conta.</p>
-                        <button id="Cadastrar">Cadastre-se</button>
-                    </form>
-                </div>
-            </div>
-        </aside>
     </section>
     <footer>
         <div class="container-footer">
@@ -190,7 +189,7 @@
         </div>
     </footer>
 </body>
-<script src="../js/pgLogin.js"></script>
+<script type="module" src="../js/pgLogin.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </html>

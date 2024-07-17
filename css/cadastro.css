@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 * {
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', 'sans-serif';
 }
 
@@ -9,27 +11,26 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    margin: 20px 0;
+    margin: 64px 0;
 }
 
-.form-box i {
+form>i {
     margin: auto;
     display: flex;
-    width: 4px;
-    height: 5px;
     justify-content: center;
     align-items: center;
-    padding: 18px;
+    padding: 10px 12px;
     font-size: 20px;
     border-radius: 20px;
     color: #F0F1F2;
-    background-color: #3a3a3a;
+    background-color: #4178BF;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus,
 input:-webkit-autofill-selected {
     /* Estilos que você deseja aplicar */
+    appearance: n;
     background-color: transparent !important;
     -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
@@ -39,54 +40,60 @@ input:-webkit-autofill:focus {
     transition: background-color 0s 600000s, color 0s 600000s !important;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+}
+
 input {
     color-scheme: dark;
+
 }
 
 .form-box {
     padding: 20px;
-    width: 400px;
+    width: 500px;
     position: relative;
-    background-color: #4178BF;
+    background-color: #F0F1F2;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 1px 30px 90px rgba(65, 120, 191, 0.7);
 }
 
 p {
     font-size: 0.9em;
     font-weight: 300;
-    color: #ffffff;
-    margin-top: 20px;
+    color: black;
+    margin: 15px 0 0px 0px;
     text-align: center;
 }
 
 h2 {
     margin-top: 5px;
     font-size: 1.5em;
-    color: #fff;
+    color: #0d0d0df1;
     text-align: center;
 }
 
 .inputbox {
     display: inline-flex;
-    height: 40px;
-    border-radius: 10px;
+    height: 24px;
     position: relative;
-    width: 170px;
-    margin: 20px 0px 20px 10px;
-    border: 2px solid #fff;
-}
-
-.nome {
-    margin-top: 30px;
+    color: black;
+    margin: 30px 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: 25px;
 }
 
 .login {
     display: block;
-    width: 355px;
-    margin: 25px 0px 20px 10px;
+    margin: 25px 0px 5px 10px;
 }
 
 #senha {
@@ -98,11 +105,12 @@ h2 {
     top: 60%;
     left: 5px;
     transform: translateY(-65%);
-    color: #fff;
+    color: #3a3a3a;
     font-size: 1em;
     pointer-events: none;
     transition: .5s;
     margin: 0;
+
 }
 
 input:focus~label,
@@ -111,66 +119,25 @@ input:valid~label {
 }
 
 .inputbox input {
-    width: 100%;
-    height: 40px;
+    height: 24px;
     background: transparent;
     border: none;
     outline: none;
-    font-size: 1em;
-    color: #fff;
-    margin-left: 10px;
+    font-size: 1rem;
+    color: black;
+    margin-left: 5px;
 }
 
-.ReceberMarketing input {
+.inputCheck {
+    margin: 0px 0 20px 8px;
+}
+
+.inputCheck input {
     width: auto;
 }
 
-.ReceberMarketing {
-    margin: 20px 0 0px 10px;
-}
-
-.ConcordanciaTermos {
-    margin: 20px 0 10px 10px;
-}
-
-.ConcordanciaTermos input {
-    width: auto;
-}
-
-input[type="date"] {
-    appearance: none;
-    background: transparent;
-}
-
-input[type="date"] {
-    cursor: pointer;
-    display: inline-flex;
-    height: 40px;
-    border-radius: 10px;
-    position: relative;
-    width: 170px;
-    color: #F0F1F2;
-    margin: 20px 0px 20px 10px;
-    border: 2px solid #fff;
-    border-radius: 10px;
-}
-
-.datalabel {
-    position: absolute;
-    margin-left: 10px;
-    transform: translateY(-65%);
-    color: #fff;
-    font-size: 1em;
-    pointer-events: none;
-    transition: .5s;
-    margin: 0;
-}
-
-#data {
-    display: none;
-}
-
-button {
+#submit {
+    background: #4178BF;
     color: #ffffff;
     width: 100%;
     height: 40px;
@@ -183,41 +150,146 @@ button {
     text-transform: uppercase;
 }
 
-#Cadastrar {
-    background: #3a3a3a;
-}
-
 .CriarConta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: .9em;
     color: #ffffff;
-    text-align: center;
-    margin: 25px 0 10px;
+    margin: 15px 0 10px;
 }
-
-.ReceberMarketing label {
-    font-family: "poppins", ;
-    font-weight: 400;
-    color: #F0F1F2;
-    text-align: justify;
+.inputCheck label{
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
-
-.ConcordanciaTermos label {
+.inputCheck label p{
     font-family: 'Roboto', 'sans-serif';
     font-weight: 400;
-    color: #F0F1F2;
+    font-size: 12px;
+    color: black;
+    text-align: justify;
+    margin: 0;
+}
+.inputCheck input {
+    position: absolute;
+    opacity: 0;
+}
+.inputCheck label::before {
+    content: '';
+    position: relative;
+    opacity: 0.8;
+    display: block;
+    min-height: 15px;
+    min-width: 16px;
+    border: 1px solid #5a5a5a;
+    border-radius: 2px;
+}
+.inputCheck input:checked+label::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='100' height='100' viewBox='0,0,256,256'%3E%3Cg fill='%23d95a11' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal'%3E%3Cg transform='scale(5.12,5.12)'%3E%3Cpath d='M41.9375,8.625c-0.66406,0.02344 -1.27344,0.375 -1.625,0.9375l-18.8125,28.78125l-12.1875,-10.53125c-0.52344,-0.54297 -1.30859,-0.74609 -2.03125,-0.51953c-0.71875,0.22266 -1.25391,0.83203 -1.37891,1.57422c-0.125,0.74609 0.17578,1.49609 0.78516,1.94531l13.9375,12.0625c0.4375,0.37109 1.01563,0.53516 1.58203,0.45313c0.57031,-0.08594 1.07422,-0.41016 1.38672,-0.89062l20.09375,-30.6875c0.42969,-0.62891 0.46484,-1.44141 0.09375,-2.10547c-0.37109,-0.66016 -1.08594,-1.05469 -1.84375,-1.01953z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.9;
+    color: #D95A11;
+}
+
+.inputCheck input:focus+label::before {
+    border: 1px solid black;
+}
+.inputCheck label {
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 400;
+    font-size: 12px;
+    color: black;
     text-align: justify;
 }
 
-.ConcordanciaTermos a {
-    color: #F0F1F2;
+.inputCheck a {
+    color: black;
 
 }
 
-.ConcordanciaTermos a:visited {
-    color: #F0F1F2;
+.inputCheck a:visited {
+    color: black;
+}
+
+.marketing {
+    margin-top: 25px;
 }
 
 input:focus~label,
 input:valid~label {
-    top: -30%;
+    top: -26%;
+    font-size: 12px;
+}
+input::placeholder{
+    transition: 0.5s;
+    opacity: 0;
+}
+input:focus::placeholder{
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.error h6 {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 0 0 6px;
+}
+
+.error {
+    width: 230px;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    color: #D95A11;
+    display: none;
+}
+
+
+.error i {
+    font-size: 14px;
+}
+
+.inputContainer {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+@media (max-width: 560px) {
+    .formContainer {
+        flex-direction: column;
+    }
+    .inputContainer{
+        width: 100%;
+    }
+    .inputbox{
+        margin-right: 0;
+        max-width: 500px;
+    }
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+@media (max-width: 430px) {
+    .form-box {
+        width: 100%;
+    }
+
+    .inputbox {
+        min-width: 10px;
+    }
 }
