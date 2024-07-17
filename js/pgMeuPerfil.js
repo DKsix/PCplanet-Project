@@ -20,7 +20,7 @@ const options = {
 
 async function buscarDados() {
     try {
-        const response = await fetch('http://localhost/PCplanet-Project/api/api.php?action=profile-user', options)
+        const response = await fetch('http://localhost/PCplanet-Project-main/api/api.php?action=profile-user', options)
         data = await response.json()
         userEmail = data.email
         userNome = data.nome
@@ -60,7 +60,7 @@ async function alterarDados() {
             },
             body: JSON.stringify(data)
         };
-        const responseJson = await fetch('http://localhost/PCplanet-Project/api/api.php?action=profile-user-edit', options)
+        const responseJson = await fetch('http://localhost/PCplanet-Project-main/api/api.php?action=profile-user-edit', options)
         console.log(responseJson)
         response = await responseJson.text()
         console.log(response)

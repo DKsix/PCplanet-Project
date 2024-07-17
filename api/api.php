@@ -1,11 +1,11 @@
 <?php
-require 'C:\xampp\htdocs\Estudos.php\phpTestes\vendor/autoload.php';
+require 'C:\xampp\htdocs\PCplanet-Project-main\vendor/autoload.php';
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
 
-include_once ("/xampp/htdocs/PCplanet-Project/php/config.php");
+include_once ("/xampp/htdocs/PCplanet-Project-main/php/config.php");
 $conn = getConnection($hostname, $user, $password, $database);
 
 $key = 'pcplanetsecretkey123';
@@ -132,36 +132,47 @@ if ($action == "profile-user") {
 
     
 }
+
+// alterar dados
 if ($action == "profile-user-edit") {
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
     $senhaAtual = md5($data['senhaAtual']);
     $senhaNova =  md5($data['senhaNova']);
     $email = ($data['email']);
-
-    $sql = "SELECT senha FROM usuarios WHERE email = ?";
-    if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $stmt->bind_result($senhaDB);
-        $stmt->fetch();
-        $stmt->close();
-    }
-    print($senhaDB);
+ 
+    // $sql = "SELECT senha FROM usuarios WHERE email = ?";
+    // if ($stmt = $conn->prepare($sql)) {
+    //     $stmt->bind_param("s", $email);
+    //     $stmt->execute();
+    //     $stmt->bind_result($senhaDB);  
+    //     $stmt->fetch();
+    //     $stmt->close();
+    // }
     
-    $sql = "UPDATE usuarios SET senha = ? WHERE email = ? AND senha = ?";
+    $sql = "UPDATE usuarios SET senha = '$senhaNova' WHERE email = '$email' AND senha = '$senhaAtual'";
 
-    if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("sss", $senhaNova, $email, $senhaAtual);
-        if ($stmt->execute()) {
-            $return["status"] = "Senha atualizada com sucesso.";
-        } else {
-            $return["status"] = "Erro ao atualizar a senha: " . $stmt->error;
-        }
-        $stmt->close();
+    $result = $conn->query($sql);
+   
+    print($result);
+    if (mysqli_fetch_array($result) > 0){
+        $return["status"] = "Senha atualizada com sucesso." . $result;
     } else {
-        $return["status"] = "Erro ao preparar a declaração: " . $conn->error;
+        $return["status"] = "Erro ao atualizar a senha: " . $result;
     }
+
+    // if ($stmt = $conn->prepare($sql)) {
+    //     $stmt->bind_param("sss", $senhaNova, $email, $senhaAtual);
+    //     if ($stmt->execute()) {
+            
+    //     } else {
+            
+    //     }
+    //     $stmt->close();
+    // } else {
+    //     $return["status"] = "Erro ao preparar a declaração: " . $conn->error;
+    // }
+    
 
     die(json_encode($return));
 }

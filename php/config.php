@@ -2,7 +2,7 @@
 
     $hostname =  'localhost';
     $user = 'root';
-    $password = 'root';
+    $password = '';
     $database = 'pcplanet';
 
     function getConnection ($hostname, $user, $password, $database) {

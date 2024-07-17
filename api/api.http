@@ -1,9 +1,9 @@
-GET http://localhost/PCplanet-Project/api/api.php?action=user-profile
+GET http://localhost/PCplanet-Project-main/api/api.php?action=user-profile
 Content-Type: application/json
 
 
 ###
-POST http://localhost/PCplanet-Project/api/api.php?action=register-user
+POST http://localhost/PCplanet-Project-main/api/api.php?action=register-user
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 
 
 ###
-POST http://localhost/PCplanet-Project/api/api.php?action=login-user
+POST http://localhost/PCplanet-Project-main/api/api.php?action=login-user
 Content-Type: application/json
 
 {
@@ -26,7 +26,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost/PCplanet-Project/api/api.php?action=profile-user
+POST http://localhost/PCplanet-Project-main/api/api.php?action=profile-user
 Content-Type: application/json
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwY3BsYW5ldC1hZG1pbiIsImF1ZCI6InVzZXIiLCJpYXQiOjE3MTQyMzg5NzIsImV4cCI6MTcxNDQxMTc3MiwiaWQiOiIyMiJ9.cHgN-UFmSPQrySiHOUx1efkKM5GZJreQ0sLXt02oHeE
 
@@ -36,7 +36,7 @@ Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwY3BsYW5ldC1hZG1p
 
 
 ###
-POST http://localhost/PCplanet-Project/api/api.php?action=profile-user-edit
+POST http://localhost/PCplanet-Project-main/api/api.php?action=profile-user-edit
 Content-Type: application/json
 
 {

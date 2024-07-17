@@ -69,7 +69,7 @@ form.addEventListener('submit', async function (event) {
 
     // Enviar a solicitação usando Fetch
     try {
-        const response = await fetch('http://localhost/PCplanet-Project/api/api.php?action=login-user', options)
+        const response = await fetch('http://localhost/PCplanet-Project-main/api/api.php?action=login-user', options)
         if (response.ok) {
             const token = response.headers.get('Authorization')?.slice(7)
             const json = await response.json()

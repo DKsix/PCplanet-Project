@@ -60,7 +60,7 @@ SET
 WHERE
     (`nome` = 'Carlos');
 
-$ sql = "CREATE SCHEMA IF NOT EXISTS 'pcplanet';
+$sql = "CREATE SCHEMA IF NOT EXISTS 'pcplanet';
 
     USE pcplanet;
 

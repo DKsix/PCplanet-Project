@@ -153,7 +153,7 @@ form.addEventListener('submit', event => {
     };
 
     // Enviar a solicitação usando Fetch
-    fetch('http://localhost/Estudos.php/phpTestes/CRUD%20para%20o%20site/api/api.php?action=register-user', options)
+    fetch('http://localhost/PCplanet-Project-main/api/api.php?action=register-user', options)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro na requisição: ' + response.statusText);
