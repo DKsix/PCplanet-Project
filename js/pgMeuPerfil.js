@@ -1,11 +1,10 @@
-nomeInput = document.getElementById('nome')
-emailInput = document.getElementById('email')
-cpfInput = document.getElementById('cpf')
-senhaNova = document.getElementById('novaSenha')
-confirmarSenha = document.getElementById('confirmarNovaSenha')
-senhaAtual = document.getElementById('senhaAtual')
+const nomeInput = document.getElementById('nome')
+const emailInput = document.getElementById('email')
+const cpfInput = document.getElementById('cpf')
+const senhaNova = document.getElementById('novaSenha')
+const confirmarSenha = document.getElementById('confirmarNovaSenha')
+const senhaAtual = document.getElementById('senhaAtual')
 const form = document.querySelector('form')
-
 
 
 
@@ -20,7 +19,7 @@ const options = {
 
 async function buscarDados() {
     try {
-        const response = await fetch('http://localhost/PCplanet-Project-main/api/api.php?action=profile-user', options)
+        const response = await fetch('http://localhost/PCplanet-Project/api/api.php?action=profile-user', options)
         data = await response.json()
         userEmail = data.email
         userNome = data.nome
@@ -42,7 +41,6 @@ form.addEventListener('submit', (event) => {
     console.log('alterar')
     alterarDados()
 })
-console.log(cpf.value)
 async function alterarDados() {
     try {
         data = {
@@ -50,7 +48,6 @@ async function alterarDados() {
             senhaAtual: senhaAtual.value,
             email: email.value
         }
-        console.log(data)
         const options = {
             method: 'POST',
             headers: {
@@ -60,17 +57,40 @@ async function alterarDados() {
             },
             body: JSON.stringify(data)
         };
-        const responseJson = await fetch('http://localhost/PCplanet-Project-main/api/api.php?action=profile-user-edit', options)
-        console.log(responseJson)
-        response = await responseJson.text()
-        console.log(response)
+        const responseJson = await fetch('http://localhost/PCplanet-Project/api/api.php?action=profile-user-edit', options)
+        response = await responseJson.json()
+        if(response.status == 200){
+            window.location.href = '../html/pgMeuPerfil.html'
+        }
+        if (response.status == 401) {
+            console.log("Senha incorreta.")
+        }
     } catch (error) {
-        console.log(error)
+        console.log(error.text)
     }
 }
 
 
 
+async function excluirConta() {
+    event.preventDefault();
+    try {
+        const options = {
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            },
+        };
+        const responseJson = await fetch('http://localhost/PCplanet-Project/api/api.php?action=profile-delete', options);
+        const response = await responseJson.json();
+        if (response.status == 200) {
+            localStorage.setItem('token', '')
+            window.location.href = '../html/login.html';
+        }
+    } catch (error) {
+        console.log(error.text); 
+    }
+}
 
 
 
@@ -123,7 +143,7 @@ function validarSenhaNova(senha) {
     return regex.test(senha) ? true : 'A senha deve ter pelo menos 6 caracteres.';
 }
 function validarConfirmarSenha(confirmarSenha) {
-    return (senhaNova.value == confirmarSenha ) ? true : 'A senha deve corresponder a primeira.';
+    return (senhaNova.value == confirmarSenha) ? true : 'A senha deve corresponder a primeira.';
 }
 function validarSenhaAtual(senhaAtual) {
     var regex = /^(?=.*\d).{6,}$/;
@@ -141,7 +161,7 @@ function validarNome(nome) {
 
 
 function redirect() {
-    window.location.href = '../html/Login.html'
+    window.location.href = '../html/login.html'
 }
 function encerrar() {
     localStorage.setItem('token', '')

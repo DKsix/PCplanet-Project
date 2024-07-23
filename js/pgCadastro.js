@@ -153,7 +153,7 @@ form.addEventListener('submit', event => {
     };
 
     // Enviar a solicitação usando Fetch
-    fetch('http://localhost/PCplanet-Project-main/api/api.php?action=register-user', options)
+    fetch('http://localhost/PCplanet-Project/api/api.php?action=register-user', options)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro na requisição: ' + response.statusText);
@@ -161,7 +161,6 @@ form.addEventListener('submit', event => {
             return response.json();
         })
         .then(response => {
-            console.log(response)
             if (response.errorCode === 1062) {
                 importAlerts().then((alerts) => {
                     const alertsToastify = new alerts.default();
@@ -175,9 +174,7 @@ form.addEventListener('submit', event => {
                 });
             }
         })
-        .catch(error => {
-            console.log(error);
-        });
+        
 
     // Função para importar o módulo de alertas
     function importAlerts() {

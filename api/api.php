@@ -1,12 +1,12 @@
 <?php
-require 'C:\xampp\htdocs\PCplanet-Project-main\vendor/autoload.php';
+require 'C:\xampp\htdocs\PCplanet-Project\vendor/autoload.php';
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
 
-include_once ("/xampp/htdocs/PCplanet-Project-main/php/config.php");
-$conn = getConnection($hostname, $user, $password, $database);
+include_once ("/xampp/htdocs/PCplanet-Project/php/config.php");
+
 
 $key = 'pcplanetsecretkey123';
 $action = $_REQUEST["action"];
@@ -14,6 +14,7 @@ $return = array();
 
 // Requisição listar usuários
 if ($action == "user-profile") {
+    $conn = getConnection($hostname, $user, $password, $database);
     $query = "SELECT nome, 
     email, 
     cpf
@@ -23,12 +24,15 @@ if ($action == "user-profile") {
     while ($row = $result->fetch_assoc()) {
         $return[] = $row;
     }
+
+    header('Content-Type: application/json');
     $conn->close();
     die(json_encode($return));
 }
 
 // Requisição registrar usuário
 if ($action == "register-user") {
+    $conn = getConnection($hostname, $user, $password, $database);
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
 
@@ -52,12 +56,14 @@ if ($action == "register-user") {
     } else {
         print ('not found data');
     }
+
     $conn->close();
     die(json_encode($return));
 }
 
 //  Login
 if ($action == "login-user") {
+    $conn = getConnection($hostname, $user, $password, $database);
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
     $expirationTime = strtotime("+2 days");
@@ -71,8 +77,7 @@ if ($action == "login-user") {
         if (mysqli_num_rows($result) > 0) {
             $row = $result->fetch_array();
             $idUser = $row['id_usuario'];
-
-            $return["status"] = "success";
+            
             $payload = [
                 'iss' => 'pcplanet-admin',
                 'aud' => 'user',
@@ -80,21 +85,24 @@ if ($action == "login-user") {
                 'exp' => $expirationTime,
                 'id' => $idUser
             ];
-
             $jwt = JWT::encode($payload, $key, 'HS256');
 
+            $return["status"] = "200";
             header("Authorization: Bearer " . $jwt);
         } else {
             header("HTTP/1.1 401 Unauthorized");
-            $return["status"] = "error";
+            $return["status"] = "Error";
         }
     }
 
     $conn->close();
+    header('Content-Type: application/json');
     die(json_encode($return));
 }
 
+// Mostrar dados
 if ($action == "profile-user") {
+    $conn = getConnection($hostname, $user, $password, $database);
     $authHeader = null;
     if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
         $authHeader = $_SERVER['HTTP_AUTHORIZATION'];
@@ -110,7 +118,7 @@ if ($action == "profile-user") {
         $decoded = JWT::decode($authHeader, new Key($key, 'HS256'));
         $userId = ($decoded->id);
     } else {
-        echo "Authorization Header not found";
+        echo "Token não encontrado";
     }
 
     $sql = "SELECT * FROM usuarios WHERE id_usuario = '$userId'";
@@ -127,55 +135,82 @@ if ($action == "profile-user") {
         'cpf' => $cpf
     ];
 
+    $conn->close();
+    header('Content-Type: application/json');
     die(json_encode($response));
-
-
-    
 }
 
 // alterar dados
 if ($action == "profile-user-edit") {
+    $conn = getConnection($hostname, $user, $password, $database);
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
     $senhaAtual = md5($data['senhaAtual']);
     $senhaNova =  md5($data['senhaNova']);
     $email = ($data['email']);
- 
-    // $sql = "SELECT senha FROM usuarios WHERE email = ?";
-    // if ($stmt = $conn->prepare($sql)) {
-    //     $stmt->bind_param("s", $email);
-    //     $stmt->execute();
-    //     $stmt->bind_result($senhaDB);  
-    //     $stmt->fetch();
-    //     $stmt->close();
-    // }
     
-    $sql = "UPDATE usuarios SET senha = '$senhaNova' WHERE email = '$email' AND senha = '$senhaAtual'";
-
-    $result = $conn->query($sql);
-   
-    print($result);
-    if (mysqli_fetch_array($result) > 0){
-        $return["status"] = "Senha atualizada com sucesso." . $result;
+    $sql = "UPDATE usuarios SET senha = ? WHERE email = ? AND senha = ?";
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("sss", $senhaNova, $email, $senhaAtual);
+        
+        if ($stmt->execute()) {
+            if ($stmt->affected_rows > 0) {
+                $return = ["status" =>  "200"];
+            } else {
+                $return = ["status" => "Error", "message" => "Senha incorreta"];
+            }
+        } else {
+            $return["status"] = "1064 " . $stmt->error;
+        }
+        $stmt->close();
     } else {
-        $return["status"] = "Erro ao atualizar a senha: " . $result;
+        $return["status"] = "Erro ao preparar a declaração: " . $conn->error;
     }
 
-    // if ($stmt = $conn->prepare($sql)) {
-    //     $stmt->bind_param("sss", $senhaNova, $email, $senhaAtual);
-    //     if ($stmt->execute()) {
-            
-    //     } else {
-            
-    //     }
-    //     $stmt->close();
-    // } else {
-    //     $return["status"] = "Erro ao preparar a declaração: " . $conn->error;
-    // }
-    
-
+    $conn->close();
+    header('Content-Type: application/json');
     die(json_encode($return));
 }
 
+// Deletar conta
+if ($action == "profile-delete") {
+    $conn = getConnection($hostname, $user, $password, $database);
+    $authHeader = null;
+    if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+        $authHeader = $_SERVER['HTTP_AUTHORIZATION'];
+    } elseif (isset($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) {
+        $authHeader = $_SERVER['REDIRECT_HTTP_AUTHORIZATION'];
+    } elseif (function_exists('apache_request_headers')) {
+        $requestHeaders = apache_request_headers();
+        if (isset($requestHeaders['Authorization'])) {
+            $authHeader = $requestHeaders['Authorization'];
+        }
+    }
+    if ($authHeader) {
+        try {
+            $decoded = JWT::decode($authHeader, new Key($key, 'HS256'));
+            $userId = $decoded->id;
 
+            $sql = "DELETE FROM usuarios WHERE id_usuario = ?";
+            if ($stmt = $conn->prepare($sql)) {
+                $stmt->bind_param("i", $userId);
+                if ($stmt->execute()) {
+                    $return = ["status" => ($stmt->affected_rows > 0) ? "200" : "Error"];
+                } else {
+                    $return = ["status" => "Error", "message" => "Erro ao executar o sql"];
+                }
+            } else {
+                $return = ["status" => "Error", "message" => "Erro ao preparar o sql"];
+            }
+        } catch (Exception $e) {
+            $return = ["status" => "Error", "message" => "Token invalido ou erro ao decodificar: " . $e->getMessage()];
+        }
+    } else {
+        $return = ["status" => "Error", "message" => "Token não encontrado"];
+    }
+
+    $conn->close();
+    header('Content-Type: application/json');
+    echo json_encode($return);
+}
 ?>

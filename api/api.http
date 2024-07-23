@@ -3,7 +3,7 @@ Content-Type: application/json
 
 
 ###
-POST http://localhost/PCplanet-Project-main/api/api.php?action=register-user
+POST http://localhost/PCplanet-Project/api/api.php?action=register-user
 Content-Type: application/json
 
 {
